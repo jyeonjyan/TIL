@@ -7,8 +7,7 @@
 ## **🔎 Content**
 ### **"Spring Framework"**
 * [SpringBoot](./Spring/SpringBoot/README.md)
-    * [SpringBoot를 사용한 CRUD](https://github.com/Johnjihwan/SpringBoot-Membership)
-    * [Swagger](./Spring/Concept/Swagger.md)
+* [Swagger](./Spring/Concept/Swagger.md)
 * [Spring Annotation](./Spring/Concept/SpringAnnotation.md)
 * [Spring Bean](./Spring/Concept/SpringBean.md)
 * [JPA Auditing](./Spring/Concept/Auditing.md)
