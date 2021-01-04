@@ -41,7 +41,7 @@ TestApplication
 /service/BoardService
 /controller/BoardController
 ```
-**TestApplication 클래스**
+**```TestApplication``` 클래스**
 > main 매서드가 선언.  
 > main 매서드는 ```SpringApplication.run``` 메서드를 호출해서 웹 애플리케이션을 실행하는 역할.
 
