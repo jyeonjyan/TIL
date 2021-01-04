@@ -44,8 +44,14 @@ TestApplication
 **TestApplication 클래스**
 > main 매서드가 선언.  
 > main 매서드는 ```SpringApplication.run``` 메서드를 호출해서 웹 애플리케이션을 실행하는 역할.
-> <br>
-> 
-> ```@SpringBootAplication``` 의 구성
-> 
+
+**```@SpringBootAplication``` 의 구성**
+> * ```@EnableAutoConfiguration```: 일부가 자동으로 완료됨.
+> * ```@ComponentScan```: 의존성 주입을 간편하게 해줌.
+> * ```@Configuration```: 자바 기반 설정 파일로 인식, less XML Loading.
+
+**```src/main/resources``` 디랙터리**
+> ```/static/..```:해당 폴더에는 css, fonts, images, plugin, scripts 등의 정적 리소스 파일이 위치합니다.   
+> ```/templates/..```: 화면과 관련된 파일을 관리하는 것으로 생각할 수 있습니다.  
+> ```/application.properties```: 해당 파일은 웹 애플리케이션을 실행하면서 자동으로 로딩되는 파일입니다.
 
