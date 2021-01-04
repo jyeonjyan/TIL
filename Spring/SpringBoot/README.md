@@ -12,4 +12,4 @@
 **기존의 Spring 개발 환경 보다 편리함** <br>
 **WAS를 start 하고 대기 시간 없이 run 가능**
 
-SpringBoot = ```SpringFrameWork``` + ```Embedded HTTP Server``` - ``` XML <bean> ```
+**SpringBoot =** ```SpringFrameWork``` + ```Embedded HTTP Server``` - ``` XML <bean> ```

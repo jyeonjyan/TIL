@@ -7,3 +7,6 @@
 ****
 ### **"Spring Framework"**
 * **[SpringBoot](./Spring/SpringBoot/README.md)**
+
+### **"For Better Development"**
+* **[iTerm2](https://github.com/Johnjihwan/iTerm2-beauty)**
