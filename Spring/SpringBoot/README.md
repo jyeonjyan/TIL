@@ -33,7 +33,7 @@
 ### **Project Structure**
 ***
 
-```
+```java
 src/main/java/com.##.##
 TestApplication
 /domain/Board, BoardRepository
@@ -54,4 +54,27 @@ TestApplication
 > ```/static/..```:해당 폴더에는 css, fonts, images, plugin, scripts 등의 정적 리소스 파일이 위치합니다.   
 > ```/templates/..```: 화면과 관련된 파일을 관리하는 것으로 생각할 수 있습니다.  
 > ```/application.properties```: 해당 파일은 웹 애플리케이션을 실행하면서 자동으로 로딩되는 파일입니다.
+
+**```src/test/java```디렉터리**
+> 해당 디렉터리의 com.board 패키지에는 BoardApplicationTests 클래스 존재  
+> 해당 클래스를 사용하면 스프링과 달리 곧바로 테스트가 가능.
+
+**```build.gradle```**
+> Maven 사용하면 라이브러리 버전 문제, 충돌 문제, 종속적인 문제 등.  
+> 요즘에는 그레이들을 선호하는 추세.  
+> 추가한 라이브러리는 ```project and External Dependencies``` 에서 확인.
+
+**MVC 패턴**
+> **M(odel)**
+> * 데이터를 처리하는 영역(비즈니스로직).
+> * 데이터베이스와 통신하여 사용자가 원하는 데이터를 가공하는 역할.
+> 
+> **V(iew)**
+> * 사용자가 보는 화면을 의미, Html, 타임리프 처리.
+> * 뷰 = 화면 = 사용자
+> 
+> **C(ontroller)**
+> * 모델과 뷰의 중간 단계.
+> * 사용자의 요청을 처리할 어떠한 로직을 호출.
+> * 호출한 결과를 사용자에게 "전달" 하는 역할.
 
