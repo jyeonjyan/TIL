@@ -1,6 +1,6 @@
 # SpringBoot 란?
 
-### **SpringBoot 소개**
+### **🍀 SpringBoot 소개**
 ***
 > 1. 단독 실행 가능한 어플리케이션 개발 가능.
 > 2. 내장된 톰켓, Jetty, UnderTow등의 서버를 이용해서 별도의 설치없이 실행.
@@ -16,7 +16,7 @@
 
 <br>
 
-### **Project Setting**
+### **🧑🏻‍💻 Project Setting**
 ********************************
 > 1. Use IntelliJ IDEA
 > 2. Go [start.spring.io](https://start.spring.io/)
@@ -30,7 +30,7 @@
 
 <br>
 
-### **Project Structure**
+### **📄 Project Structure**
 ***
 
 ```java
