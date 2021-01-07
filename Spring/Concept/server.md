@@ -88,7 +88,7 @@
 > * 클래스를 재사용 할 가능성을 높이고, 다른 클래스와 독립적으로 클래스를 테스트 할 수 있습니다.
 > * 비즈니스 로직의 특정 구현이 아닌 클래스를 생성하는데 매우 효과적.
 
-### **5. 의존성 주입(Dependency Injection)을 어떻게 할건가?
+### **5. 의존성 주입(Dependency Injection)을 어떻게 할건가?**
 > * Contructor Injection: 생성자 삽입
 > * Field Injection: 멤버 변수 삽입(비공개 안됨)
 > * Method Injection: 메소드 매게 변수 삽입
