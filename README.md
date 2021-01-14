@@ -10,6 +10,7 @@
     * [SpringBoot를 사용한 CRUD](https://github.com/Johnjihwan/SpringBoot-Membership)
     * [Swagger](./Spring/Concept/Swagger.md)
 * **[Spring Annotation](./Spring/Concept/SpringAnnotation.md)**
+* **[Spring Bean](./Spring/Concept/SpringBean.md)**
 ### **"API Documentation"**
 * **[HTTP API Design](./API/HttpAPI.md)**
 ### **"For Better Development"**
