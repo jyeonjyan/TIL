@@ -8,7 +8,7 @@
 > ### 가로축은 학습을 시도한 횟수 또는 시간(number of trials or >attempts at learning)이고, 세로축은 습득 정도(performance measure)이다. 
 > <br> 
 >위 그림과 같은 s자 모양(sigmoid)의 그래프가 가장 일반적이다.
-
+> 
 > 초반에는 모르는 개념과 용어가 많아 습득 속도가 느리지만(slow beginning), 일정 정도를 넘어서면 습득 속도가 빨라지며(steep acceleration), 어느 단계를 넘어서면 다시 습득 속도가 느려진다(plateau).
 
 ***
