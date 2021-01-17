@@ -5,7 +5,7 @@
 
 <img src="https://ww.namu.la/s/ae077a007df00d179cc997f639d6858072ab2d437a19176874582c71a01230623693a7cc85641be4cdbbaa63368fd5bd53ffa62568d516ad558e27b064ccd92422ed7dc787ae7f9608d9b0e9ea0da883a82509bf530674b70df29dee1c3dde0b">
 
-> ### 가로축은 학습을 시도한 횟수 또는 시간(number of trials or >attempts at learning)이고, 세로축은 습득 정도(performance measure)이다. 
+> ### 가로축은 학습을 시도한 횟수 또는 시간(number of trials or attempts at learning)이고, 세로축은 습득 정도(performance measure)이다. 
 > <br> 
 >위 그림과 같은 s자 모양(sigmoid)의 그래프가 가장 일반적이다.
 > 
