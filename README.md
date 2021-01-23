@@ -20,6 +20,7 @@
   * [URI, URL, URN](./DevFeed/URI.md)
   * [TDD](./DevFeed/TDD.md)
   * [LearningCurve](./DevFeed/LearningCurve.md)
+  * [PG](./DevFeed/PG.md)
 * **✅ 백엔드 개발에 필요한 지식**
   * [웹 생태계의 스펙](./Spring/Concept/webSpec.md)
   * [기본 SDK, 라이브러리/프레임워크 이해와 활용](Spring/Concept/whatIsSDK.md)
@@ -28,4 +29,4 @@
   * 저장소활용
     * [DBMS 설계](./Spring/Concept/DBMS.md)
 
-### **"Organizational culture"**
+### **"organization"**
