@@ -33,3 +33,18 @@ public static void test(int a){
     }
 }
 ```
+
+### 2. ```@ExceptionHandler``` 이란
+```@ExceptionHandler``` 같은 경우는 ```@Controller, @RestController```가 적용된 Bean 내에서 발생하는 예외를 잡아서 하나의 메서드에서 처리해주는 기능을 한다.
+
+```java
+@RestController public class MyRestController { 
+    ... 
+    ... 
+    @ExceptionHandler(NullPointerException.class) 
+    public Object nullex(Exception e) { 
+        System.err.println(e.getClass()); 
+        return "myService"; 
+        } 
+}
+```
