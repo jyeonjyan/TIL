@@ -11,6 +11,7 @@
 * **[Spring Annotation](./Spring/Concept/SpringAnnotation.md)**
 * **[Spring Bean](./Spring/Concept/SpringBean.md)**
 * **[JPA Auditing](./Spring/Concept/Auditing.md)**
+* **[JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)**
 ### **"API Documentation"**
 * **[HTTP API Design](./API/HttpAPI.md)**
 ### **"For Better Development"**
