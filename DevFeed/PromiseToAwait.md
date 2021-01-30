@@ -47,7 +47,7 @@ $.get('url', function(response) {
 });
 ```
 
-해결방법  
+### **해결방법**  
 promise 나 Async를 사용하는 방법이 있다. 각 콜백 함수를 분리하면 된다.
 ```js
 function parseValueDone(id) {
