@@ -30,3 +30,42 @@
 요청이 처리가 완료되어(다시) 사용하세요! 라는 신호라고 생각합니다.  
 즉, 콜백함수에서 콜백이란 이름이 별로 있는 것이 아니라, 함수가 있는데 사용되는 목적/용도가 "call+back" 이라는 것입니다.
 즉, 콜백함수가 실행됐다는 것은 요청한 작업이 끝났음을 알리고, 작업의 결과물을 콜백함수를 통해 사용가능하게 됩니다.  
+
+### 콜백헬(hell), 피라미드 무덤
+콜백함수가 늘어나면 늘어갈 수록 코드의 깊이가 늘어나 더이상 헤어날 수 없다는 유머 입니다.  
+코드 관점에서 콜백함수는 중첩으로 들여쓰기가 반복되 가독성이 떨어지게 됩니다.  
+이런 중첩된 모습이 꼭 피라미드 같다고 해서 피라미드 무덤이라고 합니다.  
+```js
+$.get('url', function(response) {
+	parseValue(response, function(id) {
+		auth(id, function(result) {
+			display(result, function(text) {
+				console.log(text);
+			});
+		});
+	});
+});
+```
+
+해결방법  
+promise 나 Async를 사용하는 방법이 있다. 각 콜백 함수를 분리하면 된다.
+```js
+function parseValueDone(id) {
+	auth(id, authDone);
+}
+function authDone(result) {
+	display(result, displayDone);
+}
+function displayDone(text) {
+	console.log(text);
+}
+$.get('url', function(response) {
+	parseValue(response, parseValueDone);
+});
+```
+정리된 코드를 간단하게 살펴보겠습니다. 먼저 ajax 통신으로 받은 데이터를 ```parseValue()``` 메서드로 파싱 합니다.  
+```parseValueDone()```에 파싱 한 결과값인 id가 전달되고 ```auth()``` 메서드가 실행됩니다.  
+```auth()``` 메서드로 인증을 거치고 나면 콜백 함수 ```authDone()```이 실행됩니다.  
+인증 결과 값인 result로 ```display()```를 호출하면 마지막으로 ```displayDone()``` 메서드가 수행되면서 text가 콘솔에 출력됩니다.
+
+### 위와 같은 코딩 패턴으로도 콜백 지옥을 해결할 수 있지만 Promise나 Async를 이용하면 더 편하게 구현할 수 있습니다.
