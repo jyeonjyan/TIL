@@ -14,8 +14,6 @@
 * [JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)
 * Library
   * [SLF4J](./Spring/Concept/library/slf4j.md)
-### **"API Documentation"**
-* [HTTP API Design](./API/HttpAPI.md)
 ### **"For Better Development"**
 * **✅ 누구나 알아가면 좋은 지식**
   * [Parameter, Argument](./DevFeed/Parameter,Argument.md)
@@ -29,6 +27,7 @@
   * [CICD](./DevFeed/CICD.md)
   * [Proxy](./Network/Proxy.md)
   * [Github license](./DevFeed/githubLicense.md)
+  * [HTTP API Design](./API/HttpAPI.md)
 * **✅ 백엔드 개발에 필요한 지식**
   * [웹 생태계의 스펙](./Spring/Concept/webSpec.md)
   * [기본 SDK, 라이브러리/프레임워크 이해와 활용](Spring/Concept/whatIsSDK.md)
