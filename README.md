@@ -31,6 +31,7 @@
   * [서버/컴퍼넌트/객체 간의 역할 분담/의존성/통신 방법 설계](./Spring/Concept/server.md)
   * 저장소활용
     * [DBMS 설계](./Spring/Concept/DBMS.md)
+  * [Redis](./Spring/Concept/Redis.md)
 
 ### **"organization"**
 * **[Agile Culture](./organization/Agile.md)**
