@@ -35,6 +35,7 @@
 
 * **✅ Amazon Web Service**
   * [AWS EC2](./AWS/EC2.md)
+  * [간단하게 EC2 서버에 프로젝트 배포하기](./AWS/UseEC2.md)
 
 ### **"organization"**
 * **[Agile Culture](./organization/Agile.md)**
