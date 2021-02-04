@@ -33,6 +33,9 @@
     * [DBMS 설계](./Spring/Concept/DBMS.md)
   * [Redis](./Spring/Concept/Redis.md)
 
+* **✅ Amazon Web Service**
+  * [AWS EC2](./AWS/EC2.md)
+
 ### **"organization"**
 * **[Agile Culture](./organization/Agile.md)**
 * **[Agile Culture Making](./organization/AgileCulture.md)**
