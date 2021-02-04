@@ -22,7 +22,7 @@ ssh connect
 $ ssh -i "***.pem" ec2-user@ec2-34-202-149-32.compute-1.amazonaws.com
 ```
 
-### AWS EC2 서버 환경 설정
+## AWS EC2 서버 환경 설정
 **git install**
 ```bash
 $ sudo yum install git
@@ -32,3 +32,70 @@ $ sudo yum install git
 ```bash
 $ sudo yum install -y java-1.8.0-openjdk-devel.x86_64
 ```
+
+**In order to install java 11**
+```bash
+$ sudo amazon-linux-extras install java-openjdk11
+```
+
+**Finally, if you want to switch between java versions run**
+```bash
+$ sudo alternatives --config java
+```
+
+**git clone**
+```bash
+$ git clone {"repository address"}
+```
+
+**make a shell**
+```bash
+#!/bin/bash
+
+echo "git pull"
+git pull
+
+echo "move to project"
+cd {"project name"}/
+
+echo "compile"
+mvn compile
+
+echo "package"
+mvn package
+```
+
+**Modify Permissions**
+```bash
+$ chmod 644 {"project name"} :: default or
+$ chmod 744 {"project name"} :: Admin
+```
+
+**Run File**
+```bash
+$ ./{bash file name}
+```
+
+**jar file Run**
+```bash
+$ java -jar {jar file name}
+```
+
+**Run when Background**
+```bash
+$ nohup java -jar {jar file name}
+```
+
+**curl localhost:8080**
+```bash
+$ curl localhost:8080
+```
+
+**Finally AWS EC2 instance ip connect**
+```
+**.****.****:8080
+```
+
+**Replace with resilient ip**
+
+<img src="./meterial/resilientIp.png">
