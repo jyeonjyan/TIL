@@ -25,6 +25,7 @@
   * [Error vs Exception](./Spring/Concept/ErrorVsException.md)
   * [비동기와 동기](./DevFeed/PromiseToAwait.md)
   * [CICD](./DevFeed/CICD.md)
+  * [Proxy](./DevFeed/Proxy.md)
 * **✅ 백엔드 개발에 필요한 지식**
   * [웹 생태계의 스펙](./Spring/Concept/webSpec.md)
   * [기본 SDK, 라이브러리/프레임워크 이해와 활용](Spring/Concept/whatIsSDK.md)
