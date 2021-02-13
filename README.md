@@ -1,19 +1,22 @@
 # **내 맘대로 작성하는 TIL 🕵🏻‍♂️**
+
 **📝 since 2021.1.1~ 공부한 내용 모두 담아보기!** <br>
-**❗️ 잘못된 부분 issue 환영 합니다!!**
+❗️ 잘못된 부분 issue 환영 합니다!!
 <br>
 
 ## **🔎 Content**
 ### **"Spring Framework"**
-* **[SpringBoot](./Spring/SpringBoot/README.md)**
+* [SpringBoot](./Spring/SpringBoot/README.md)
     * [SpringBoot를 사용한 CRUD](https://github.com/Johnjihwan/SpringBoot-Membership)
     * [Swagger](./Spring/Concept/Swagger.md)
-* **[Spring Annotation](./Spring/Concept/SpringAnnotation.md)**
-* **[Spring Bean](./Spring/Concept/SpringBean.md)**
-* **[JPA Auditing](./Spring/Concept/Auditing.md)**
-* **[JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)**
+* [Spring Annotation](./Spring/Concept/SpringAnnotation.md)
+* [Spring Bean](./Spring/Concept/SpringBean.md)
+* [JPA Auditing](./Spring/Concept/Auditing.md)
+* [JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)
+* Library
+  * [SLF4J](./Spring/Concept/library/slf4j.md)
 ### **"API Documentation"**
-* **[HTTP API Design](./API/HttpAPI.md)**
+* [HTTP API Design](./API/HttpAPI.md)
 ### **"For Better Development"**
 * **✅ 누구나 알아가면 좋은 지식**
   * [Parameter, Argument](./DevFeed/Parameter,Argument.md)
