@@ -48,3 +48,7 @@
 ### **"Lecture"**
 * 객체지향 프로그래밍
   * [Singleton Pattern](./Lecture/OOP/singleTon.md)
+
+### **"The World Skills Korea"**
+* Js
+  * [Jquery-Modal](https://gist.github.com/Johnjihwan/f8442aa9ee91d5b9ef68bad5e0751103)
