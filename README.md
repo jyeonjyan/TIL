@@ -41,6 +41,9 @@
   * [AWS Route 53](./AWS/Route53.md)
   * [docker](./DevOps/docker.md)
 
+* **✅ JPA**
+  * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
+
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
 * [Agile Culture Making](./organization/AgileCulture.md)
