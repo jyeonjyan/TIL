@@ -7,7 +7,6 @@
 * [Swagger](./Spring/Concept/Swagger.md)
 * [Spring Annotation](./Spring/Concept/SpringAnnotation.md)
 * [Spring Bean](./Spring/Concept/SpringBean.md)
-* [JPA Auditing](./Spring/Concept/Auditing.md)
 * [JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)
 * Library
   * [SLF4J](./Spring/Concept/library/slf4j.md)
@@ -43,6 +42,8 @@
 
 * **✅ JPA**
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
+  * [JPA Auditing](./Spring/Concept/Auditing.md)
+  * [JPA mappedBy](./Spring/JPA/mappedBy.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
