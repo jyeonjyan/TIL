@@ -45,6 +45,7 @@
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
   * [JPA Auditing](./Spring/Concept/Auditing.md)
   * [JPA mappedBy](./Spring/JPA/mappedBy.md)
+  * [QueryDsl](./Spring/JPA/Querydsl.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
