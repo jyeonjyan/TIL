@@ -46,6 +46,7 @@
   * [JPA Auditing](./Spring/Concept/Auditing.md)
   * [JPA mappedBy](./Spring/JPA/mappedBy.md)
   * [QueryDsl](./Spring/JPA/Querydsl.md)
+  * [상속관계 매핑](./Spring/JPA/extendsRelation.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
