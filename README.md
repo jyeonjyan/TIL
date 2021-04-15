@@ -48,6 +48,9 @@
   * [QueryDsl](./Spring/JPA/Querydsl.md)
   * [상속관계 매핑](./Spring/JPA/extendsRelation.md)
 
+* **토비의 스프링 3.1**
+  * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
+
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
 * [Agile Culture Making](./organization/AgileCulture.md)
