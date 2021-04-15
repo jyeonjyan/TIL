@@ -11,7 +11,7 @@
 * Library
   * [SLF4J](./Spring/Concept/library/slf4j.md)
 ### **"For Better Development"**
-* **✅ 누구나 알아가면 좋은 지식**
+* **누구나 알아가면 좋은 지식**
   * [Parameter, Argument](./DevFeed/Parameter,Argument.md)
   * [iTerm2](https://github.com/Johnjihwan/iTerm2-beauty)
   * [URI, URL, URN](./DevFeed/URI.md)
@@ -26,7 +26,7 @@
   * [HTTP API Design](./API/HttpAPI.md)
   * [Special GitHub Command](./GitHub/delPush.md)
   * [GraphQL](./DevFeed/GraphQL.md)
-* **✅ 백엔드 개발에 필요한 지식**
+* **백엔드 개발에 필요한 지식**
   * [웹 생태계의 스펙](./Spring/Concept/webSpec.md)
   * [기본 SDK, 라이브러리/프레임워크 이해와 활용](Spring/Concept/whatIsSDK.md)
   * [클라이언트를 위한 API 설계](./Spring/Concept/Api.md)
@@ -35,13 +35,13 @@
     * [DBMS 설계](./Spring/Concept/DBMS.md)
   * [Redis](./Spring/Concept/Redis.md)
 
-* **✅ DevOps**
+* **DevOps**
   * [AWS EC2](./AWS/EC2.md)
   * [간단하게 EC2 서버에 프로젝트 배포하기](./AWS/UseEC2.md)
   * [AWS Route 53](./AWS/Route53.md)
   * [docker](./DevOps/docker.md)
 
-* **✅ JPA**
+* **JPA**
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
   * [JPA Auditing](./Spring/Concept/Auditing.md)
   * [JPA mappedBy](./Spring/JPA/mappedBy.md)
