@@ -47,6 +47,7 @@
   * [JPA mappedBy](./Spring/JPA/mappedBy.md)
   * [QueryDsl](./Spring/JPA/Querydsl.md)
   * [상속관계 매핑](./Spring/JPA/extendsRelation.md)
+  * [JPA-findBy](./Spring/JPA/findby.md)
 
 * **토비의 스프링 3.1**
   * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
