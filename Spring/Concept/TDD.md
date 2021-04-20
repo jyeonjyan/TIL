@@ -26,20 +26,25 @@ TestCaseTest.java
 ```java
 public class TestCaseTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(Assert.class);
-
-    private void Assert() {} // 인스턴스 생성을 막기 위해 기본생성자 private 선언
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new TestCaseTest().runTest();
     }
 
-    private void runTest() {
+    public void runTest () {
         long sum = 10+10;
-        assertTrue(sum == 20);
+        Assert.assertTrue(sum == 20);
     }
+}
+```
 
-    private void assertTrue(boolean condition) {
+Assert.java
+```java
+public class Assert {
+    private static final Logger logger = LoggerFactory.getLogger(Assert.class);
+
+    private Assert() {} // 인스턴스 생성을 막기 위해 기본생성자 private 선언
+
+    public static void assertTrue(boolean condition) {
         if(!condition){
             throw new AssertionFailedError();
         }
@@ -48,12 +53,14 @@ public class TestCaseTest {
     }
 }
 ```
-AssertionFailedError
+
+AssertionFailedError.java
 ```java
 public class AssertionFailedError extends Error {
     public AssertionFailedError() {}
 }
 ```
+
 console
 ```shell   
 09:38:29.993 [main] INFO com.mysema.commons.lang.Assert - Test Passed
