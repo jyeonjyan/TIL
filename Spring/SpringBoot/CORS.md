@@ -1,6 +1,6 @@
 # 스프링 부트에서 CORS 문제 해결하기
 
-## <ins>특정 컨트롤러나 요청에 대해서 Cross Origin 허용하기</ins>
+### <ins>특정 컨트롤러나 요청에 대해서 Cross Origin 허용하기</ins>
 
 ``@CrossOrigin`` 사용
 ```java
@@ -28,7 +28,7 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
 }
 ```
 
-## <ins>Origin 이란?</ins>
+### <ins>Origin 이란?</ins>
 * Origin 은 아래 세가지의 조합이다.
   * URL 스키마(http, https)
   * Hostname(도메인 네임)
