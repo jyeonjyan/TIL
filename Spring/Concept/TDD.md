@@ -1,6 +1,6 @@
 # TDD (Test-driven Development)
 
-<ins>TDD의 필요성과 동기</ins>
+### <ins>TDD의 필요성과 동기</ins>
 * 객체지향적인 코드 개발
   * 모든 코드가 재사용 성 기반으로 작성되어야 한다.
 * 설계 수정 시간의 단축
@@ -11,7 +11,7 @@
 * 테스트 문서의 대체 가능
 
 
-<ins>들어가기</ins>
+### <ins>들어가기</ins>
 <br>
 
 build.gradle
