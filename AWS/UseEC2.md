@@ -48,15 +48,26 @@ $ sudo alternatives --config java
 $ git clone {"repository address"}
 ```
 
+**install mvn**
+```bash
+$ sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+$ sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+
+$ sudo yum install -y apache-maven
+
+$ mvn --version
+
+```
+
 **make a shell**
 ```bash
 #!/bin/bash
+echo "move to project"
+cd {"project name"}/
 
 echo "git pull"
 git pull
-
-echo "move to project"
-cd {"project name"}/
 
 echo "compile"
 mvn compile
@@ -67,8 +78,10 @@ mvn package
 
 **Modify Permissions**
 ```bash
-$ chmod 644 {"project name"} :: default or
-$ chmod 744 {"project name"} :: Admin
+$ chmod 644 {"project name"} 
+$ chmod 744 {"project name"}
+
+ex) $ chmod 744 ./shell
 ```
 
 **Run File**
@@ -78,6 +91,7 @@ $ ./{bash file name}
 
 **jar file Run**
 ```bash
+$ cd {"project name"}/target/.jar
 $ java -jar {jar file name}
 ```
 
