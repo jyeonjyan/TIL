@@ -1,4 +1,4 @@
-# 스프링 부트에서 CORS 문제 해결하기
+# SpringBoot에서 CORS 문제 해결하기
 
 ### <ins>특정 컨트롤러나 요청에 대해서 Cross Origin 허용하기</ins>
 
