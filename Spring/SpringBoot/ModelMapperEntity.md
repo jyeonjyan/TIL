@@ -5,6 +5,7 @@
 * 계속 select query trace에서는 정확히 나가는데 response code에는 null 이 뜨는 현상
 
 null 이 뜨는 현상
+
 <img src="../../img/ModelMapperRes.png">
 
 처음에는 service 부분이 문제라고 생각했다.
