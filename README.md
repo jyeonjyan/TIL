@@ -60,6 +60,9 @@
 * **토비의 스프링 3.1**
   * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
 
+* **Java**
+  * [기술 면접 예상 질문 대비하기 - Java편](Lecture/JAVA/prac_interview_java.md)
+
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
 * [Agile Culture Making](./organization/AgileCulture.md)

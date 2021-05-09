@@ -13,3 +13,5 @@
 <img src="../../img/can't%20return%202%20result.png">
 
 <ins>해결방안</ins>
+
+<img src="../../img/solved%201%20result%20return.png">
