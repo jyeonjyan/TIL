@@ -47,6 +47,7 @@
   * [docker](./DevOps/docker.md)
   * [springboot docker에 올리기](./DevOps/springbootDocker.md)
   * [Ubuntu + EC2 + RDS](./DevOps/Ubuntu+EC2.md)
+  * [docker에서 내 SpringBoot Run 하기](/DevOps/docker/springboot-docker.md)
 
 * **JPA**
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
@@ -71,7 +72,7 @@
 * 객체지향 프로그래밍
   * [Singleton Pattern](./Lecture/OOP/singleTon.md)
 * 이정도는 알고 가자
-  * [다양한 표기법]
+  * [다양한 표기법](./Lecture/recode/variousNotation.md)
 
 ### **"이런 경험을 가진 분을 찾습니다"**
 * [Puppeteer](./experience/puppeteer.md)
