@@ -1,4 +1,4 @@
-## 내 Springboot 프로젝트를 도커로 실행시키기
+## Springboot 프로젝트를 도커로 실행시키기
 
 ### 🐳 Dockerfile 만들기
 여기서 주의사항 "무조건 SpringBoot_app root 에 ``Dockerfile`` 만들기"
