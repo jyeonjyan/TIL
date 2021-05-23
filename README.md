@@ -62,6 +62,7 @@
 * **토비의 스프링 3.1**
   * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
   * [관심사의 분리](./tobby/interests.md)
+    * [템플릿 메서드 패턴](./tobby/templatePattern.md)
 
 * **Java**
   * [기술 면접 예상 질문 대비하기 - Java편](Lecture/JAVA/prac_interview_java.md)
