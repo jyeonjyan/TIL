@@ -49,6 +49,7 @@
   * [Ubuntu + EC2 + RDS](./DevOps/Ubuntu+EC2.md)
   * [docker에서 내 SpringBoot Run 하기](/DevOps/docker/springboot-docker.md)
   * [dockercompose 란?](/DevOps/docker/dockercompose.md)
+  * [서버 EC2 SSL(HTTPS)적용 방법](./DevOps/HttpsConnect.md)
 
 * **JPA**
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
