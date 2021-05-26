@@ -27,3 +27,28 @@ https(클라이언트)가 http(서버)로 XHR(요청)을 보내게 되면 연결
 
 > 레코드를 생성한다.  
 > 여기서 ec2 를 사용한다면 ec2의 주소를 ip 값으로 넣어주면 된다.
+
+## ELB 생성하기
+* 먼저 ELB를 생성합니다.
+<img src="../img/LB-Create.png">
+
+* 해당 메뉴를 선택합니다.
+<img src="../img/ApplicationLoadBanlancer.png">
+
+* ``기본구성/이름`` 자신이 원하는 이름을 입력합니다.
+* ``리스너`` 에 Https 를 추가합니다.
+* ``가용영역`` 에 해당하는 체크박스를 다 체크합니다.
+
+<img src="../img/LB-setting1.png">
+
+* 인증서를 선택합니다. 없다면 ACM으로부터 새 인증서를 발급합니다.
+<img src="../img/ACM_Certification.png">
+
+* 인증서를 선택하고 보안그룹을 선택합니다.
+<img src="../img/security-group-setting.png">
+
+* 라우팅을 세팅합니다 저는 docker-compose 포트를 5000 포트로 사용하기 때문에 5000을 넣어줍니다.
+<img src="../img/routing_setting.png">
+
+* 다음으로 대상 등록을 해주고 
+<img src="../img/target-adding.png">
