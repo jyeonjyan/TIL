@@ -51,8 +51,8 @@
   * [dockercompose 란?](/DevOps/docker/dockercompose.md)
   * [서버 EC2 SSL(HTTPS)적용 방법](./DevOps/HttpsConnect.md)
   * [nohup 명령어 사용하기](./DevOps/use-nohup.md)
-  * [ELB에서 발생하는 50x error 해결하기]()
-  * [RDS 연동시 마주할 수 있는 치명적 오류]()
+  * [ELB에서 발생하는 50x error 해결하기](./DevOps/solve-50x-error.md)
+  * [RDS 연동시 마주할 수 있는 치명적 오류](./DevOps/solve-50x-error.md)
 
 * **JPA**
   * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
