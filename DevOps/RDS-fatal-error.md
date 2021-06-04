@@ -21,3 +21,17 @@ RDS 에서는 개인적으로 세팅해줘야 할 부분이 많지 않다.
 <img src="../img/rds-error-method.png">
 
 결국에는 EC2 로 접속해서 EC2에 있는 SpringBoot application을 실행하고 Hibernate ``create table`` 시켜주면 저 Exception이 해결되고, table이 생성되는 것을 확인 할 수 있다.
+
+### application.yml 더 나아가 설정하기
+```yml
+datasource:
+  url : jdbc:mariadb://rds엔드포인트:포트명/database이름
+  username : db계정
+  password : db계정 비밀번호
+  driver-class-name: org.mariadb.jdbc.Driver
+
+jpa:
+  hibernate:
+    ddl-auto: none
+    // 최초 DB 연동에는 ddl-auto: ture 해줘야 한다.
+```
