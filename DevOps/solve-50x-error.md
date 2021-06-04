@@ -23,7 +23,7 @@ HTTP 504(게이트웨이 제한 시간)
 나는 우선 502 error에 하루동안 빠져있었는데..  
 그냥 다시 ELB를 차근차근 만들어보자. 
 
-<img src="../img/ELB-error-solved.png">
+<img src="../img/ELB-error-solved.png" width="450">
 
 나는 대상 등록에서의 문제였다.  
 ``http:80`` , ``https:443`` 을 넣는게 아니라 자신이 포워딩 하고자 하는 ``5000`` docker-compose app port 를 넣어 추가해야한다.
