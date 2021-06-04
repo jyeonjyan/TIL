@@ -7,7 +7,7 @@ https(클라이언트)가 http(서버)로 XHR(요청)을 보내게 되면 연결
 
 <br>
 
-해결방안
+해결방안w
 * ``the-moment.org`` 도메인을 Route 53 과 연결
 * ELB에 SSL Listener 생성
 * ELB Security group 설정
