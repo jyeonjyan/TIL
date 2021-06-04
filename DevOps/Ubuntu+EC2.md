@@ -28,3 +28,24 @@ $ sudo apt install mysql
 <img src="./../img/security-mysql.png">
 
 
+5. MySQL 접속하기
+
+```
+$ mysql -u {user-name} -p -h {end-point}
+```
+
+6. 사용할 DB 생성
+
+```
+$ create database {database-name};
+```
+
+7. MySQL 연동하기 (application.yml)
+
+```yml
+datasource:
+  url : jdbc:mariadb://rds엔드포인트:포트명/database이름
+  username : db계정
+  password : db계정 비밀번호
+  driver-class-name: org.mariadb.jdbc.Driver
+```
