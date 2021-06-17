@@ -38,7 +38,7 @@ Java SE 8 부터는 이러한 람다 표현식을 이용하여 자바에서도 �
 4. 함수의 몸체가 하나의 return 문으로만 이루어진 경우에는 중괄호를 생략할 수 있습니다. 
 5. return 문 대신 표현식을 사용할 수 있으며, 이때 반환값은 표현식의 결괏값이 됩니다.
 
-```
+```java
 new Thread(new Runnable() {
     public void run() {
         System.out.println("전통적인 방식의 일회용 스레드 생성");
