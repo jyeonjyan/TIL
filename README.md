@@ -69,7 +69,8 @@
     * [템플릿 메서드 패턴](./tobby/templatePattern.md)
 
 * **Java**
-  * [기술 면접 예상 질문 대비하기 - Java편](Lecture/JAVA/prac_interview_java.md)
+  * [스레드란(thread)](./Lecture/JAVA/tread.md)
+  * 
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
