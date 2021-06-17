@@ -70,7 +70,7 @@
 
 * **Java**
   * [스레드란(thread)](./Lecture/JAVA/tread.md)
-  * 
+  * [멀티스레드란(multi-thread)](./Lecture/JAVA/multi-thread.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
