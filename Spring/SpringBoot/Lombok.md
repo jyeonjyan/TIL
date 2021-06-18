@@ -2,7 +2,7 @@
 ###   ``@AllArgsConstructor``, ``@RequiredArgsConstructor`` 사용금지
 
 
-   * 필자도 개발의 편의를 위해 ``@AllArgsConstructor`` 와 ``@RequiredArgsConstructor``를 즐겨 사용했다. 하지만 나의 별 생각 없는 생성자 자동 생성 어노테이션이 치명적 버그를 만들게 되게 될 수 있었다. 
+* 필자도 개발의 편의를 위해 ``@AllArgsConstructor`` 와 ``@RequiredArgsConstructor``를 즐겨 사용했다. 하지만 나의 별 생각 없는 생성자 자동 생성 어노테이션이 치명적 버그를 만들게 되게 될 수 있었다. 
 
     ```java
     @AllArgsConstructor
