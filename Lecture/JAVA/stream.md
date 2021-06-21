@@ -28,3 +28,34 @@ Java SE 8 + 부터 추가된 스트림 API는 앞서 입력과 출력 수업에�
 3. 스트림의 최종 연산 (스트림의 사용)
 
 <img src="../../img/stream-동작방식.png">
+
+### Stream API 사용하기
+```java
+    @Test
+    void 스트림(){
+        // 배열선언, 초기화
+        int [] arr = {1,2,3,4,5};
+        // arr에 저장된 값 모두 더하기
+        int sumValue = Arrays.stream(arr).sum();
+        System.out.println(sumValue);
+        // 배열의 요소 개수를 변환
+        int count = (int)Arrays.stream(arr).count();
+        System.out.println(count);
+    }
+```
+```java
+    @Test
+    void 스트림_정렬(){
+        // strList 객체 생성
+        List<String> strList = new ArrayList<String>();
+        strList.add("jihwan");
+        strList.add("john");
+        // stream 생성
+        Stream<String> stream = strList.stream();
+        // 베열의 요소를 하나씩 출력
+        stream.forEach(s -> System.out.println(s));
+        System.out.println();
+        //정렬
+        strList.stream().sorted().forEach(s -> System.out.println(s));
+    }
+```
