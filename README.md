@@ -73,7 +73,7 @@
   * [스레드란(thread)](./Lecture/JAVA/tread.md)
   * [멀티스레드란(multi-thread)](./Lecture/JAVA/multi-thread.md)
   * [람다 표현식(Lambda expression)](./Lecture/JAVA/lambda.md)
-  * [스트림 API]()
+  * [스트림 API](./Lecture/JAVA/stream.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
