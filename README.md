@@ -41,6 +41,7 @@
   * [SpringBoot에서 CORS 문제 해결](./Spring/SpringBoot/CORS.md)
   * [SpringBoot 알 수 없는 스레드풀 에러](./Spring/SpringBoot/ThreadPool.md)
   * [mysql을 초기화 하고 싶나요?](./DevFeed/mysql-reset.md)
+  * [h2 database 설치 및 사용](./DevFeed/h2db.md)
 
 * **DevOps**
   * [AWS EC2](./AWS/EC2.md)
