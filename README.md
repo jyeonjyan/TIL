@@ -65,6 +65,7 @@
   * [상속관계 매핑](./Spring/JPA/extendsRelation.md)
   * [JPA-findBy](./Spring/JPA/findby.md)
   * [데이터베이스에서 하나 이상의 값에 엑세스 하고 있어서 발생하는 Exception](./Spring/JPA/can'tReturn2Result.md)
+  * [JPQL](./DevFeed/JPQL.md)
 
 * **토비의 스프링 3.1**
   * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
