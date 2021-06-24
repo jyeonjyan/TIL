@@ -24,3 +24,8 @@ jdbc:h2:~/querydsl
 ```
 jdbc:h2:tcp://localhost/~/querydsl 
 ```
+
+⚠️ 중요한건 h2 DB 를 실행시키지 않으면 아래와 같은 오류가 발생한다.
+```
+Failed to load ApplicationContext
+```
