@@ -73,7 +73,7 @@
     * [템플릿 메서드 패턴](./tobby/templatePattern.md)
 
 * **Java**
-  * [스레드란(thread)](./Lecture/JAVA/tread.md)
+  * [스레드란(thread)](./Lecture/JAVA/thread.md)
   * [멀티스레드란(multi-thread)](./Lecture/JAVA/multi-thread.md)
   * [람다 표현식(Lambda expression)](./Lecture/JAVA/lambda.md)
   * [스트림 API](./Lecture/JAVA/stream.md)
