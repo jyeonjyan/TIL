@@ -81,7 +81,7 @@
   * [람다 표현식(Lambda expression)](./Lecture/JAVA/lambda.md)
   * [스트림 API](./Lecture/JAVA/stream.md)
   * [POJO](./Lecture/JAVA/POJO.md)
-  * [Optional 과 null에 대해](./Lecture/JAVA/optional.md)
+  * [Optional과 null에 대해](./Lecture/JAVA/optional.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
