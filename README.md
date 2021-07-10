@@ -87,6 +87,7 @@
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
 * [Agile Culture Making](./organization/AgileCulture.md)
+* [스타트업 용어 정리](./organization/startup-expression.md)
 
 ### **"Lecture"**
 * 객체지향 프로그래밍
