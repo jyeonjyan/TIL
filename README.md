@@ -83,6 +83,7 @@
   * [POJO](./Lecture/JAVA/POJO.md)
   * [Optional과 null에 대해](./Lecture/JAVA/optional.md)
   * [IS-A 관계](./Lecture/JAVA/IS-A.md)
+  * [생성자](./Lecture/JAVA/constructor.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
