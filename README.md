@@ -82,6 +82,7 @@
   * [스트림 API](./Lecture/JAVA/stream.md)
   * [POJO](./Lecture/JAVA/POJO.md)
   * [Optional과 null에 대해](./Lecture/JAVA/optional.md)
+  * [IS-A 관계](./Lecture/JAVA/IS-A.md)
 
 ### **"organization"**
 * [Agile Culture](./organization/Agile.md)
