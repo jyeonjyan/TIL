@@ -17,6 +17,7 @@
 ### **"For Better Development"**
 * CS
   * [JIT 컴파일](./CS/JIT.md)
+  * [인터프리터 언어와 컴파일 언어의 차이](./CS/interpreter-compile.md)
 * **누구나 알아가면 좋은 지식**
   * [Parameter, Argument](./DevFeed/Parameter,Argument.md)
   * [iTerm2](https://github.com/Johnjihwan/iTerm2-beauty)
