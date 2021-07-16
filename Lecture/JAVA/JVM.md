@@ -25,8 +25,7 @@ JVM은 `Class Loder`, `Runtime Data Areas`, `Excution Engine` 이렇게 3가지�
       4. Method Area `클래스, 인터페이스, 메서드, 필드, static 등 바이크 코드 보관`
       5. Heap `ClassA a = new ClassA();`
 
-
 3. Execution Engine 
-Load된 Class의 ByteCode를 실행하는 Runtime Module이 바로 Execution Engine 입니다. 
-
-Class Loader를 통해 JVM 내의 Runtime Data Areas에 배치된 바이트 코드는 Executin Executin Engine에 의해 실행되며, 실행 엔진은 자바 바이트 코드를 명령어 단위로 읽어서 실행합니다.
+ > Load된 Class의 ByteCode를 실행하는 Runtime Module이 바로 Execution Engine 입니다. 
+ 
+ > Class Loader를 통해 JVM 내의 Runtime Data Areas에 배치된 바이트 코드는 Executin Executin Engine에 의해 실행되며, 실행 엔진은 자바 바이트 코드를 명령어 단위로 읽어서 실행합니다.
