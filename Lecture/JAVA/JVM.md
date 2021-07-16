@@ -14,3 +14,19 @@ JVM은 `Class Loder`, `Runtime Data Areas`, `Excution Engine` 이렇게 3가지�
 
 <img src="../../img/JVM-structure.jpg" width="500">
 
+### JVM 구조
+1. Class Loader
+   1. RunTime 시점에 클래스를 로딩하게 해주며 클래스의 인스턴스를 생성하면 클래스 로더를 통해 메모리에 로드하게 됩니다.
+2. Runtime Data Areas
+   1. JVM이 프로그램을 수행하기 위해 OS로 부터 별도로 할당 받은 메모리 공간을 말하며, Runtime Data Areas는 크게 5가지 영역으로 나눌 수 있다.
+      1. PC register `Java는 Platform 에 종속받지 않는다`
+      2. Java Virtual Machine Stack `Tread 시작 시, 생성 다른 Thread에는 접근 불가능`
+      3. Native Method Stack
+      4. Method Area `클래스, 인터페이스, 메서드, 필드, static 등 바이크 코드 보관`
+      5. Heap `ClassA a = new ClassA();`
+
+
+3. Execution Engine 
+Load된 Class의 ByteCode를 실행하는 Runtime Module이 바로 Execution Engine 입니다. 
+
+Class Loader를 통해 JVM 내의 Runtime Data Areas에 배치된 바이트 코드는 Executin Executin Engine에 의해 실행되며, 실행 엔진은 자바 바이트 코드를 명령어 단위로 읽어서 실행합니다.
