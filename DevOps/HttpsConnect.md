@@ -1,4 +1,4 @@
-## AWS SSL(Https) 적용방법
+## 내 어플리케이션에 Https 적용하는 방법
 
 문제상황
 * mixed contents 이슈 발생
