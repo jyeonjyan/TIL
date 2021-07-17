@@ -39,12 +39,22 @@
 - [URI 란?](./DevFeed/URI.md)
 - [PaymentGateway 란?](./DevFeed/PG.md)
 - [HTTP API 란?](./API/HttpAPI.md)
+- [puppeteer 란?](./experience/puppeteer.md)
+- [프록시란?](./Network/Proxy.md)
 
 
 **DataBase, JPA, SQL**
 - [GraphQL 이란?](./DevFeed/GraphQL.md)
 - [JPQL](./DevFeed/JPQL.md)
 - [h2DB](./DevFeed/h2db.md)
+- [Elastic Search](./experience/ES.md)
+- [JPA can't return 2 result 오류](./Spring/JPA/can'tReturn2Result.md)
+- [상속관계 매핑이란?](./Spring/JPA/extendsRelation.md)
+- [다양한 JPA findBy 메서드](./Spring/JPA/findby.md)
+- [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
+- [JPA 연관관계 주인](./Spring/JPA/mappedBy.md)
+- [Querydsl 이란?](./Spring/JPA/Querydsl.md)
+- [transaction이란?](./Spring/JPA/transaction.md)
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
@@ -53,3 +63,6 @@
 **Methodology**
 - [Test Driven Development](./DevFeed/TDD.md)
 - [러닝커브 이겨내기](./DevFeed/LearningCurve.md)
+- [애자일한 조직문화](./organization/AgileCulture.md)
+- [애자일이란?](./organization/Agile.md)
+- [스타트업 용어 정리](./organization/startup-expression.md)
