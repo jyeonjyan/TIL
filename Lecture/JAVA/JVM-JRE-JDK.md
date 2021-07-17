@@ -4,7 +4,7 @@
 
 * Class Loader - 컴파일 된 클래스 파일을 메모리에 로딩
 * Bytecode verifier - 로딩된 클래스 파일의 정보가 플랫폼에서 실행되는지 문제가 있는지 없는지 검증
-* Javar Virtual Machine - 검증된 클래스 파일을 플랫폼에서 실행 시켜 준다.
+* Java Virtual Machine - 검증된 클래스 파일을 플랫폼에서 실행 시켜 준다.
 
 
 JVM은 JRE의 한 부분으로 JRE는 클래스 파일이 주어지는 동안 자바가 실행될 수 있는 환경을 제공한다.
