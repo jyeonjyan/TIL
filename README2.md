@@ -1,4 +1,4 @@
-### 배움은 의무도, 생존도 아니다 _ W. Edwards Deming
+## 배움은 의무도, 생존도 아니다 _ W. Edwards Deming
 
 Java
 - [생성자란?](./Lecture/JAVA/constructor.md)
