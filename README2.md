@@ -12,7 +12,7 @@
 
 
 **Design Pattern**
-- [싱글톤 패턴](./)
+- [싱글톤 패턴](./DesignPattern/Singleton.md)
 
 **Springboot**
 - [TDD란](./Spring/Concept/TDD.md)
