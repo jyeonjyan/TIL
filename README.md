@@ -1,111 +1,81 @@
-# **내 맘대로 작성하는 TIL 🕵🏻‍♂️**
-> 개발을 하며 얻은 지식들을 공유합니다.  
+**Java**
+- [생성자란?](./Lecture/JAVA/constructor.md)
+- [IS-A 관계란?](./Lecture/JAVA/IS-A.md)
+- [JVM 이란?](./Lecture/JAVA/JVM.md)
+- [JVM-JRE 그리고 JDK 차이점](./Lecture/JAVA/JVM-JRE-JDK.md)
+- [POJO 란?](./Lecture/JAVA/POJO.md)
+- [Stream API란?](./Lecture/JAVA/stream.md)
+- [Lambda란?](./Lecture/JAVA/lambda.md)
+- [멀티스레드란?](./Lecture/JAVA/multi-thread.md)
+- [Optional이란?](./Lecture/JAVA/optional.md)
+- [싱글톤 패턴이란?](./Lecture/OOP/singleTon.md)
 
-## **🔎 Content**
-### **"Spring Framework"**
-* [SpringBoot](./Spring/SpringBoot/README.md)
-* [Swagger](./Spring/Concept/Swagger.md)
-* [Spring Annotation](./Spring/Concept/SpringAnnotation.md)
-* [Spring Bean](./Spring/Concept/SpringBean.md)
-* [JubJub Server File Structure](./Spring/SpringBoot/JubJubStrcture.md)
-* Library
-  * [SLF4J](./Spring/Concept/library/slf4j.md)
-* [ModelMapper Entity to Dto 변환 시 프로퍼티 null 해결](Spring/SpringBoot/ModelMapperEntity.md)
-* [Spring @Component @Bean 알고 쓰기](./Spring/SpringBoot/EJB.md)
-* [Lombok 사용시 주의점](./Spring/SpringBoot/Lombok.md)
 
-### **"For Better Development"**
-* CS
-  * [JIT 컴파일](./CS/JIT.md)
-  * [인터프리터 언어와 컴파일 언어의 차이](./CS/interpreter-compile.md)
-* **누구나 알아가면 좋은 지식**
-  * [Parameter, Argument](./DevFeed/Parameter,Argument.md)
-  * [iTerm2](https://github.com/Johnjihwan/iTerm2-beauty)
-  * [URI, URL, URN](./DevFeed/URI.md)
-  * [TDD](./DevFeed/TDD.md)
-  * [LearningCurve](./DevFeed/LearningCurve.md)
-  * [PG](./DevFeed/PG.md)
-  * [Error vs Exception](./Spring/Concept/ErrorVsException.md)
-  * [비동기와 동기](./DevFeed/PromiseToAwait.md)
-  * [CICD](./DevFeed/CICD.md)
-  * [Proxy](./Network/Proxy.md)
-  * [Github license](./DevFeed/githubLicense.md)
-  * [HTTP API Design](./API/HttpAPI.md)
-  * [Special GitHub Command](./GitHub/delPush.md)
-  * [GraphQL](./DevFeed/GraphQL.md)
-* **백엔드 개발에 필요한 지식**
-  * [웹 생태계의 스펙](./Spring/Concept/webSpec.md)
-  * [기본 SDK, 라이브러리/프레임워크 이해와 활용](Spring/Concept/whatIsSDK.md)
-  * [클라이언트를 위한 API 설계](./Spring/Concept/Api.md)
-  * [서버/컴퍼넌트/객체 간의 역할 분담/의존성/통신 방법 설계](./Spring/Concept/server.md)
-  * 저장소활용
-    * [DBMS 설계](./Spring/Concept/DBMS.md)
-  * [Redis](./Spring/Concept/Redis.md)
-  * [TDD를 위한 준비](./Spring/Concept/TDD.md)
-  * [SpringBoot에서 CORS 문제 해결](./Spring/SpringBoot/CORS.md)
-  * [SpringBoot 알 수 없는 스레드풀 에러](./Spring/SpringBoot/ThreadPool.md)
-  * [mysql을 초기화 하고 싶나요?](./DevFeed/mysql-reset.md)
-  * [h2 database 설치 및 사용](./DevFeed/h2db.md)
-  * [온프레미스, 오프프레미스](./DevFeed/on,off-premise.md)
+**Design Pattern**
+- [싱글톤 패턴](./DesignPattern/Singleton.md)
 
-* **DevOps**
-  * [AWS EC2](./AWS/EC2.md)
-  * [간단하게 EC2 서버에 프로젝트 배포하기](./AWS/UseEC2.md)
-  * [AWS Route 53](./AWS/Route53.md)
-  * [docker](./DevOps/docker.md)
-  * [springboot docker에 올리기](./DevOps/springbootDocker.md)
-  * [Ubuntu + EC2 + RDS](./DevOps/Ubuntu+EC2.md)
-  * [docker에서 내 SpringBoot Run 하기](/DevOps/docker/springboot-docker.md)
-  * [dockercompose 란?](/DevOps/docker/dockercompose.md)
-  * [서버 EC2 SSL(HTTPS)적용 방법](./DevOps/HttpsConnect.md)
-  * [nohup 명령어 사용하기](./DevOps/use-nohup.md)
-  * [ELB에서 발생하는 50x error 해결하기](./DevOps/solve-50x-error.md)
-  * [RDS 연동시 마주할 수 있는 치명적 오류](./DevOps/RDS-fatal-error.md)
+**Springboot**
+- [TDD란](./Spring/Concept/TDD.md)
+- [Swagger 연동 방법](./Spring/Concept/Swagger.md)
+- [Spring에서 사용하는 어노테이션](./Spring/Concept/SpringAnnotation.md)
 
-* **JPA**
-  * [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
-  * [JPA Auditing](./Spring/Concept/Auditing.md)
-  * [JPA mappedBy](./Spring/JPA/mappedBy.md)
-  * [QueryDsl](./Spring/JPA/Querydsl.md)
-  * [상속관계 매핑](./Spring/JPA/extendsRelation.md)
-  * [JPA-findBy](./Spring/JPA/findby.md)
-  * [데이터베이스에서 하나 이상의 값에 엑세스 하고 있어서 발생하는 Exception](./Spring/JPA/can'tReturn2Result.md)
-  * [JPQL](./DevFeed/JPQL.md)
-  * [Transaction](./Spring/JPA/transaction.md)
+**Computer Science**
+- [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
+- [Just In Time 컴파일이란?](./CS/JIT.md)
 
-* **토비의 스프링 3.1**
-  * [1장 오브젝트와 의존관계](./tobby/objectDi.md)
-  * [관심사의 분리](./tobby/interests.md)
-    * [템플릿 메서드 패턴](./tobby/templatePattern.md)
+**Git, Commands**
+- [엎질러진 github 명령 취소하기](./GitHub/delPush.md)
+- [github 라이센스 알아보기](./DevFeed/githubLicense.md)
+- [mysql 초기화 하는 방법](./DevFeed/mysql-reset.md)
 
-* **Java**
-  * [스레드란(thread)](./Lecture/JAVA/thread.md)
-  * [멀티스레드란(multi-thread)](./Lecture/JAVA/multi-thread.md)
-  * [람다 표현식(Lambda expression)](./Lecture/JAVA/lambda.md)
-  * [스트림 API](./Lecture/JAVA/stream.md)
-  * [POJO](./Lecture/JAVA/POJO.md)
-  * [Optional과 null에 대해](./Lecture/JAVA/optional.md)
-  * [IS-A 관계](./Lecture/JAVA/IS-A.md)
-  * [생성자](./Lecture/JAVA/constructor.md)
-  * [JVM 이란?](./Lecture/JAVA/JVM.md)
-  * [JVM과 JRE, JDK의 차이](./Lecture/JAVA/JVM-JRE-JDK.md)
+**DevOps**
+- [CICD](./DevFeed/CICD.md)
+- [온프레미스, 오프프레미스](./DevFeed/on,off-premise.md)
+- [AWS EC2 제대로 알기](./AWS/EC2.md)
+- [AWS Route53 제대로 알기](./AWS/Route53.md)
+- [AWS EC2 직접 사용해 본다](./AWS/UseEC2.md)
+- [Docker란?](./DevOps/docker.md)
+- [내 애플리케이션에 HTTPS 프로토콜 적용하기](./DevOps/HttpsConnect.md)
+- [50x 에러 해결하기](./DevOps/solve-50x-error.md)
+- [RDS can't connect 에러 해결하기](./DevOps/RDS-fatal-error.md)
+- [nohup 사용하기](./DevOps/use-nohup.md)
+- [Ubuntu 서버에 내 애플리케이션 올리기](./DevOps/Ubuntu+EC2.md)
+- [내 springboot application docker image화 시키기](./DevOps/springbootDocker.md)
+- [docker-compose란?](./DevOps/docker/dockercompose.md)
+- [springboot에 dockerfile 설정하기](./DevOps/docker/springboot-docker.md)
 
-### **"organization"**
-* [Agile Culture](./organization/Agile.md)
-* [Agile Culture Making](./organization/AgileCulture.md)
-* [스타트업 용어 정리](./organization/startup-expression.md)
+**Network**
+- [URI 란?](./DevFeed/URI.md)
+- [PaymentGateway 란?](./DevFeed/PG.md)
+- [HTTP API 란?](./API/HttpAPI.md)
+- [puppeteer 란?](./experience/puppeteer.md)
+- [프록시란?](./Network/Proxy.md)
+- [웹 생태계의 스팩](./Spring/Concept/webSpec.md)
 
-### **"Lecture"**
-* 객체지향 프로그래밍
-  * [Singleton Pattern](./Lecture/OOP/singleTon.md)
-* 이정도는 알고 가자
-  * [다양한 표기법](./Lecture/recode/variousNotation.md)
 
-### **"이런 경험을 가진 분을 찾습니다"**
-* [Puppeteer](./experience/puppeteer.md)
-* [Elastic Search](./experience/ES.md)
+**DataBase, JPA, SQL**
+- [GraphQL 이란?](./DevFeed/GraphQL.md)
+- [JPQL](./DevFeed/JPQL.md)
+- [h2DB](./DevFeed/h2db.md)
+- [Elastic Search](./experience/ES.md)
+- [JPA can't return 2 result 오류](./Spring/JPA/can'tReturn2Result.md)
+- [상속관계 매핑이란?](./Spring/JPA/extendsRelation.md)
+- [다양한 JPA findBy 메서드](./Spring/JPA/findby.md)
+- [JPA 엔티티 매핑 방법](./Spring/JPA/JpaEntity.md)
+- [JPA 연관관계 주인](./Spring/JPA/mappedBy.md)
+- [Querydsl 이란?](./Spring/JPA/Querydsl.md)
+- [transaction이란?](./Spring/JPA/transaction.md)
 
-### **"The World Skills Korea"**
-* Js
-  * [Jquery-Modal](https://gist.github.com/Johnjihwan/f8442aa9ee91d5b9ef68bad5e0751103)
-  * [Jquery-append](https://gist.github.com/Johnjihwan/507ffe8c5840a4431b84780d9bfdf342)
+**Grammar**
+- [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
+- [동기 | 비동기](./DevFeed/PromiseToAwait.md)
+
+**library**
+- [SDK 란?](./Spring/Concept/whatIsSDK.md)
+
+**Methodology**
+- [Test Driven Development](./DevFeed/TDD.md)
+- [러닝커브 이겨내기](./DevFeed/LearningCurve.md)
+- [애자일한 조직문화](./organization/AgileCulture.md)
+- [애자일이란?](./organization/Agile.md)
+- [스타트업 용어 정리](./organization/startup-expression.md)
