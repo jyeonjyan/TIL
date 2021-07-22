@@ -12,6 +12,7 @@
 
 
 **Design Pattern**
+- [디자인 패턴](./DesignPattern/DesignPattern.md)
 - [싱글톤 패턴](./DesignPattern/Singleton.md)
 
 **Springboot**
