@@ -1,4 +1,4 @@
-## 디자인 패턴
+# [디자인 패턴] Design Pattern
 도움을 주셔서 감사합니다 🙇🏻‍♂️
 > https://gmlwjd9405.github.io/2018/07/06/design-pattern.html
 
