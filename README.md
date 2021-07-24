@@ -1,4 +1,4 @@
-**Java**
+**Java, Object-oriented**
 - [생성자란?](./Lecture/JAVA/constructor.md)
 - [IS-A 관계란?](./Lecture/JAVA/IS-A.md)
 - [JVM 이란?](./Lecture/JAVA/JVM.md)
@@ -9,6 +9,7 @@
 - [멀티스레드란?](./Lecture/JAVA/multi-thread.md)
 - [Optional이란?](./Lecture/JAVA/optional.md)
 - [싱글톤 패턴이란?](./Lecture/OOP/singleTon.md)
+- [OCP 개방폐쇄의원칙](./Lecture/OOP/OCP.md)
 
 
 **Design Pattern**
