@@ -87,3 +87,25 @@ public class Client {
     }
     ```
     * 새로운 기능으로 변경하려고 기존 코드의 내용을 수정해야 함으로 OCP(Open Closed Principle) 원칙에 위배된다.
+    * 또한 TeakwonV와 Atom의 Move() 메서드의 내용이 중복된다.
+    * 만약 걷는 방식에 문제가 있거나 새로운 방식으로 수정하려면 모든 중복 코드를 일관성있게 변경해야한다.
+
+
+2. 새로운 로봇을 만들어 기존의 공격 또는 이동 방법을 추가/수정 하는 경우
+* 새로운 로봇으로 `Sungard` 만들어 `TeakwonV`의 미사일 공격 기능을 추가하려면?
+  ```java
+    public class Sungard extends Robot {
+        public Sungard(String name) { super(name); }
+        public void attack() { System.out.println("I have Missile."); } // 중복
+        public void move() { System.out.println("I can only walk."); }
+    }   
+  ```
+  
+  <img src="../img/sub-super-class.png">
+
+* 현재 시스템의 캡슐화 단위가 'Robot' 자체이므로 로봇을 추가하기는 매우 쉽다.
+* 그러나 새로운 로봇인 'Sungard'에 기존의 공격 또는 이동방법을 추가하거나 변경하려고 하면 문제가 발생한다.
+
+
+### 해결책
+문제를 해결하기 위해서는 `무엇이 변화되었는지 찾은 후에 이를 클래스로 캡슐화해야 한다.`
