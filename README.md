@@ -10,6 +10,7 @@
 - [Optional이란?](./Lecture/JAVA/optional.md)
 - [싱글톤 패턴이란?](./Lecture/OOP/singleTon.md)
 - [OCP 개방폐쇄의원칙](./Lecture/OOP/OCP.md)
+- [직렬화란?](./Lecture/JAVA/Serialization.md)
 
 
 **Design Pattern**
