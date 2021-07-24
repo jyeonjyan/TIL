@@ -14,6 +14,7 @@
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
 - [싱글톤 패턴](./DesignPattern/Singleton.md)
+- [스트래티지 패턴](./DesignPattern/strategy-pattern.md)
 
 **Springboot**
 - [TDD란](./Spring/Concept/TDD.md)
