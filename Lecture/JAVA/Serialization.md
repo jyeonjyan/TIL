@@ -1,5 +1,8 @@
 # 직렬화(Serialization)란?
 
+> 도움을 주셔서 감사합니다 🙇🏻‍♂️  
+> https://medium.com/@lunay0ung/basics-%EC%A7%81%EB%A0%AC%ED%99%94-serialization-%EB%9E%80-feat-java-2f3eb11e9a8
+
 객체를 저장하거나 메모리, 데이터베이스 혹은 파일로 옮기려면 어떻게 해야할까?  
 이럴 때 필요한 것이 직렬화다.
 
