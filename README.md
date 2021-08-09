@@ -22,7 +22,7 @@
 - [TDD란](./Spring/Concept/TDD.md)
 - [Swagger 연동 방법](./Spring/Concept/Swagger.md)
 - [Spring에서 사용하는 어노테이션](./Spring/Concept/SpringAnnotation.md)
-- [Springboot 동작원리]
+- [Springboot 동작원리](./Spring/SpringBoot/springboot-principle-of-motion.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
