@@ -12,7 +12,7 @@
 - [OCP 개방폐쇄의원칙](./Lecture/OOP/OCP.md)
 - [직렬화란?](./Lecture/JAVA/Serialization.md)
 - [GC 이해하기](./Lecture/JAVA/GC.md)
-- [Lambda Expression]
+- [Lambda Expression](./Lecture/JAVA/Lambda-expression.md)
 
 
 **Design Pattern**
