@@ -48,7 +48,7 @@ public class LambdaEx {
 * Thread 생성자는 api를 보면 **Runnable 인터페이스를 받아드리는 것**을 알 수 있습니다.
 * JVM Thread 생성자가 Runnable 인터페이스를 구현한 것이 와야 하는 것을 알게되고, `() -> {}`을 **Runbable 을 구현하는 객체로 자동으로 만들어** 매개변수로 넣습니다.
 
-### 람다식 실습하기
+## 람다식 실습하기
 
 #### Compare.Interface
 ```java
