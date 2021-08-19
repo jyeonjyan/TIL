@@ -46,4 +46,38 @@ public class LambdaEx {
 * `() -> {}` 부분이 람다식, 다른말로 익명 메서드(interface 안에 1개의 method만 선언)입니다.
 * JVM은 Thread를 보고 `() -> {}` 이 무엇인지 **대상을 추론**합니다.
 * Thread 생성자는 api를 보면 **Runnable 인터페이스를 받아드리는 것**을 알 수 있습니다.
-* J**VM Thread 생성자가 Runnable 인터페이스를 구현한 것이 와야 하는 것**을 알게되고, `() -> {}`을 **Runbable 을 구현하는 객체로 자동으로 만들어** 매개변수로 넣습니다.
+* JVM Thread 생성자가 Runnable 인터페이스를 구현한 것이 와야 하는 것을 알게되고, `() -> {}`을 **Runbable 을 구현하는 객체로 자동으로 만들어** 매개변수로 넣습니다.
+
+### 람다식 실습하기
+
+#### Compare.Interface
+```java
+package compare;
+
+@FunctionalInterface
+public interface Compare {
+    int compareTo(int n, int m);
+}
+```
+* `@FunctionalInterface` 를 붙여 보다 더 정확하게 선언한다.
+
+#### CompareEx.class
+```java
+package compare;
+
+public class CompareEx {
+    public static void exec(Compare compare){
+        int n = 10;
+        int m = 20;
+
+        int result = compare.compareTo(n, m);
+        System.out.println(result);
+    }
+    public static void main(String[] args) {
+        exec((i, j) -> i-j);
+    }
+}
+```
+
+* `exec()` 메서드는 `Compare` 를 매개변수로 받아주는데..
+* JVM은 `exec(() -> {})` 에 `() -> {}` 를 자동으로 Compare를 구현하는 객체로 만들어 매개변수로 넣게된다.
