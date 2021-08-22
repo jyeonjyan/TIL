@@ -34,3 +34,21 @@ public class ArithmeticCalculator {
     }
 }
 ```
+
+ArithmeticCalculatorMain.class
+```java
+public class ArithmeticCalculatorTest {
+ 
+    @Test
+    public void test() {
+        int first = 5;
+        int second = 10;
+        
+        int result = ArithmeticCalculator.calculate(first, second, (a, b) -> a + b);
+        Assert.assertEquals(first + second, result);
+    }
+}
+```
+
+위의 `ArithmeticCalculatorMain` 을 보면 `ArithmeticOperator`의 구현체가 예상되는 곳에 람다식을 넣었다.  
+Functional Interface는 추상 메서드가 하나뿐이기 때문에 파라미터와 리턴 타입을 쉽게 추론할 수 있고, 이를 근거로 인스턴스를 생성한다.
