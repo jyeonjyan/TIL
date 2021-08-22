@@ -13,6 +13,7 @@
 - [직렬화란?](./Lecture/JAVA/Serialization.md)
 - [GC 이해하기](./Lecture/JAVA/GC.md)
 - [Lambda Expression](./Lecture/JAVA/Lambda-expression.md)
+- [Functional Interface](./Lecture/JAVA/FunctionalInterface.md)
 
 
 **Design Pattern**
