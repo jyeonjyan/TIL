@@ -30,3 +30,39 @@ $ rm /usr/local/etc/my.cnf
 $ brew update 
 $ brew install mysql
 ```
+
+6. mysql 시작하기
+```
+$ mysql.server start
+```
+
+7. MySQL 설정 방법
+```
+$ mysql_secure_installation
+```
+
+... 세부세팅
+```
+"Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No"
+> no
+> 1234
+
+"Remove anonymous users? (Press y|Y for Yes. any other key for No)"
+> yes
+
+"Disallow root login remotely? (Press y|Y for Yes, any other key for No)"
+> yes
+
+"Remove test database and access to it? (Press y|Y for Yes, any other key for No)"\
+> yes
+
+"Reload privilege tables now? (Press y|Y for Yes, any other key for No)"
+> yes
+```
+
+8. mysql user 접속
+```
+$ "mysql -uroot -p"
+```
