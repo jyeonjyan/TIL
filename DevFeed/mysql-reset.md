@@ -55,11 +55,13 @@ Press y|Y for Yes, any other key for No"
 "Disallow root login remotely? (Press y|Y for Yes, any other key for No)"
 > yes
 
-"Remove test database and access to it? (Press y|Y for Yes, any other key for No)"\
+"Remove test database and access to it? (Press y|Y for Yes, any other key for No)"
 > yes
 
 "Reload privilege tables now? (Press y|Y for Yes, any other key for No)"
 > yes
+
+All done!
 ```
 
 8. mysql user 접속
