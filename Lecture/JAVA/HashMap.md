@@ -100,3 +100,15 @@ private BigInteger fibonacci (int n) {
 ```java
 productPrice.putIfAbsent("Fish", 4.5);
 ```
+
+### putIfAbsent() 와 computeIfAbsent() 의 다른 점
+computeIfAbsent() 는 만일 키가 없으면 값을 얻기 위하여 호출하는 매핑된 함수를 가지는 반면, putIfAbsent() 는 value를 바로 가진다. 그러므로 key의 value는 메소드 호출에서 오고 만일 메소드가 비싸다면(계산이 비용이 많이든다면) **putIfAbsent() 는 무조건 계산**을 하지만 **computeIfAbsent() 는 key를 찾을 수 없지 않는 한 계산을 하지 않는다.**
+```java
+var theKey = "Fish";        
+
+// key가 존재하여도 callExpensiveMethodToFindValue()가 호출된다.
+productPriceMap.putIfAbsent(theKey, callExpensiveMethodToFindValue(theKey)); 
+
+// key가 존재한다면 callExpensiveMethodToFindValue()가 결코 호출되지 않는다. 
+productPriceMap.computeIfAbsent(theKey, key -> callExpensiveMethodToFindValue(key));
+```
