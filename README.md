@@ -14,6 +14,7 @@
 - [GC 이해하기](./Lecture/JAVA/GC.md)
 - [Lambda Expression](./Lecture/JAVA/Lambda-expression.md)
 - [Functional Interface](./Lecture/JAVA/FunctionalInterface.md)
+- [HashMap을 효과적으로 사용하는 방법](./Lecture/JAVA/HashMap.md)
 
 
 **Design Pattern**
