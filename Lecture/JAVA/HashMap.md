@@ -83,3 +83,20 @@ public class Fibonacci {
 위의 코드에서는 100까지 피보나치 번호를 빠르게 제공한다.
 
 map에 해당 key가 존재한다면 `put()` 메서드가 value를 key로 대체한다.
+
+### computeIfAbsent() 과 puIfAbsent()
+`containsKey()` 대신에 `computeIfAbsent()` 메서드를 사용한다면 우리는 이것을 좀 더 짧고 간결하게 만들 수 있습니다.
+
+```java
+private BigInteger fibonacci (int n) {
+  return memoizeHashMap.computeIfAbsent(n, 
+           (key) -> fibonacci(n - 1).add(fibonacci(n - 2)));
+}
+```
+이 메소드는 두 개의 입력값을 받습니다. 첫번째는 key이고, 두번째는 key를 사용하여 차례대로 value를 반환하는 함수형 인터페이스 입니다. map에 key가 있으면 값을 반환한다는 아이디어입니다.  
+그렇지 않다면, value를 계산하고 map에 추가를 한후에 value를 돌려줄것입니다. 이렇게 하면 코드가 보다 간단해 지고 짧아집니다.
+
+그러나 value를 직접 얻을 수 있는 `putIfAbsent()` 라는 메서드도 있습니다.
+```java
+productPrice.putIfAbsent("Fish", 4.5);
+```
