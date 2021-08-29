@@ -55,6 +55,7 @@
 - [springboot에 dockerfile 설정하기](./DevOps/docker/springboot-docker.md)
 - [클라우드 서비스 이해하기 IaaS, PaaS, SaaS](./DevOps/IaaS,PaaS,SaaS.md)
 - [xx.com의 리다이렉션 횟수가 너무 많습니다.](./DevOps/tooManyRedirection.md)
+- [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
