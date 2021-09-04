@@ -9,7 +9,7 @@
 
 ### 하나하나 차근차근 찾아보자
 
-1. 우선 딱 봤을 때 아무문제 없는 file-structure (보고 이상한 점을 못느꼈다면 정말 이 글 잘 본거임)
+* 우선 딱 봤을 때 아무문제 없는 file-structure (보고 이상한 점을 못느꼈다면 정말 이 글 잘 본거임)
 
 <img src="../../img/querydsl-file-st.png">
 
@@ -18,17 +18,19 @@
 
 [구해주셔서 감사합니다🙇🏻‍♂️](https://insanelysimple.tistory.com/245)
 
-**하지만 나는 이 레퍼런스와 같은 오류를 내뱉었던 것 아니였다.**
+**하지만 나는 아래와 같이 이 레퍼런스와 같은 오류를 내뱉었던 것 아니였다.**
 ```
 spring data jpa querydsl property not found
 ```
 
-나는 아래와 같은 오류가 생겼었음..
+**나는 아래와 같은 오류가 생겼었음..**
 ```
 No converter found capable of converting from type [com.server.EZY.model.plan.tag.TagEntity] to type [com.server.EZY.model.plan.tag.dto.TagGetDto]
 ```
 
-하지만.. 시원이가 해준 `repository 분할 그리고 비즈니스 로직에 DI 후 사용` 실험이 정상적인 query 출력이 결과를 통해 알아낸.. **원인_1 querydsl projection을 인식못하는 것.**  
+하지만.. 시원이가 해준 `repository 분할 그리고 비즈니스 로직에 DI 후 사용` 실험이 정상적인 query 출력이 결과를 통해 알아낸.. 
+**원인_1 querydsl projection을 인식못하는 것.**  
+
 설마 설마 하면서 ㅋㅋㅋ class 를 refectoring 했다.. 결과는 성공적.. 
 
 결론적으로.. 클래스 명명규칙이 위 레퍼런스에서 말했던 것과 맞지 않다면..
