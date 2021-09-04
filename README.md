@@ -79,6 +79,7 @@
 - [JPA 연관관계 주인](./Spring/JPA/mappedBy.md)
 - [Querydsl 이란?](./Spring/JPA/Querydsl.md)
 - [transaction이란?](./Spring/JPA/transaction.md)
+- [querydsl 사용시 주의하기](./Spring/JPA/warn-querydsl.md)
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
