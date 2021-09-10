@@ -15,6 +15,7 @@
 - [Lambda Expression](./Lecture/JAVA/Lambda-expression.md)
 - [Functional Interface](./Lecture/JAVA/FunctionalInterface.md)
 - [HashMap을 효과적으로 사용하는 방법](./Lecture/JAVA/HashMap.md)
+- [무조건 빌드 패턴을 사용해야 하는 이유](./Lecture/JAVA/builder-pattern.md)
 
 
 **Design Pattern**
