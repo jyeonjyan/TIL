@@ -83,6 +83,7 @@
 - [Querydsl 이란?](./Spring/JPA/Querydsl.md)
 - [transaction이란?](./Spring/JPA/transaction.md)
 - [querydsl 사용시 주의하기](./Spring/JPA/warn-querydsl.md)
+- [영속성 컨텍스트](./Spring/JPA/managed-context.md)
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
