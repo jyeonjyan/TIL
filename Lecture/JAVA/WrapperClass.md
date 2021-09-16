@@ -31,7 +31,7 @@ public class WrapperMain {
 
         System.out.println("boxing: " + boxing + " unboxing: " + unboxing);
         System.out.println("boxing type: " + boxing.getClass().getName());
-        System.out.println("boxing type: " + ((Object) unboxing).getClass().getName());
+        System.out.println("unboxing type: " + ((Object) unboxing).getClass().getName());
     }
 }
 ```
