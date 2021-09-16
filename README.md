@@ -34,6 +34,7 @@
 - [Springboot 동작원리](./Spring/SpringBoot/springboot-principle-of-motion.md)
 - [springboot JUnit5 MockMvc Test](./Spring/SpringBoot/MockMvc-test.md)
 - [springboot @Async 는 어떻게 동작하는가?](./Spring/SpringBoot/springboot-async.md)
+- [springboot bean은 기본적으로 singleton으로 관리된다고?](./Spring/SpringBoot/spring-bean-sigleton.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
