@@ -18,7 +18,7 @@
 - [무조건 빌드 패턴을 사용해야 하는 이유](./Lecture/JAVA/builder-pattern.md)
 - [기본 생성자가 필요한 이유](./Lecture/JAVA/defualt-const.md)
 - [래퍼 클래스란?](./Lecture/JAVA/WrapperClass.md)
-- [제네릭의 이해]()
+- [제네릭의 이해](./Lecture/JAVA/understand-generic.md)
 
 
 **Design Pattern**
