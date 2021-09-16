@@ -106,3 +106,5 @@ public class Generic_Ex {
     }
 }
 ```
+
+<img src="../../img/generic-console.png" width="600px">
