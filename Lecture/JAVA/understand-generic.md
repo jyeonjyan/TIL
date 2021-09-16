@@ -76,3 +76,33 @@ public class Main {
 	}
 }
 ```
+
+### 제네릭 공부하기
+```java
+public class Generic_Ex {
+    static class ClassName<E>{
+        // 제네릭 타입 변수
+        private E element;
+        // setter
+        void setElement(E element){
+            this.element = element;
+        }
+        // getter
+        E get(){
+            return element;
+        }
+    }
+    public static void main(String[] args) {
+        ClassName<String> a = new ClassName<>();
+        ClassName<Integer> b = new ClassName<>();
+
+        a.setElement("10");
+        b.setElement(12);
+
+        System.out.println("a data: " + a.get());
+        System.out.println("a type: " + a.get().getClass().getName());
+        System.out.println("b data: " + b.get());
+        System.out.println("b type: " + b.get().getClass().getName());
+    }
+}
+```
