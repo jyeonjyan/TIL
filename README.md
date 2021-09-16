@@ -95,6 +95,7 @@
 
 **library**
 - [SDK 란?](./Spring/Concept/whatIsSDK.md)
+- [SOLID 원칙](./Spring/Concept/SOLID.md)
 
 **Methodology**
 - [Test Driven Development](./DevFeed/TDD.md)
