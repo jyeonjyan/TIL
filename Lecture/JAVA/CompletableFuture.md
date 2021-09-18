@@ -45,3 +45,41 @@ getPriceAsync 메서드를 호출한 이후에 클라이언트는 다른 작업�
 
 #### Async, Non-Blocking
 비동기, 논블록킹에 대한 개발자의 의견이 조금씩 다르다.
+
+### CompletableFuture
+자바 8 에서는 람다의 추가와 함께 `CompletableFuture` 가 추가되었다.  
+자바의 CompletableFuture은 Scala의 Future 와 비슷한다.  
+
+언젠간 얻게 될 값을 정의 한 후, 그 값을 얻었을 때 하는 행동을 정의한다.  
+자바 람다식을 사용하는 then~ 메서드가 있어 그 메서드를 호출하면 된다.
+
+```java
+public class CompletableFutureEx {
+    public static void main(String[] args) {
+        System.out.println("GO");
+
+        CompletableFuture<Integer> cf = CompletableFuture.supplyAsync(() -> {
+            try{
+                TimeUnit.SECONDS.sleep(2L);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            return 200;
+        });
+
+        cf.thenAccept(System.out::println);
+
+        System.out.println("END");
+
+        // 메인 스레드가 종료되지 않게 블록킹
+        cf.join();
+
+    }
+}
+```
+
+<img src="../../img/async-console.png" width="300">
+
+> 와 너무 신기하다 너무 재밌다  
+> 여기서 중요한건 cf.join 이 없으면 cf 의 결과를 기다려 주지 않기 때문에 메인 쓰레드가 종료 돼 버린다.  
+> 결론적으로 블록킹을 해줘야 한다.
