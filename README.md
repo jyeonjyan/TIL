@@ -38,6 +38,7 @@
 - [springboot @Async 는 어떻게 동작하는가?](./Spring/SpringBoot/springboot-async.md)
 - [springboot bean은 기본적으로 singleton으로 관리된다고?](./Spring/SpringBoot/spring-bean-sigleton.md)
 - [자바 싱글톤 vs 스프링 싱글톤](./Spring/SpringBoot/java-spring-singleton.md)
+- [spring mvc lifecycle](./Spring/SpringBoot/spring-mvc-lifecycle.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
