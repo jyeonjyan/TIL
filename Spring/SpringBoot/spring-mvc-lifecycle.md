@@ -12,7 +12,7 @@
 #### DispatcherServlet
 * App 에 들어오는 모든 req 를 우선적으로 받아 처리하는 서블릿이다.  
 * HandlerMapping 에게 req 에 대해 매핑한 Controller 의 검색을 요청한 뒤, Controller 의 정보를 받아 해당 Controller 와 매핑시킨다.  
-* Dispatcher 라는 단어 자체가 '배치 담당자' 라는 뜻이 있듯이, 말 그대로 req 에 대해 어느 * Controller 로 매핑시킬 것인지 배치하는 역할을 한다. 
+* Dispatcher 라는 단어 자체가 '배치 담당자' 라는 뜻이 있듯이, 말 그대로 req 에 대해 어느 Controller 로 매핑시킬 것인지 배치하는 역할을 한다. 
 
 #### HandlerMapping
 * 아까 말했듯이 DispatcherServlet 로 부터 controller 검색 요청을 받아 처리한 뒤 반환한다.
