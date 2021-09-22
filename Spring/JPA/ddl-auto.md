@@ -7,13 +7,13 @@
 기존에는 `spring.jpa.hibernate.ddl-auto: create` 를 사용하고 있었다.  
 하지만 아래와 같은 검증 코드에서 3만건이 아닌 12만건을 조회하는 결과를 초래하더라..
 
-<img src="../../img/error-ddl-auto.png">
+<img src="../../img/error-ddl-auto.png" width="450px">
 
 
 query를 확인하니 초반에 create 속성의 기능인 drop query를 안날리는 것을 발견했다!!  
 원래는 아래와 같이(해결된 쿼리) drop 날라간후에 create 되면서 기존 data를 다 밀어줘야 함.
 
-<img src="../../img/hbm2ddl-auto-resolved.png">
+<img src="../../img/hbm2ddl-auto-resolved.png" width="450px">
 
 암튼... 구글링을 엄청 해본 결과 답을 얻을 수 있었다.  
 그건 바로 `hibernate.hbm2ddl.auto` 라는 속성이다.  
