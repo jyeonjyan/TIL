@@ -40,6 +40,7 @@
 - [자바 싱글톤 vs 스프링 싱글톤](./Spring/SpringBoot/java-spring-singleton.md)
 - [spring mvc lifecycle](./Spring/SpringBoot/spring-mvc-lifecycle.md)
 - [스프링 빈 순환참조 오류](./Spring/SpringBoot/spring-bean-cycle-error.md)
+- [내 springboot 에 ehcache를 적용해보자!](https://github.com/jyeonjyan/spring-cache)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
