@@ -49,3 +49,7 @@ JVM 메모리 영역으로 자바 애플리케이션을 실행할 때 사용되�
 
 5. Native method stack
    1. 자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역이다.
+   - 보충 설명을 하자면..
+   - <img src="../../img/thread-currentThread.png" width="300px">
+   - <img src="../../img/thread-native.png" width="450px">
+   - 이처럼 `Thread.currentThread();` 메서드도 **native method** 이다.
