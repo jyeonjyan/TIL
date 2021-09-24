@@ -2,7 +2,7 @@
 > 간략하게 설명하자면.. `.java` 파일을 `.class` 파일로 바꿔주는 핵심적인 역할을 한다. (바이트코드로 변환하는 작업을 한다.)  
 > 이렇게 생성된 .class 파일들을 엮어서 JVM 이 운영체제로 부터 할당받은 메모리영역인 Rumtime Data Area 로 적재하는 역할을 Class Loader 가 한다.
 
-<img src="../../img/classLoader-system.png">
+<img src="../../img/classLoader-system.png" width="70%">
 
 우선 classLoader 의 구조를 파악해보자
 ```java
