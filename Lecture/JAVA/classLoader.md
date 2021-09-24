@@ -26,3 +26,15 @@ public class ClassLoaderEx {
   * <img src="../../img/bootstrap-classLoader-why-null.png">
   * 결론적으로 일부 구현에서 `BootstrapClassLoader` 는 null로 나타낼 수 있다고 한다.
   * "네이티브코드로 구현되어 볼 수 없다" - 백기선
+
+#### 클래스를 읽어오는 순서(로딩)
+<ins> 부모(BootstrapClassLoader) -> 자식(PlatformClassLoader)  -> 자식(AppClassLoader) </ins>
+
+만약에 최하위 클래스에서 못 읽는다면.. `ClassNotFoundException` 이 발생.  
+> ex) pom.xml 에 의존성 추가 안하고 App 을 실행시킬 때.
+
+
+### 링크 (Link)
+* Verify: `.class` 파일의 형식이 유효한지 확인한다.
+* Prepare: 클래스 변수와 static 변수에 필요한 메모리
+* Resolve: 이건 `Optional` 이다 "적절한 Heap 영역을 가르킬수도 있고 아닐 수도 있다."
