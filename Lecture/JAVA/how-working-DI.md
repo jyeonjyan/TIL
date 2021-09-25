@@ -22,4 +22,4 @@ public class BookService {
 
 <img src="../../img/basic-DI-success.png" width="450px">
 
-궁금증을 안고.. 다음 리플랙션 문서에서 계속..
+궁금증을 안고.. [리플랙션 문서](../../Lecture/JAVA/reflection-1.md)에서 계속..
