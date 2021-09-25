@@ -31,3 +31,6 @@ Arrays.stream(bookRepositoryClass1.getDeclaredFields()).forEach(System.out::prin
 ```
 
 <img src="../../img/getFields.png" width="600px">
+
+**아래는 앞으로 잘 사용하게 될 여러가지의 option들이다 잘 참고하시길 (귀찮아서 절대 아님)**
+<img src="../../img/class-reflection-options.png" width="450px">
