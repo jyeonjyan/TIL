@@ -1,6 +1,6 @@
 ## 학교가 불편한 순간 - 서버 v1.1.1 트러블슈팅 여정기 - redis
 
-#### docker redis unable to connect
+#### docker redis unable to connect error
 [🥕 여기를 참고했습니다](https://github.com/luin/ioredis/issues/763#issuecomment-451041838)  
 하지만.. 왜 아직도 connect 가 안되는거야? 똑같은 error log 가 발생하네? 해서 docker-compose 자체에도 cache 가 있는지 구글링을 하게 됩니다.  
 
