@@ -73,6 +73,7 @@
 - [클라우드 서비스 이해하기 IaaS, PaaS, SaaS](./DevOps/IaaS,PaaS,SaaS.md)
 - [xx.com의 리다이렉션 횟수가 너무 많습니다.](./DevOps/tooManyRedirection.md)
 - [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
+- [학교가불편한순간 v1.1.1에서 마주한 트러블슈팅](./DevOps/themoment-v1.1.1-issue.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
