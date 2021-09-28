@@ -54,3 +54,5 @@ public class ContainerService {
 ```
 
 이제 이 프로젝트를 export 시켜서 pom.xml에 dependency로 등록해서 사용하면 된다.
+
+<img src="../../img/reflection-정리.png">
