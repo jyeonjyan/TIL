@@ -103,6 +103,7 @@
 - [영속성 컨텍스트](./Spring/JPA/managed-context.md)
 - [Flush](./Spring/JPA/flush.md)
 - [ddl-auto 와 hbm2ddl.auto](./Spring/JPA/ddl-auto.md)
+- [왜 Hibernate orm column이 WrapperClass일까?](./Spring/JPA/column-mapping-wrapperclass.md)
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
