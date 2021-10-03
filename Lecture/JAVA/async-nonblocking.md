@@ -31,4 +31,4 @@ A쓰레드가 어떤 작업을 하는 다른 대상을 호출하고 그 대상�
 
 <img src="../../img/blocking-process.png">
 
-[-> stack overflow 에서도 이와 같은 정리를 확인할 수 있습니다](https://deveric.tistory.com/99)
+[-> stack overflow 에서도 이와 같은 정리를 확인할 수 있습니다](https://stackoverflow.com/questions/52234241/what-is-blocking-in-async-or-sync)
