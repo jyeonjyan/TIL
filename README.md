@@ -47,6 +47,7 @@
 - [스프링 빈 순환참조 오류](./Spring/SpringBoot/spring-bean-cycle-error.md)
 - [내 springboot 에 ehcache를 적용해보자!](https://github.com/jyeonjyan/spring-cache)
 - [spring DI(Dependency Injection)은 어떻게 동작할까?](./Lecture/JAVA/how-working-DI.md)
+- [Spring Bean Life Cycle](./Spring/SpringBoot/spring-bean-life-cycle.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
