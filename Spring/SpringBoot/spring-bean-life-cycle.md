@@ -193,7 +193,7 @@ SoccerBall를 interface로 만들었고, SoccerBall을 implements하는 각각�
 
 축구선수가 축구공에 의존하고 있던 관계가 뒤집힌 것. **이것을 DIP(의존 역전 원칙) 이라한다.**
 
-하지만 아직도 코들르 실행하는 부분에서 SoccerBall의 종류를 선택해여 직접 생성하고 SoccerBall에게 set 해주는 작업을 해야한다.
+하지만 아직도 코드를 실행하는 부분에서 SoccerBall의 종류를 선택해여 직접 생성하고 SoccerBall에게 set 해주는 작업을 해야한다.
 
 ### Spring IoC/DI 개념을 적용시켜보자
 
