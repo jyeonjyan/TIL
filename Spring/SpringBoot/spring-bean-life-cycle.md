@@ -195,3 +195,101 @@ SoccerBall를 interface로 만들었고, SoccerBall을 implements하는 각각�
 
 하지만 아직도 코들르 실행하는 부분에서 SoccerBall의 종류를 선택해여 직접 생성하고 SoccerBall에게 set 해주는 작업을 해야한다.
 
+### Spring IoC/DI 개념을 적용시켜보자
+
+SoccerBall.java
+```java
+interface SoccerBall {
+  String touchBall();
+}
+
+@Component("adidasBall") // adidasBall이란 이름을 가진 Bean으로 등록
+public class AdidasSoccerBall implements SoccerBall {
+  public String touchBall() {
+      return "아디다스 축구공이 굴러간다!";
+  }
+}
+
+@Component("nikeBall") // nikeBall이란 이름을 가진 Bean으로 등록
+public class NikeSoccerBall implements SoccerBall {
+  public String touchBall() {
+      return "나이키 축구공이 굴러간다!";
+  }
+}
+```
+
+SoccerPlayer.java
+```java
+@Component // 의존성을 주입받는 객체도 Bean으로 등록되어야 한다.
+public class SoccerPlayer {
+    @Autowired
+    @Qualifier("nikeBall")
+    private SoccerBall ball;
+
+    public String playSoccer() {
+        return "축구선수가 공을 찼다! \n" + this.ball.touchBall();
+    }
+}
+```
+
+SoccerController.java
+```java
+@RestController
+public class SoccerController {
+    @Autowired // SoccerPlayer라는 타입을 가진 Bean을 찾아서 주입시킴
+    private SoccerPlayer soccerPlayer;
+
+    @RequestMapping("/soccer")
+    public String soccerDriver() {
+        return soccerPlayer.playSoccer();
+    }
+}
+```
+
+Contoller -> interface 까지 메소드를 타고 들어가보면 `SoccerPlayer` 는 `SoccerBall`을 DI 받고 `SoccerBall` 를 구현하는 클래스가 2개 이상이기 때문에 `@Qualifier` 를 사용해서 대상이 뭔지 더 명확하게 가르키도록 한다.
+
+<img src="../../img/DI-st.jpg">
+
+**스프링의 Container 가 대신 객체를 생성해주고 알아서 객체를 주입해준다.**  
+이렇게 생성된 객체는 자신이 어디에 쓰이는지 아지 못한다. 이것이 제어의 역전 원칙이며 스프링은 DI라는 개념으로 구현하고 있다. 
+
+
+### Container
+앞서 Spring Bean이 스프링 컨테이너에 의해 관리되는 객체라는 것을 배웠다.  
+그럼 이런 역할을 해주는 Container는 무엇인가.
+
+<img src="../../img/container-magic.png">
+
+> 이는 여러가지 이름으로 불린다 Spring Container, DI Container, IoC Container, Bean Controller 등.
+
+스프링 컨테이너는 프로그래머가 작성한 코드의 처리과정을 위임받아 독립적으로 처리하는 존재이다.
+
+### Container를 사용하는 이유
+우리는 객체를 사용하기 위해서 new 생성자를 이용하거나 getter/setter 기능을 써야만 했다. 한 어플리케이션에서는 이러한 객체가 무수히 많이 존재하고 서로 참조하고 있을 것이다.
+
+그 정도가 심할 수록 의존성이 높다고 표현한다. 낮은 결합도와 높은 캡슐화로 대변되는 OOP에서 높은 의존성은 매우 지양된다. 
+
+의존성 제어, 즉 객체 간의 의존성을 낮추기 위해 바로 Spring 컨테이너가 사용된다. 
+
+```
+- 코드가 깔끔해지고 사용하기 쉽다.
+- 재사용하기 좋다.
+- 테스트하기 쉽다.
+```
+
+### 종류
+<img src="../../img/application-context.jpg">
+
+#### BeanFactory
+Bean 객체를 생성하고 관리하는 인터페이스이다.  
+디자인패턴의 일종인 팩토리 패턴을 구현한 것이다. BeanFactory 컨테이너는 구동될 때 Bean 객체를 생성하는 것이 아니라. 클라이언트의 요청이 있을 때 getBaen()객체를 생성한다. [lazy init]
+
+#### ApplicationContext
+BeanFactory를 상속받은 interface 이다. 부가적인 기능이 많기 때문에 많이 사용한다. ApplicationContext 컨테이너는 구동되는 시점에 등록된 Bean 객체를 스캔하여 객체화한다.[eager init]
+
+```
+추가기능
+- 국체화 지원 텍스트 메시지 관리
+- 이미지 파일 로드
+- Listener로 등록된 Bean에게 이벤트 발생 통보
+```
