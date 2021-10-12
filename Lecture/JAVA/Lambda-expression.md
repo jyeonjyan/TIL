@@ -83,3 +83,13 @@ public class CompareEx {
 * 우선 `exec()` 메서드를 static으로 선언하여 인스턴스를 미리 잡아 전역에서 사용가능하게 함.
 * `exec()` 메서드는 `Compare` 를 매개변수로 받아주는데..
 * JVM은 `exec(() -> {})` 에 `() -> {}` 를 자동으로 Compare를 구현하는 객체로 만들어 매개변수로 넣게된다.
+
+### 추가적으로 자바에서 제공하는 함수형 인페이스로도 람다식을 응용할 수 있다.
+<img src="../../img/java-default-functional-interface.png" width="650px">
+
+```java
+BinaryOperator<Integer> minus = (a, b) ->  a-b;
+System.out.println(minus.apply(2,4));
+```
+
+<img src="../../img/BiFunction-apply-ab-method.png">
