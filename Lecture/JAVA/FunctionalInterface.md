@@ -1,6 +1,6 @@
 ## 함수형 인터페이스 (Functional Interface)
 > 함수형 인터페이스는 일급객체로 사용할 수 없는 Java 언어의 단점을 보완하기 위해 도입되었다.  
-> JDK 1.8의 function package 에는 수 많은 Functional Interface 들이 정의되어 있다.
+> [JDK 1.8의 function package](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html) 에는 수 많은 Functional Interface 들이 정의되어 있다.
 
 * 일급객체(first-class Object)
   * 다른 객체들에 일반적으로 적용 가능한 연산을 모두 지원하는 객체를 가르킨다. 
@@ -52,3 +52,31 @@ public class ArithmeticCalculatorTest {
 
 위의 `ArithmeticCalculatorMain` 을 보면 `ArithmeticOperator`의 구현체가 예상되는 곳에 람다식을 넣었다.  
 Functional Interface는 추상 메서드가 하나뿐이기 때문에 파라미터와 리턴 타입을 쉽게 추론할 수 있고, 이를 근거로 인스턴스를 생성한다.
+
+
+### 부가적인 설명
+> 아까 말했듯 Functional Interface의 조건은 추상 메소드를 딱 하나만 가지고 있는 인스턴스라고 했는데
+
+예를 들어 아래 interface 를 참고해서 보면..
+```java
+@FunctionalInterface
+public interface FooInterface {
+    Integer calculatePlus(int a, int b);
+}
+```
+
+`public abstract` 라고 하지 않았는데도 compile error 가 나지 않는 것을 볼 수 있다. (jdk 1.8 부터는 생략 가능)
+<img src="../../img/interface-member-constraint.png" width="800px">
+
+또한 이 함수는 이렇게 사용이 가능하다.
+```java
+public class FooMain {
+    public static void main(String[] args) {
+        FooInterface fooInterface = (a, b) -> return a+b; // Integer::sum 메소드 레퍼런스 이용 가능
+        System.out.println(fooInterface.calculatePlus(2,3));
+    }
+}
+```
+
+### 이렇게도 정리 가능할 것 같다.
+<img src="../../img/FI-lecture.png" width="700px">
