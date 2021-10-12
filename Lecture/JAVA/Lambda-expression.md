@@ -92,4 +92,4 @@ BinaryOperator<Integer> minus = (a, b) ->  a-b;
 System.out.println(minus.apply(2,4));
 ```
 
-<img src="../../img/BiFunction-apply-ab-method.png">
+<img src="../../img/BiFunction-apply-ab-method.png" width="450px">
