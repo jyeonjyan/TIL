@@ -27,6 +27,7 @@
 - [자바 리플랙션](./Lecture/JAVA/reflection-1.md)
 - [나만의 @애노테이션 만들기](./Lecture/JAVA/MyAnnotation.md)
 - [java 리플랙션을 사용해 DI 구현하기](./Lecture/JAVA/DI-impl.md)
+- [java 메소드 레퍼런스](../Lecture/JAVA/java-method-reference.md)
 
 
 **Design Pattern**
