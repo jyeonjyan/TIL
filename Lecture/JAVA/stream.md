@@ -97,4 +97,4 @@ public class JavaEx {
 
 이렇게 보면 ArrayList에 `stream.map()`을 사용해서 중개 연산만 해준 상태이다. `.collect()`같은 최종 연산이 없다는 것이다. 이렇게 되면..  
 
-<img src="../../img/stream-lazy.png">
+<img src="../../img/stream-lazy.png" width="470px">
