@@ -84,8 +84,7 @@ public class JavaEx {
     public static void main(String[] args) {
         System.out.println("======== what is lazy? ========");
         names.stream().map(s -> {
-            System.out.println("=========");
-            System.out.println(s + " is good");
+            System.out.println("========= map =========");
             return s.toUpperCase();
         });
         System.out.println("========= lazy is worked ==========");
@@ -98,3 +97,52 @@ public class JavaEx {
 이렇게 보면 ArrayList에 `stream.map()`을 사용해서 중개 연산만 해준 상태이다. `.collect()`같은 최종 연산이 없다는 것이다. 이렇게 되면..  
 
 <img src="../../img/stream-lazy.png" width="470px">
+
+딱 봤을 때 map 안의 print문과 `.toUpperCase()` 변환하는 로직이 실행될 것 같지만 실행되지 않는 것을 확인할 수 있다.  
+이유는 stream API는 중애 연산을 `0~n`개가 올 수 있다. 하지만 종료 연산은 무조건 하나 이상 와야 실행이 가능하다.  
+
+이제 그러면 해당 stream 연산을 수행하려면 종료 연산을 추가하면된다.
+```java
+public class JavaEx {
+    public static void main(String[] args) {
+        System.out.println("======== what is lazy? ========");
+        List<String> collect1 = names.stream().map(s -> {
+            System.out.println("========= map =========");
+            return s.toUpperCase();
+        }).collect(Collectors.toList());
+        System.out.println("========= lazy is worked ==========");
+        collect1.forEach(System.out::println);
+    }
+}
+```
+
+<img src="../../img/stream-worked.png" width="450px">
+
+### 스트림은 `parallelStream()` 메서드를 통한 손쉬운 병렬 처리를 지원한다.
+> 여러개의 쓰레드로 병렬처리하는 것이 항상 빠른 것은 절대 아니다.(데이터가 완전 방대한 경우에는 비교적 빠름)  
+> 상황에 따라 싱글 스레드로 프로세스를 처리 하는 것이 빠를 때도 있다.
+
+```java
+public class MyStream {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("jihwan");
+        names.add("dabin");
+        names.add("toby");
+
+        List<String> collect = names.parallelStream().map(s -> {
+            System.out.println(s + " " + Thread.currentThread().getName());
+            return s.toUpperCase();
+        }).collect(Collectors.toList());
+
+        collect.forEach(System.out::println);
+    }
+}
+```
+
+이렇게 한번 `parallelStream()`를 사용해서 병렬처리를 해볼것이다.  
+`.map()`이 돌아갈 때 마다 `currentThread().getName()` 하도록 해 보았다.
+
+<img src="../../img/parallelStream-console.png" width="450px">
+
+이처럼 각자 ArrayList index 하나하나 다른 Thread가 할당되어 처리 되는 것을 볼 수 있다.
