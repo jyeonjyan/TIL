@@ -29,6 +29,7 @@
 - [java 리플랙션을 사용해 DI 구현하기](./Lecture/JAVA/DI-impl.md)
 - [java 메소드 레퍼런스](../Lecture/JAVA/java-method-reference.md)
 - [java 인테페이스 기본 메서드와 스태틱 메서드](./Lecture/JAVA/interface-defualt-static.md)
+- [java 8 API의 기본 메서드와 스태틱 메서드](./Lecture/JAVA/java-8-defualt-static-method.md)
 
 
 **Design Pattern**
