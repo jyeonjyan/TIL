@@ -99,7 +99,7 @@ public class JavaEx {
 <img src="../../img/stream-lazy.png" width="470px">
 
 딱 봤을 때 map 안의 print문과 `.toUpperCase()` 변환하는 로직이 실행될 것 같지만 실행되지 않는 것을 확인할 수 있다.  
-이유는 stream API는 중애 연산을 `0~n`개가 올 수 있다. 하지만 종료 연산은 무조건 하나 이상 와야 실행이 가능하다.  
+이유는 stream API는 중간 연산이 `0~n`개가 올 수 있다. 하지만 종료 연산은 무조건 하나 이상 와야 실행이 가능하다.  
 
 이제 그러면 해당 stream 연산을 수행하려면 종료 연산을 추가하면된다.
 ```java
