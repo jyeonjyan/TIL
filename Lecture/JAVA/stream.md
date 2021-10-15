@@ -73,11 +73,11 @@ Java SE 8 + 부터 추가된 스트림 API는 앞서 입력과 출력 수업에�
 |Stream<T> sorted(), Stream<T> sorted(Comparator<? super T> comparator)| 해당 스트림을 주어진 비교자(comparator)를 이용하여 정렬함. 비교자를 전달하지 않으면 영문사전 순(natural order)으로 정렬함. |
 
 
-## 추가적인 설명
+## 스트림 파이프라인에 대한 추가적인 설명
 
 ### 스트림의 연산은 `filter-map` 기반의 API 를 사용하여 `lazy`연산을 통해 성능을 최적화 한다.
 
-lazy 연산을 한다. 라는 의미에는 다양한게 있겠지만 대표적으로 아래와 같은 예시를 살펴볼 수 있겠다.
+Stream은 근본적으로 lazy 연산을 한다. 라는 의미에는 다양한게 있겠지만 대표적으로 아래와 같은 예시를 살펴볼 수 있겠다.
 
 ```java
 public class JavaEx {
@@ -146,3 +146,16 @@ public class MyStream {
 <img src="../../img/parallelStream-console.png" width="450px">
 
 이처럼 각자 ArrayList index 하나하나 다른 Thread가 할당되어 처리 되는 것을 볼 수 있다.
+
+## 다양한 오퍼레이션, 연산
+아까 말했듯 stream 은 0~n개의 중개 오퍼레이션과 한개의 종료 오퍼레이션으로 구성돼야 한다고 했다.  
+스트림의 데이터 소스는 오직 터미널 오퍼레이션을 실행할 때만 처리한다.  
+
+### 중개 오퍼레이션
+* Stream을 리턴한다. (종료 오퍼레이터가 없다면.)
+* Stateless / Stateful 오퍼레이션으로 더 상세하게 구분할 수도 있다.
+* filter, map, limit, skip, sorted, ...
+
+### 종료 오퍼레이션
+* Stream을 리턴하지 않는다.
+* collect, allMatch, count, forEach, min, max, ...
