@@ -1,35 +1,82 @@
 # 싱글톤 패턴(Singleton Pattern)을 쓰는 이유와 문제점
+[이 리드미에서는 java 싱글톤과 spring 싱글톤의 차이를 알 수 있어요!](../../Spring/SpringBoot/java-spring-singleton.md)
 
 ## 싱글톤 패턴(Singleton Pattern)
-싱글톤 패턴이란
-> 애플리케이션이 시작될 때 어떤 클래스가 최초 한번만 메모리를 할당하고(static) 그 메모리에 만들어 상요하는 디자인 패턴.  
-> 생성자가 여러 차례 호출되더라도 생성되는 객체는 하나고, 최초 생성 이후에는 get 메서드로 받아 씀.
+* 인스턴스가 오직 1개만 생성되어야 한다.  
+* 레지스트리 같은 설정 파일의 경우 객체가 여러 개 생성되면 설정 값이 변경될 위험이 있다.  
+* 인스턴스가 1개만 생성되는 특징을 가진 싱글톤을 이용하면 하나의 인스턴스를 메모리에 등록해서 여러 스레드가 동시에 해당 인스턴스를 공유하여 사용하게끔 할 수 있으므로, 요청이 많은 곳에서 사용하면 효율을 높일 수 있다.  
+* 하지만 싱글톤을 사용할 때 주의할 점이 있다. 바로 동시성 문제를 고려해서 설계해야 한다는 점이다.
 
 ### 결론은 하나의 인스턴스를 생성해 사용하는 디자인 패턴이다.
+1. 기본생성자는 private 하게
+2. 메소드는 static 하게 
 
 Company.java
 ```java
-public class Company{
-    private static Company instance = new Company();
-
-    private Company(){
-    }
-
-    public Company getInstance(){
-        return instance;
+public class Company {
+    // static 인스턴스
+    private static final Company company = new Company();
+    // 기본생성자
+    private Company(){ }
+    // 인스턴스 getter
+    public static Company getInstance(){
+        return company;
     }
 }
 ```
+
 CompanyTest.java
 ```java
-// main 생략
-Company company = Company.getInstance();
-Company company2 = Company.getInstance();
+public class Example {
+    public static void main(String[] args) {
+        Company aInstance = Company.getInstance();
+        Company bInstance = Company.getInstance();
 
-sysout(company);
-sysout(company2);
-// 둘의 메모리는 같게 잡힌다.
+        if(aInstance == bInstance){
+            // 해당 출력문이 실행된다.
+            System.out.println("Yeeess! it's the same");
+        }
+    }
+}
 ```
+
+## Eager Initialization | 이른 초기화, Thread-safe
+Company.java
+```java
+// Eager Initialization
+private static final Company company = new Company();
+```
+
+#### 여기서 static 을 통해 인스턴스를 생성하는 이유는?
+static 키워드의 특징을 이용해서 클래스로더가 초기화 하는 시점에서 정적 바인딩(컴파일 시점에서 성격이 결점됨)을 통해 인스턴스를 메모리에 등록하여 사용하기 위해서이다.
+
+이른 초기화 방식은 클래스 로더에 의헤 **클래스가 최초로 로딩 될 때 객체가 생성되기 때문에 Thread-safe 하다.**
+
+Thread-safe를 신경써야 하는 이유는 멀티 스레딩 환경에서도 동장 가능하게끔 해야하기 때문이다.
+
+## Lazy Initialization with synchronized (동기화 블럭, Thread-Safe)
+이 방식은 `synchronized` 키워드를 이용한 게으른 초기화 방식인데 메서드에 동기화 블럭을 지정해서 Thread-safe를 보장한다.
+
+**결론적으로 동적 바인딩을 한다는 것이다. 인스턴스가 필요한 시점에 요청하여 인스턴스를 생성한다.**
+
+```java
+public class SingleTon {
+    private static SingleTon singleTon;
+    // private 기본 생성자
+    private SingleTon(){ }
+    // synchronized 키워드를 통한 lazy 동기화 블럭
+    public static synchronized SingleTon getInstance(){
+        if (singleTon == null){
+            singleTon = new SingleTon();
+        }
+        return singleTon;
+    }
+}
+```
+
+동기화 블럭을 지정한 lazy 초기화 방식은 Thread-safe 하지만, 인스턴스가 생성되었든 안되었든 무조건 동기화 블럭을 거치게 돼 있다는 것입니다.
+
+**또한 `synchronized` 키워드를 사용하면 성능이 100개 가량 떨어집니다.**
 
 ## 싱글톤 패턴을 쓰는 이유
 고정된 메모리 영역을 얻으면서 한번의 new 생성자로 인스턴스를 사용하기 때문에 메모리 낭비를 방지할 수 있음  
