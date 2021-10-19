@@ -24,7 +24,7 @@ public class ProcessThread {
     }
 }
 ```
-뭔가 `thread.start();` 가 먼저 오니껀 thread 안의 runnable 이 먼저 실행되고 그 후가 구현될 것처럼 생각하지만.. 사실 결과는 모르는 것이다.
+뭔가 `thread.start();` 가 먼저 호출되니 thread 안의 Runnable 이 먼저 실행되고 그 후가 구현될 것처럼 생각하지만.. 사실 결과는 모르는 것이다.
 
 <img src="../../img/thread-runnable.png" width="380px">
 
@@ -72,7 +72,7 @@ public void run() {
 이 코드를 보면 일단 먼저 드는 생각이 굉장히 복잡하다. 뭐 그렇기 때문에 나중에 내가 다시 정리할 CompletableFuture가 등장한다. 아무튼.  
 
 이 코드를 보면 Runnable 을 시작하자마자 무한루프에서 1초마다 현재 초를 출력한다.  
-하지만 Main 쓰레드가 시작하고 3초를 sleep 하고 그 뒤에 Runnable을 깨우게 된다. 이렇게 되면 1초당 한번씩 출력하고 있던 Runnable이 `interrupt()`를 감지 하자 마자 루프를 빠져나와 종료하게 되는 것이다.
+하지만, Main 쓰레드가 시작하고 3초를 sleep 하고 그 뒤에 Runnable을 깨우게 된다. 이렇게 되면 1초당 한번씩 출력하고 있던 Runnable이 `interrupt()`를 감지 하자 마자 루프를 빠져나와 종료하게 되는 것이다.
 
 <img src="../../img/thread-wake-3seconds-after.png" width="380px">
 
