@@ -31,6 +31,7 @@
 - [java 인테페이스 기본 메서드와 스태틱 메서드](./Lecture/JAVA/interface-defualt-static.md)
 - [java 8 API의 기본 메서드와 스태틱 메서드](./Lecture/JAVA/java-8-defualt-static-method.md)
 - [checked-exception unchecked-exception](./Lecture/JAVA/checked-unchecked-exception.md)
+- [java thread 완벽하게 알고가자](./Lecture/JAVA/java-thread.md)
 
 
 **Design Pattern**
