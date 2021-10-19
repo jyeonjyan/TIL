@@ -77,3 +77,23 @@ public void run() {
 <img src="../../img/thread-wake-3seconds-after.png" width="380px">
 
 아무튼 굉장히 복잡해진다.. 나중에 n개의 쓰레드를 개발자가 직접 만들어 관리하기에는 굉장히 어렵다.
+
+### 쓰레드 기다리기
+```java
+public static void main(String[] args) throws InterruptedException {
+    Thread thread = new Thread(() -> {
+        System.out.println("Runnable is starting: " + Thread.currentThread().getName());
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+            System.out.println("======== I'm wake now =======");
+        }
+    }); thread.start();
+
+    System.out.println("Hello: " + Thread.currentThread().getName());
+    Thread.sleep(3000L);
+    thread.join();
+    System.out.println("======= thread is finished =======");
+}
+```
+이렇게 `thread.join();` 을 사용하면 해당 쓰레드가 종료되기 전 까지 기다려주다 프로세스가 종료 되는 것을 볼 수 있다.
