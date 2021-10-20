@@ -1,4 +1,10 @@
 # java Callable과 Future
+
+## Future
+> Future은 Runnable을 구현하는 클래스이고 Executor에 의해 실행됩니다.
+> return null as a result of the underlying task. -> null 반환, NPE의 문제가 발생한다.
+> [-> Future.class 더 알아보기](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html)
+
 Thread는 Runnable과 Callable의 구현된 함수를 구현한다는 공통점이 있지만. 차이점도 존재한다.
 * Runnable: 어떤 객체도 **리턴하지 않는다** Exception을 발생시키지 않는다.
 * Callable: 특정 타입의 **객체를 리턴한다** Exception을 발생시킨다.
