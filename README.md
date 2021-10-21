@@ -123,7 +123,7 @@
 **library**
 - [SDK 란?](./Spring/Concept/whatIsSDK.md)
 - [SOLID 원칙](./Spring/Concept/SOLID.md)
-- [시간복잡도]()
+- [시간복잡도](./Spring/Concept/library/Time-complexity.md)
 
 **Methodology**
 - [Test Driven Development](./DevFeed/TDD.md)
