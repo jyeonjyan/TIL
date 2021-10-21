@@ -120,5 +120,4 @@ public class TimeComplexity {
 ㄴ> 여기서 콜렉션은 자료구조의 유형인데 데이터의 집합이나 그룹을 의미한다.
 
 <img src="../../../img/sorting-algorithms.png" width="650px">
-
 <img src="../../../img/arrayList-bigO.png" width="650px>
