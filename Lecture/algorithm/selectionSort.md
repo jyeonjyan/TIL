@@ -18,34 +18,20 @@
 
 ## 코드 구현 & 설명
 ```java
-public class Main {
-    public int[] solution(int[] arr){
-        // 0~last 인덱스까지 반복한다.
-        for (int i=0; i<arr.length; i++){
-            // 자신을 제외한 나머지 index를 비교 반복한다.
-            for (int j=i+1; j<arr.length; j++){
-                // 만약 i가 더 크다면 비교한 수 j와 자리를 바꾼다.
-                if (arr[i] > arr[j]){
-                    int tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                }
+public int[] solution(int[] arr){
+    // 0~last 인덱스까지 반복한다.
+    for (int i=0; i<arr.length; i++){
+        // 자신을 제외한 나머지 index를 비교 반복한다.
+        for (int j=i+1; j<arr.length; j++){
+            // 만약 i가 더 크다면 비교한 수 j와 자리를 바꾼다.
+            if (arr[i] > arr[j]){
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
             }
         }
-        return arr;
     }
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner scanner = new Scanner(System.in);
-
-        int n = scanner.nextInt();
-        int[] integers = new int[n];
-        for (int i=0; i<n; i++){
-            integers[i] = scanner.nextInt();
-        }
-
-        System.out.println(Arrays.toString(main.solution(integers)));
-    }
+    return arr;
 }
 ```
 
