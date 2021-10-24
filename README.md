@@ -66,6 +66,7 @@
 **Algorithm**
 * 정렬
   * [선택정렬](./Lecture/algorithm/selectionSort.md)
+  * [버블정렬](./Lecture/algorithm/bubbleSort.md)
 
 **Git, Commands**
 - [엎질러진 github 명령 취소하기](./GitHub/delPush.md)
