@@ -14,7 +14,7 @@
    4. 하나의 원소만 남을 때까지 반복한다.
 
 ## 선택정렬 회전 및 정렬 결과
-<img src="../../img/selection-sort.png">
+<img src="../../img/selection-sort.png" width="600px">
 
 ## 코드 구현 & 설명
 ```java
