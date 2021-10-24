@@ -63,6 +63,10 @@
 - [Just In Time 컴파일이란?](./CS/JIT.md)
 - [동기, 비동기 | 블록킹, 논블로킹](./Lecture/JAVA/async-nonblocking.md)
 
+**Algorithm**
+* 정렬
+  * [선택정렬](./Lecture/algorithm/selectionSort.md)
+
 **Git, Commands**
 - [엎질러진 github 명령 취소하기](./GitHub/delPush.md)
 - [github 라이센스 알아보기](./DevFeed/githubLicense.md)
