@@ -108,12 +108,3 @@ public class Generic_Ex {
 ```
 
 <img src="../../img/generic-console.png" width="600px">
-
-## 제한된 Generics 클래스
-```java
-FruitBox<Toy> fruitBox = new FruitBox<Toy>();
-fruitBox.add(new Toy());  // OK, 과일상자에 장난감을 담을 수 있다.. 그러나 뭔가 잘못된 것 같지 않은가?
-```
-
-* 타입문자로 사용할 타입을 명시하면 한 종류의 타입만 지정할 수 있도록 제한할 수 있지만, 그래도 위의 코드처럼 여전히 모든 종류의 타입을 지정할 수 있다는 것에는 변함이 없다.
-* 그렇다면 타입 매개변수 `T`에 지정할 수 있는 타입의 종류를 제한할 수 있는 방법에 대해 알아보자. 
