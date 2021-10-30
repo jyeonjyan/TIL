@@ -37,6 +37,7 @@
 - [java CompletableFuture과 callback](./Lecture/JAVA/java-completableFuture-callback.md)
 - [java 배열의 깊은 복사와 얕은 복사](./Lecture/JAVA/shallowcopy-deepcopy.md)
 - [제네릭의 활용](./Lecture/JAVA/generics-harcore.md)
+- [impl Comparable<>, @Override compareTo()](./Lecture/JAVA/comparable-compareTo.md)
 
 
 **Design Pattern**
