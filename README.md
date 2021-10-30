@@ -38,6 +38,7 @@
 - [java 배열의 깊은 복사와 얕은 복사](./Lecture/JAVA/shallowcopy-deepcopy.md)
 - [제네릭의 활용](./Lecture/JAVA/generics-harcore.md)
 - [impl Comparable<>, @Override compareTo()](./Lecture/JAVA/comparable-compareTo.md)
+- [java number를 intArray로 convert 하는 방법](https://gist.github.com/jyeonjyan/744adc149918531e3331fd92b6732179)
 
 
 **Design Pattern**
