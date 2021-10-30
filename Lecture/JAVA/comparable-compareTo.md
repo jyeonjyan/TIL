@@ -57,9 +57,9 @@ public class Person{
 그럼 `Comparable`과 `Comparator`의 역할은 비슷한 것 같은데 무슨 차이인 것일까?  
 왜 `Comparable`의 `comapreTo(T o)` 메소드의 파라미터는 하나이고, `Comprator`의 `compareTo(T o1, T o2)` 메소드는 파라미터가 두개인 것일까?
 
-일단, 두 인터페이스의 구체적인 내용을 떠나서 정답부터 말하자면, `Comparable`은 **"자기자신과 매개변수 객체를 비교"**하는 것이고, `Comparator`는 **"두 매개변수 객체를 비교"**하는 것이다.
+일단, 두 인터페이스의 구체적인 내용을 떠나서 정답부터 말하자면, `Comparable`은 **"자기자신과 매개변수 객체를 비교"** 하는 것이고, `Comparator`는 **"두 매개변수 객체를 비교"** 하는 것이다.
 
-또 다른 차이점이라면 Comparable은 lang패키지에 있기 때문에 **import 를 해줄 필요가 없지만,** Comparator는 util패키지에 있다.
+또 다른 차이점이라면 Comparable은 lang패키지에 있기 때문에 **import 를 해줄 필요가 없지만,**  Comparator는 util패키지에 있다.
 
 ## Comparable<T>
 우선 `<T>` 제네릭에 대해서 모르는 사람은 바로 앞 TIL 문서를 보고 와줬으면 좋겠다.  
