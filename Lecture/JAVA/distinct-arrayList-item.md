@@ -31,6 +31,7 @@ ArrayList의 `contains()` 메소드의 시간복잡도는 `O(n)`이다. List 모
 ## hashCode() 어떻게 작동하는가?
 해시코드를 간단하게 말하면 **알고리즘에 의해 생성된 정수** 값이다.  
 
+#### HashCode 규약
 * equals 비교에 사용되는 정보가 변경되지 않았다면, 애플리케이션이 실행되는 동안 그 객체의 hashCode 메소드는 몇번을 호출해도 항상 일관되게 항상 같은 값을 반환해야 한다. (애플리케이션을 다시 실행하면 이 값이 달라져도 상관없다.)
 * equals가 두 객체를 같다고 판단했다면, 두 객체의 hashCode는 똑같은 값을 반환해야 한다.  
 * equals가 두 객체를 다르다고 판단했더라도, 두 객체의 hashCode가 서로 다른 값을 반환할 필요는 없다. 단, **다른 객체에 대해서는 확실히 다른 값을 반환하는것이 해시테이블 성능이 좋아진다.**
@@ -54,10 +55,32 @@ public class MyHash{
 
     @Override
     public int hashCode() {
-        return Objects.hash(pk);
+        return 1;
     }
 }
 ```
 
 이렇게 계속 똑같은 해시코드 값을 반호나하는 메소드를 사용하면 어떻게 될까요?  
 해시테이블 하나의 버킷 내에 계속 원소들이 쌓여 리스트 형태로 연결될 것입니다. 그렇다면 해시테이블 검색 시간복잡도 O(1)의 이점을 누리지 못하고 O(n)으로 늘어나게 됩니다.
+
+## 해시코드 성능 향상
+```java
+@Override
+public int hashCode() {
+    System.out.println("hashCode: "+Objects.hash(word));
+    return Objects.hash(word);
+}
+```
+
+이렇게 [java 8](https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#hash-java.lang.Object...-) 부터 Objects 클래스에 `.hash()`라는 static 메소드를 제공한다.  
+아무튼 이걸 사용하면 된다. 이걸 사용하면 위에서 말한 HashCode 규약에 알맞은 HashCode를 return 한다.
+
+<img src="../../img/hashcode-return.png" width="400px">
+
+### hashCode 생성 연산에 31을 곱해주는 이유는?
+
+<img src="../../img/Obejct-hashCode.png" width="730px">
+
+* 31은 홀수이면서 소수(prime)이기 때문이다. 만약 이 숫자가 짝수이고 오버플로가 발생한다면 정보를 잃게 된다. 2를 곱하는 것은 시프트 연산과 같은 결과를 내기 때문이다.
+* 소수를 곱하는 이유는 전통적으로 그렇다. 그리고 31이라는 숫자는 곱셈을 시프트 연산과 뺄셈으로 대체해 최적화 할 수 있다.
+* `31*i == (i<<5)-1` 과 같다.
