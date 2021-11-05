@@ -62,6 +62,7 @@
 - [spring DI(Dependency Injection)은 어떻게 동작할까?](./Lecture/JAVA/how-working-DI.md)
 - [Spring Bean Life Cycle](./Spring/SpringBoot/spring-bean-life-cycle.md)
 - [@NoargsConstructor(AccessLevel.PROTECTED) 와 @Builder](./Spring/SpringBoot/@NoArgs.md)
+- [springboot app request client ip 가져오기](./Spring/SpringBoot/getClientIp.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
