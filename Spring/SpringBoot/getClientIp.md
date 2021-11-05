@@ -2,11 +2,11 @@
 
 ## request.getRemoteAddr();
 기본적으로 HttpServletRequest 의 `.getRemoteAddr()` 메소드로 클라이언트 IP를 가져올 수 있다.  
-하지만 보안관련해서 방화벽이나 클라우드를 운영하는 경우 클라이언트의 원 IP주소를 가져올 수 없다.  
+하지만 보안관련해서 방화벽이나 클라우드를 운영하는 경우 클라이언트의 원 IP주소를 가져올 수 없다.(프록시들에 의해 타켓이 달라짐)  
 
 이유는, 클라이언트가 요청을 하면 WebServer에서 프록시나 로드 밸런서를 통해 WAS에 요청하기 때문에 프록시나 밸런서의 IP주소만을 담게 되기 때문이다. 그래서 원 IP를 그대로 못가져오는 이슈가 발생한다.
 
-이슈가 발생할 수도 있는 IP getter
+#### 이슈가 발생할 수도 있는 IP getter
 ```java
 public IdolData getList(@RequestParam String name, HttpRequestServlet request) {
     request.getRemoteAddr(); // IP 주소?
