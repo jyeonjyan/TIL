@@ -41,6 +41,7 @@
 - [impl Comparable<>, @Override compareTo()](./Lecture/JAVA/comparable-compareTo.md)
 - [java number를 intArray로 convert 하는 방법](https://gist.github.com/jyeonjyan/744adc149918531e3331fd92b6732179)
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
+- [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
 
 
 **Design Pattern**
@@ -76,6 +77,7 @@
   * [버블정렬](./Lecture/algorithm/bubbleSort.md)
   * [삽입정렬](./Lecture/algorithm/insertionSort.md)
   * [카운팅정렬](./Lecture/algorithm/counting-sort.md)
+  * [깊이 우선 탐색 DFS](./Lecture/algorithm/DFS.md)
 
 **Git, Commands**
 - [엎질러진 github 명령 취소하기](./GitHub/delPush.md)
