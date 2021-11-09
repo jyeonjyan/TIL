@@ -1,4 +1,5 @@
 **Java, Object-oriented**
+- [절차지향, 객체지향의 차이](./Lecture/JAVA/Procedure-oriented&object-oriented.md)
 - [생성자란?](./Lecture/JAVA/constructor.md)
 - [IS-A 관계란?](./Lecture/JAVA/IS-A.md)
 - [JVM 이란?](./Lecture/JAVA/JVM.md)
