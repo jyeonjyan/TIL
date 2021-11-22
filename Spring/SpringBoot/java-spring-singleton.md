@@ -30,8 +30,9 @@ public class Singleton{
 
 ### 단점 발생
 1. 동시에 호출하는 경우를 고려해 synchronized 키워드를 줬지만, 인스턴스가 초기화되고나면, 필요없는 synchronized이 계속 발생해 효율이 저하
-2. locking overhead 로 인한 성능 저하
+2. 동기화 로직에 의한 locking overhead로 성능 저하
 
+### Double checked locking 구현하기
 ```java
 public static Singleton getInstance() { 
     if (instance == null) { 
