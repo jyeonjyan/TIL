@@ -41,10 +41,11 @@ HikariCP에서 얻은 Connection은 `(ProxyConnection) Connection.close()`를 �
 ### thread starvation or clock leap detected
 이 오류의 결론적인 문제는 docker 자원 부족이였다.  
 그렇다고 docker의 자원을 제한해서 해결될 문제는 아니라고 한다.
+[이 블로그를 인용 함](https://bit.ly/3d5RLyv)
 
-<img src="../../img/hikari-error-solution.png" Width="670px">
+<img src="../../img/docker-resource-limit.png" width="700px"></>
 
 ## 총평
-
+<img src="../../img/hikari-error-solution.png" Width="700px">
 나는 [stackoverflow](https://bit.ly/3d97nBi) 해당 답변의 방법처럼 인스턴스 용량을 키우니 해결되었다.  
 서버 중단의 심적 타격에 비해 단순한 해결법이라 허무했긴 했지만, 나중에 DB Connection관련 에러가 터진다고 해도 이 계기를 통해 빠르게 해결할 수 있을 것 같다.
