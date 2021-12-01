@@ -15,9 +15,9 @@
 여기에 첨부한 자료의 저자처럼 대용량 메시징 처리 때문에 발생한 문제는 아니였다.    
 우선 우리가 운영하는 서비스의 초기 트래픽은 총 월 500건의 요청 정도를 처리했다. 아무튼 대용량 데이터 처리 때문은 아니라는거다.
 
-HikariCP는 3단계의 로직을 통해 Connection 객체를 얻을 수 있게 되어 있습니다.
+### HikariCP는 3단계의 로직을 통해 Connection 객체를 얻을 수 있게 되어 있습니다.
 
-### Connection 요청
+#### Connection 요청
 1. 기존에 Thread가 썻던 Connection 객체가 아직 존재하는지 확인한다.
    1. 기존에 Connection 객체가 `STATE_NOT_IN_USE` 상태면 기존의 Connection 객체를 빠르게 반환한다.
    2. 기존의 Connection이 존재하지만, `IS_USE` 상태면 다음단계로 넘어간다.
@@ -28,7 +28,7 @@ HikariCP는 3단계의 로직을 통해 Connection 객체를 얻을 수 있게 �
 
 <img src="../../img/getConnection-flow.png" width="780px">
 
-### Connection 반납하기
+####  Connection 반납하기
 HikariCP에서 얻은 Connection은 `(ProxyConnection) Connection.close()`를 하게 되면 반납이 된다.  
 정상적인 transaction으로 마무리 되거나, Rollback이 호출되어도 `connection.close()`가 호출되어 Connection을 반납합니다.  
 
@@ -47,5 +47,6 @@ HikariCP에서 얻은 Connection은 `(ProxyConnection) Connection.close()`를 �
 
 ## 총평
 <img src="../../img/hikari-error-solution.png" Width="700px">
+
 나는 [stackoverflow](https://bit.ly/3d97nBi) 해당 답변의 방법처럼 인스턴스 용량을 키우니 해결되었다.  
 서버 중단의 심적 타격에 비해 단순한 해결법이라 허무했긴 했지만, 나중에 DB Connection관련 에러가 터진다고 해도 이 계기를 통해 빠르게 해결할 수 있을 것 같다.
