@@ -43,7 +43,7 @@ HikariCP에서 얻은 Connection은 `(ProxyConnection) Connection.close()`를 �
 그렇다고 docker의 자원을 제한해서 해결될 문제는 아니라고 한다.
 [이 블로그를 인용 함](https://bit.ly/3d5RLyv)
 
-<img src="../../img/docker-resource-limit.png" width="700px"></>
+<img src="../../img/docker-resource-limit.png" width="700px">
 
 ## 총평
 <img src="../../img/hikari-error-solution.png" Width="700px">
