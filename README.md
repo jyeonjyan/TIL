@@ -104,6 +104,7 @@
 - [xx.com의 리다이렉션 횟수가 너무 많습니다.](./DevOps/tooManyRedirection.md)
 - [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
 - [학교가불편한순간 v1.1.1에서 마주한 트러블슈팅](./DevOps/themoment-v1.1.1-issue.md)
+- [20명 정도 되는 규모의 팀에 Vault 도입하기](./DevOps/Introducing-Vault.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
