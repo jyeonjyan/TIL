@@ -66,6 +66,7 @@
 - [@NoargsConstructor(AccessLevel.PROTECTED) 와 @Builder](./Spring/SpringBoot/@NoArgs.md)
 - [springboot app request client ip 가져오기](./Spring/SpringBoot/getClientIp.md)
 - [장애회고, HikariCP connection error](./Spring/SpringBoot/error-hikari.md)
+- [spring application을 운영할 때 고려해야 security](./Network/spring-security.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
