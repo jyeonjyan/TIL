@@ -67,7 +67,7 @@
 - [springboot app request client ip 가져오기](./Spring/SpringBoot/getClientIp.md)
 - [장애회고, HikariCP connection error](./Spring/SpringBoot/error-hikari.md)
 - [spring application을 운영할 때 고려해야 security](./Network/spring-security.md)
-- [사랑해요❤️ modelMapper](./Spring/SpringBoot/modelmapper-love.md)
+- [사랑해요❤️ modelMapper <- "NEW"](./Spring/SpringBoot/modelmapper-love.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
@@ -122,7 +122,8 @@
   - [인터넷 통신](./http/internet-network.md)
   - [IP(인터넷 프로토콜)](./http/ip.md)
   - [TCP-UDP](./http/TCP-UDP.md)
-  - [PORT <- "NEW"](./http/port.md)
+  - [PORT](./http/port.md)
+  - [DNS <- "NEW"](./http/DNS.md)
 
 
 **DataBase, JPA, SQL**
