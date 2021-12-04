@@ -124,7 +124,7 @@
   - [TCP-UDP](./http/TCP-UDP.md)
   - [PORT](./http/port.md)
   - [DNS](./http/DNS.md)
-- [URI와 웹브라우져의 요청 흐름]
+- URI와 웹브라우져의 요청 흐름
   - [URI](./http/URI.md)
 
 

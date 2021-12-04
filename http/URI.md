@@ -47,13 +47,13 @@ https://www.the-moment.org/search?key=value
 * https는 http에 보안 추가
 
 ### URL - userinfo 
-scheme://**[userinfo@]**host[:port][/path][?query][#fragment]
+scheme://[userinfo@]host[:port][/path][?query][#fragment]
 
 * url에 사용자 정보를 포함해서 인증
 * 거의 사용하지 않음
 
 ### URL - host
-scheme://[userinfo@]**host**[:port][/path][?query][#fragment]
+scheme://[userinfo@]host[:port][/path][?query][#fragment]
 
 * 호스트명
 * 도메인명 또는 IP 주소 직접 사용가능
