@@ -117,6 +117,11 @@
 - [웹 생태계의 스팩](./Spring/Concept/webSpec.md)
 - [cache 란?](./Network/cache.md)
 
+**모든 개발자들을 위한 HTTP**
+- 인터넷 네트워크
+  - [인터넷 통신](./http/internet-network.md)
+  - [IP(인터넷 프로토콜)](./http/ip.md)
+
 
 **DataBase, JPA, SQL**
 - [GraphQL 이란?](./DevFeed/GraphQL.md)
