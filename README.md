@@ -126,6 +126,7 @@
   - [DNS](./http/DNS.md)
 - URI와 웹브라우져의 요청 흐름
   - [URI](./http/URI.md)
+  - [웹브라우져의 요청 흐름](./http/web-browser-flow.md)
 
 
 **DataBase, JPA, SQL**
