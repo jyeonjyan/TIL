@@ -20,6 +20,10 @@
   * TCP로 서버간 통신하는건 요즘 거의 없음. (굳이 있다면 게임 서버?)
 * 지금은 HTTP 시대!
 
+#### 이건 몰랐지 ?!?!
+
+<img src="../img/http/socket-TCP.png" width="500px">
+
 ## HTTP 역사
 
 * HTTP/0.9 1991년: GET 메서드만 지원, HTTP 헤더 X
