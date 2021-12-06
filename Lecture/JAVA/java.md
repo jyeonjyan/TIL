@@ -48,3 +48,24 @@ DB의 직렬화 역직렬화와 로직이 유사하다고 할 수 있습니다.
 
 Exception 핸들링이 필요하냐 필요없냐의 차이 입니다.  
 Checked 가 무조건 Exception 핸들링이 필요하고, Unckecked 가 하지 않아도 됩니다.
+
+## JVM의 역할을 설명하세요
+
+JVM 은 Java Virtual Machine 으로 자바 가상 머신을 줄여 부른것이다.  
+JVM 은 classLoader를 통해 class 파일들을 JVM 으로 로딩한다.  
+JVM 은 메모리를 효율적으로 관리해주며, 클래스 파일을 해석하여 실질적인 수행까지 이루어지게 한다.
+
+## JDBC란 무엇인가요?
+
+Java Database Connectivity 로 자바에서 DB 프로그래밍을 하기 위해 사용되는 것이다.  
+Hibernate orm framework 또한 내부적으로 JDBC API를 사용합니다.
+
+## Hibernate란 무엇인가요?
+
+하이버네이트는 자바 언어를 위한 ORM 프레임워크예요.  
+JPA의 구현체로, JPA 인터페이스를 구현하며, 내부적으로 JDBC API를 사용해요.
+
+JPA는 관계형 데이터베이스와 객체의 페러다임 불일치 문제를 해결할 수 있다는 점과 영속성 컨텍스트를 제공이 큰 특징이예요.
+
+객체를 불러올 때, 연관된 객체 또한 함께 불러오기 때문에, SQL에 의존적이지 않은 개발을 할 수 있어요.  
+즉, SQL 중심이 아닌 객체 중심의 개발이 가능해요.
