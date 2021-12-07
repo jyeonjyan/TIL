@@ -24,7 +24,7 @@
 
 * 리소스 조회
 * 서버에 전달하고 싶은 데이터는 query(파라미터, 스트링)을 통해서 전달
-* 메시지 바디를 사용해서 데이터 전달 가능하지만, 실무에서는 사용 X 권장하지도 X
+* `RequestBody`를 사용해서 데이터 **전달 가능하지만, 실무에서는 사용 X 권장하지도 X**
 
 <img src="../img/http/HTTP-GET-flow.png" width="750px">
 
@@ -53,11 +53,11 @@
 네 바로 DELETE의 기능을 수행하지만, `@RequestBody`로 `SignInDto`를 받는다는게 HTTP 메소드 설계의 주요 골칫거리죠???  
 
 아까 기본적인 이론에서 언급했다 싶이.  
-POST 메소드의 "주로 **전달된 데이터**로 프로세스 처리에 사용"에 집중해야 하는데요..
+POST 메소드의 "주로 **전달된 데이터**로 프로세스 처리에 사용"하는 속성에 집중해야 하는데요..
 
 이미 이처럼 비즈니스 로직상 DELETE 의 기능을 수행하지만, HTTP 메소드 설계 원칙상 POST가 되는 고민들을 다 하고 계셨더라고요..
 
-[ex stackoverflow](https://stackoverflow.com/questions/299628/is-an-entity-body-allowed-for-an-http-delete-request)
+[ex stackoverflow](https://stackoverflow.com/questions/299628/is-an-entity-body-allowed-for-an-http-delete-request)  
 [ex Kyoungil's Blog](http://blog.leekyoungil.com/?p=390)
 
 <img src="../img/http/stackoverflow-ex1.png" width="750px"> 
