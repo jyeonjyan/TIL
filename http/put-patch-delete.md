@@ -33,7 +33,7 @@ PUT 요청 처리 시 username의 필드가 삭제되고 그대로 **리소스�
 
 <img src="../img/http/PATCH-without-feild.png" width="750px">
 
-PATCH 요청 json에 존재하는 `"필드":데이터` 만 리소스에서 **"부분 변경"**이 일어난다.
+PATCH 요청 json에 존재하는 `"필드":데이터` 만 리소스에서 **"부분 변경"** 이 일어난다.
 
 ## DELETE 
 [DELETE] `/member/100` 이렇게 요청하면 index 100에 해당하는 리소스가 삭제된다. (너무 쉬우니 넘어감)
