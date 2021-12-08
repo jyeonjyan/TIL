@@ -70,4 +70,4 @@ client에서 memberId 상태를 관리하고 있다면, POST `/member/{memberId}
 
 <img src="../img/http/post-정리.png" width="800px">
 
-[다음편에서 계속....]()
+[다음편에서 계속....](./put-patch-delete.md)

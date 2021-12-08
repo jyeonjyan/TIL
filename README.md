@@ -131,6 +131,7 @@
 - HTTP 기본
   - [모든 것이 HTTP](./http/everything-http.md)
   - [HTTP 메서드](./http/HTTP-method.md)
+  - [HTTP 메서드 - PUT, PATCH, DELETE](./http/put-patch-delete.md)
 
 
 **DataBase, JPA, SQL**
