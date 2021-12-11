@@ -108,6 +108,7 @@
 - [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
 - [학교가불편한순간 v1.1.1에서 마주한 트러블슈팅](./DevOps/themoment-v1.1.1-issue.md)
 - [20명 정도 되는 규모의 팀에 Vault 도입하기 <- "NEW"](./DevOps/Introducing-Vault.md)
+- [DispatcherServlet 이 대체 뭐하는 녀석인가](./Spring/SpringBoot/dispatcherServlet.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
