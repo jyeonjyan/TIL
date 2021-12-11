@@ -1,4 +1,4 @@
-# Dispatcher Servlet이 대체 뭐하는 녀석인가.
+# DispatcherServlet이 대체 뭐하는 녀석인가.
 > 나는 예전에 Spring MVC 동작 원리를 설명한적이 있다.  
 > 하지만 Dispatcher Servlet이 기술면접에서도 자주 등장하는 녀석이라 깔끔하게 짚고 넘어가려고 한다.
 
