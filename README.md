@@ -68,7 +68,8 @@
 - [springboot app request client ip 가져오기](./Spring/SpringBoot/getClientIp.md)
 - [장애회고, HikariCP connection error](./Spring/SpringBoot/error-hikari.md)
 - [spring application을 운영할 때 고려해야 security](./Network/spring-security.md)
-- [사랑해요❤️ modelMapper <- "NEW"](./Spring/SpringBoot/modelmapper-love.md)
+- [사랑해요❤️ modelMapper](./Spring/SpringBoot/modelmapper-love.md)
+- - [DispatcherServlet 이 대체 뭐하는 녀석인가 <- "NEW"](./Spring/SpringBoot/dispatcherServlet.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
@@ -108,7 +109,6 @@
 - [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
 - [학교가불편한순간 v1.1.1에서 마주한 트러블슈팅](./DevOps/themoment-v1.1.1-issue.md)
 - [20명 정도 되는 규모의 팀에 Vault 도입하기 <- "NEW"](./DevOps/Introducing-Vault.md)
-- [DispatcherServlet 이 대체 뭐하는 녀석인가](./Spring/SpringBoot/dispatcherServlet.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
