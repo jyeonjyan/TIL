@@ -4,7 +4,7 @@
 
 우선 springboot 를 공부하자니 AOP, PSA, Application Context 등 너무 방대한 용어들 사이에 DispatcherServlet 도 그 중 하나이다.
 
-간략하게 정리하자면 DispatcherServlet 은 "개발자에게 서블릿 컨텍스트 구현의 책임이 아닌 스프링 컨텍스트 구현의 책임을 주는 것"이다.
+간략하게 정리하자면 DispatcherServlet 은 **"개발자에게 서블릿 컨텍스트 구현의 책임이 아닌 스프링 컨텍스트 구현의 책임을 주는 것"** 이다.
 
 더 자세하게 알아보자..
 
@@ -72,12 +72,12 @@ public abstract class HttpServlet extends GenericServlet {
 
 HTTP 요청마다 요청을 처리할 서블릿을 생성하고, 생성한 서블릿을 요청에 매핑하여 HTTP Request를 처리하는 Actor로 사용한다.
 
-여기까지가 서블릿을 통해 Http 요청을 처리하던 방식입니다.  
-위의 패턴은 서블릿을 상속하는 방식이기에 개발자의 코드를 서블릿이라는 기술에 종속되게 된다는 큰 문제점이 있습니다.  
+여기까지가 서블릿을 통해 HTTP 요청을 처리하던 방식이다.  
+위의 패턴은 서블릿을 상속하는 방식이기에 개발자의 코드를 서블릿이라는 기술에 종속되게 된다는 큰 문제점이 있다.  
 
 **JavaEE가 시장되어 현재는 거의 사용하지 않는 이유도, 코드의 기술 결합도를 너무 높여서 재사용성을 떨어뜨린다는 것이였는데,** 서블릿에서도 그 모습을 확인할 수 있습니다.
 
-스프링은 이러한 문제점을, 컨테이너 계층을 Servlet Container - Spring Container 로 분리하고 DispatcherServlet을 통해 연결하여 해결합니다.
+스프링은 이러한 문제점을, 컨테이너 계층을 `Servlet Container - Spring Container` 로 분리하고 DispatcherServlet을 통해 연결하여 해결한다.
 
 ## Spring Container와 Spring Container을 연결하는 DispatcherServlet
 
@@ -91,14 +91,22 @@ HTTP 요청마다 요청을 처리할 서블릿을 생성하고, 생성한 서�
 
 <img src="../../img/front-controller.png" width="500px">
 
-스프링 MVC의 DispatcherServlet이 Servlet 구현의 책임을 갖고, **개발자는 서블릿이 아닌 스프링 컨텍스트 작성의 책임을 갖기 때문에 기존의 JavaEE 에 종속된 프로그램을 만들어야 했던 패턴을 벗어나 지금의 POJO 지향 프로그램 개발이 가능했다.**
+스프링 MVC의 DispatcherServlet이 Servlet 구현의 책임을 갖고, **개발자는 서블릿이 아닌 스프링 컨텍스트 작성의 책임을 갖기 때문에 기존의 JavaEE 에 종속된 프로그램을 만들어야 했던 패턴을 벗어나 지금의 POJO 지향 프로그램 개발이 가능하다.**
 
 ## 결론
 DispatcherServlet은 Servlet Container에 포함된 개념이기 때문에, DispatcherServlet 에서 Spring Container를 참조할 수 있기만 한다면, 두 컨테이너의 연결은 성립한다고 볼 수 있다.  
 
 사실상 SpringContainer도 ApplicationContext을 의미한다고 볼 수 있다.  
+
 다시 말하면 Spring container를 참조할 수 있다는 것은 ApplicationContext를 알고 있다는 것이고, 이러한 맥락에서 클래스에 ApplicationContext를 주입하는 인터페이스인 ApplicationContextAware 를 떠올릴 수 있다.
 
 ### GenericServlet 클래스와의 연결이 돼 있는걸 볼 수 있다.
 
 <img src="../../img/dispatcherServlet-diagram.png" width="500px">
+
+## 진짜 결론
+
+DispatcherServlet 은 스프링이 기존 엔터프라이즈 시스템 개발 패턴의 문제를 해결한 기술중 하나이다.  
+스프링은 하나같이 "객체지향" 설계를 기반으로 문제를 풀어나간다는 공통점을 알 수 있다.
+
+스프링을 다른 프레임워크를 활용할 수 있는 수단이라고 생각하기 보다는. **"객체지향적 설계를 위한 프레임워크"** 라는 생각을 하는게 바람직하다.
