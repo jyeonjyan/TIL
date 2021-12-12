@@ -138,6 +138,7 @@
   - [HTTP 상태코드 소개](./http/HTTP-status-code.md)
   - [2xx 성공](./http/2xx-success.md)
   - [3xx 리다이렉션](./http/3xx-redirection.md)
+  - [4xx 클라이언트 에러](./http/4xx-client-error.md)
 
 
 **DataBase, JPA, SQL**
