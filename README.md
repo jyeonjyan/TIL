@@ -134,6 +134,10 @@
   - [HTTP 메서드](./http/HTTP-method.md)
   - [HTTP 메서드 - PUT, PATCH, DELETE](./http/put-patch-delete.md)
   - [HTTP 메서드의 활용](./http/http-method-use.md)
+- HTTP 상태코드
+  - [HTTP 상태코드 소개](./http/HTTP-status-code.md)
+  - [2xx 성공](./http/2xx-success.md)
+  - [3xx 리다이렉션](./http/3xx-redirection.md)
 
 
 **DataBase, JPA, SQL**
