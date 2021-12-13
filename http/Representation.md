@@ -59,5 +59,14 @@
 
 <img src="../img/http/accept-lang.png" width="500px">
 
-예시 [토스](https://toss.im/)이렇게 들어가면 Request Header에 language 우선순위를 볼 수 있을 것이다.
+예시 [토스](https://toss.im/) 이렇게 들어가면 Request Header에 language 우선순위를 볼 수 있을 것이다.
 
+## Content-Length
+> 표현 데이터의 길이
+
+* 바이트 단위
+* Transfer-Encoding(전송 코딩)을 사용하면 Content-Length를 
+
+
+
+### [협상(콘텐츠 네고시에이션) 다음화에 계속..](./Negotiations.md)
