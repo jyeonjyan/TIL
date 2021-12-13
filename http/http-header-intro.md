@@ -4,11 +4,11 @@
 
 ## HTTP 헤더
 
-<img src="../img/http/http-header.png" width="700px">
+<img src="../img/http/http-header.png" width="850px">
 
 ## HTTP 헤더의 용도
 
-<img src="../img/http/http-header-short.png" width="400px">
+<img src="../img/http/http-header-short.png" width="500px">
 
 * HTTP 전송에 필요한 모든 부가정보
 * 메시지 바디의 내용, 메시지 바디의 크기, 인증, 요청 클라이언트, 서버 정도 등등
@@ -17,7 +17,7 @@
 
 ## HTTP - RFC2616 과거
 
-<img src="../img/http/rfc-2616.png" width="400px">
+<img src="../img/http/rfc-2616.png" width="500px">
 
 * 헤더 분류
   * General 헤더: 메시지 전체에 적용되는 정보 ex) Connection: close
@@ -28,7 +28,7 @@
 
 ### HTTP BODY
 
-<img src="../img/http/http-body.png" width="400px">
+<img src="../img/http/http-body.png" width="500px">
 
 * 메시지 본문은 엔티티 본문을 전달하는데 사용
 * 엔티티 본문은 요청이나 응답에서 전달할 실제 데이터
