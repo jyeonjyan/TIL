@@ -14,7 +14,7 @@
 ## HTTP BODY
 > RFC7230(최신)
 
-<img src="../img/http/rfc-7230-http-body.png" width="400px">
+<img src="../img/http/rfc-7230-http-body.png" width="500px">
 
 * 메시지 본문을 통해 데이터를 전달
 * 메시지 본문 = 페이로드(payload)
