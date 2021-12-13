@@ -140,7 +140,9 @@
   - [3xx 리다이렉션](./http/3xx-redirection.md)
   - [4xx 클라이언트 에러](./http/4xx-client-error.md)
   - [5xx 서버 에러](./http/5xx-server-error.md)
-
+- HTTP 헤더 1 - 일반 헤더
+  - [HTTP 헤더 개요](./http/http-header-intro.md)
+  - [표현](./http/Representation.md)
 
 **DataBase, JPA, SQL**
 - [GraphQL 이란?](./DevFeed/GraphQL.md)
