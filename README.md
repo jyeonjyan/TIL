@@ -162,7 +162,7 @@
 - [ddl-auto 와 hbm2ddl.auto](./Spring/JPA/ddl-auto.md)
 - [왜 Hibernate orm column이 WrapperClass일까?](./Spring/JPA/column-mapping-wrapperclass.md)
 - [SQLD 한번에 보기](./DevFeed/SQLD.md)
-- [jpa jpql 그리고 querydsl 까지 <- "NEW"](./Spring/JPA/jpa-jpql-querydsl.md)
+- [나는 왜 JPA를 쓸까](./Spring/JPA/jpa-jpql-querydsl.md)
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
