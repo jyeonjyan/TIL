@@ -42,7 +42,6 @@
 - [java number를 intArray로 convert 하는 방법](https://gist.github.com/jyeonjyan/744adc149918531e3331fd92b6732179)
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
 - [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
-- [Java 이정도는 대답 해야한다.](./Lecture/JAVA/java.md)
 
 
 **Design Pattern**
@@ -183,6 +182,7 @@
 
 **Extra**
 - [nest 빠르게 환경 구성하기 <- "NEW"](Extra/nest/fast-nest-env.md)
+- [백엔드 기술면접 이정도는 대답 하자.](./Lecture/JAVA/tech-interview.md)
   
 > 현재 TIL structure를 마이그레이션 중에 있습니다.  
 > 이곳을 제외한 더 많은 파일은 tree를 사용하거나, [여기](./README_legacy.md)를 참고하세요.
