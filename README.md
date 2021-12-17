@@ -68,7 +68,8 @@
 - [장애회고, HikariCP connection error](./Spring/SpringBoot/error-hikari.md)
 - [spring application을 운영할 때 고려해야 security](./Network/spring-security.md)
 - [사랑해요❤️ modelMapper](./Spring/SpringBoot/modelmapper-love.md)
-- [DispatcherServlet이 대체 뭐하는 녀석인가 <- "NEW"](./Spring/SpringBoot/dispatcherServlet.md)
+- [DispatcherServlet이 대체 뭐하는 녀석인가](./Spring/SpringBoot/dispatcherServlet.md)
+- [우아한 모듈형 모노리스 시스템]()
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
