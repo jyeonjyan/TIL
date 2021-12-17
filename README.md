@@ -41,7 +41,7 @@
 - [impl Comparable<>, @Override compareTo()](./Lecture/JAVA/comparable-compareTo.md)
 - [java number를 intArray로 convert 하는 방법](https://gist.github.com/jyeonjyan/744adc149918531e3331fd92b6732179)
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
-- [java 참조형 변수 <- "NEW"](./Lecture/JAVA/Reference-veriable.md)
+- [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
 - [Java 이정도는 대답 해야한다.](./Lecture/JAVA/java.md)
 
 
