@@ -23,7 +23,7 @@ JVM 구조에 대해 간략히 설명하자면 ClassLoader, RuntimeDataArea, Exe
 
 ### GC 의 대상이 되는 영역은 어디인가요
 
-GC의 대상은 RuntimeDataArea 5가지 영역 `PC register`, `call stack`, `native method stack`, `heap, method area` 중 `heap` 영역만 대상 영역이 됩니다.
+GC의 대상은 RuntimeDataArea 5가지 영역 `PC register`, `call stack`, `native method stack`, `heap`, `method area` 중 `heap` 영역만 대상 영역이 됩니다.
 
 GC 는 사용하지 않는 객체의 메모리를 청소해주는 역할을 합니다.
 
@@ -49,7 +49,7 @@ JIT 컴파일러는 크게 두 가지 역할을 합니다.
 ## GC에 대해서 더 자세하게 알려주세요
 
 GC는 RuntimeDataArea 중 Heap 영역에서만 수행하게 되고요.  
-자바의 메모리 영역은 크게 Young 영역과 Old 영역으로 나뉘게 됩니다.  
+자바의 메모리 영역은 크게 Young 영역과 Old 영역 permgen 영역으로 나뉘게 됩니다.  
 Young 영역에서는 Minor GC가 발생하고 Old 영역에서는 Major GC가 발생합니다.  
 GC 의 정도는 Young 영역이 Old 영역보다 심합니다.
 
@@ -58,10 +58,10 @@ GC 의 정도는 Young 영역이 Old 영역보다 심합니다.
 
 ### 과정에 대해 더 자세하게요 
 
-Young 영역은 또 3가지 eden, servivor1, servivor2 영역으로 나뉘는데요.  
+Young 영역은 또 3가지 eden, servivor, servivor1 영역으로 나뉘는데요.  
 살아있는 객체는 young 영역에 eden 영역에 올라갑니다.  
-eden 영역이 꽉 차면 servivor1 영역에 살아있는 객체를 이동시킵니다.  
-servivor1 영역이 꽉 차면 servivor2 영역에 있는 객체를 old 영역으로 옮기고 이동시킵니다.
+eden 영역이 꽉 차면 servivor 영역에 살아있는 객체를 이동시킵니다.  
+servivor 영역이 꽉 차면 servivor1 영역에 있는 객체를 old 영역으로 옮기고 이동시킵니다.
 
 ## 쓰레드란 무엇이고, 싱글쓰레드와 멀티쓰레드 차이를 설명해주세요.
 
@@ -213,12 +213,13 @@ spring 기준으로 `도메인` 과 `비즈니스 로직`이 POJO 의 대상이 
 ## Servlet filter 와 Intercpetor의 차이가 무엇인가요?
 
 * filter
-  * DispatcherServlet 외부에서 동작하며 Servlet 스팩에 포함됩니다.
+  * DispatcherServlet 보다 먼저 위치해 있으며 Servlet 스팩에 포함됩니다.
 
 * Intercptor
+  * spring application 내부에 위치에 있습니다.
   * spring에서 Handler를 실행하기 전후에 실행합니다.
   * spring 의 application context 에 등록합니다.
-  *  HttpServletRequest 혹은 HttpServeltResponse 사용이 가능해 사용자 인증, 자원 접근, 로깅에 사용됩니다.
+  * HttpServletRequest 혹은 HttpServeltResponse 사용이 가능해 사용자 인증, 자원 접근, 로깅에 사용됩니다.
 
 ## Spring에서 CORS를 해결하는 방법을 설명해주세요
 
@@ -272,7 +273,8 @@ JPA는 관계형 데이터베이스와 객체의 페러다임 불일치 문제�
 ## JPA를 사용하면서 N+1 문제에 대해서 알려주세요.
 우선 N+1 문제란 조회할 데이터 N 만큼 연관관계 조회 쿼리가 발생하여 데이터를 읽어오게 되는 것이예요.  
 JpaRepository에 정의한 메서드를 실행하면 명명규칙에 맞게 JPQL을 생성하여 실행하는데요 이때 JPQL 입장에서 연관관계 데이터를 무시하고 원하는 엔티티만 실행하게 되는 것이기 떄문에 발생하는 것이예요.  
-이 문제는 `FetchJoin`, `@EntityGraph`를 통해 해결할 수 있어요.
+이 문제는 `FetchJoin`, `@EntityGraph`를 통해 해결할 수 있어요.  
+되도록이면 `@OneToMany` 매핑을 하지 않는게 최고의 예방책이예요.
 
 ## 벌크연산이 무엇이고 어떤 문제를 야기 시킬 수 있나요?
 
@@ -284,3 +286,42 @@ JpaRepository에 정의한 메서드를 실행하면 명명규칙에 맞게 JPQL
 한 네트워크로 2개의 객체 정보를 가져옵니다. (매번 A와 B를 같이 조회해야 할 때 이점을 보입니다.)
 
 지연로딩은 객체A를 가져올 때 연관된 객체 B에 대해서 proxy 엔티티를 우선적으로 반환하고 실제로 객체A에 연관된 B를 접근할 때 조회 쿼리를 날리는 것입니다.
+
+## TCP 와 UDP 차이를 알려주세요
+
+TCP와 UDP의 가장 큰 차이는 신뢰성/비신뢰성 입니다.  
+하지만 UDP 는 그 자체로서 비신뢰성일뿐 개발자의 추가적인 정의를 통해 갖도록 해줄 수 있습니다.  
+
+**HTTP/3 스펙에서는 UDP를 기반으로 기술적 문제를 해결합니다.**
+
+## OSI7계층의 존재 이유, TCP/IP 4계층에 대해 설명해보세요.
+
+OSI7계층은 네트워크 통신을 구성하는 요소들 7개의 계층으로 표준화 한 것입니다.  
+이렇게 표준화하는 것의 장점은 통신이 일어나는 과정을 단계별로 파악할 수 있어, 문제가 발생하면 해당 문데를 해결하기 용이해집니다.
+
+실제로 우리가 사용하는 네트워크는 TCP/IP 4계층입니다. 
+
+## 교착상태와 기아상태의 해결방법에 대해 설명해주세요.
+
+교착상태가 무엇인지 알고 있어야 합니다.  
+서로 다른 프로세스가 서로 점유하고 있는 자원의 반납을 대기하고 있는 생태를 의미합니다.  
+
+**발생조건**
+* 상호 배제: 한 번에 한 프로세스만 해당 자원을 사용할 수 있어야 합니다.
+* 점유 대기: 할당된 자원을 가진 상태에서 다른 자원을 기다립니다.
+* 비선점: 다른 프로세스가 자원의 사용을 끝날 때 까지 자원을 뺏을 수 없습니다.
+* 순환대기: 각 프로세스가 순환적으로 프로세스가 요구하는 자원을 가지고 있습니다.
+
+## OAuth 에 대해 알려주세요.
+
+자자 서비스의 회원 로직을 사용하지 않고 다른 회사, 제 3자 인증방식 입니다.  
+개인정보를 넘기는 것을 꺼려하기 때문에 신뢰할 수 있는 서버에게 정보를 맡겨놓고 접근할 수 있는 권한을 주는 것입니다.
+
+## SDP 안정된 의존관계 원칙에 대해 설명해주세요.
+자신이 안정적인 만큼 추상적이기도 해야 한다. 라는 의미에서 나온 개념인데요  
+간단히 말하면 controller -> service -> repository 구조에서 
+
+* controller는 불안정하므로 추상적인 필여가 없다 -> controller 클래스 interface를 만들고 구현하는 것은 무의미하다.
+* repository는 매우 안정적이므로 추상적이여야 한다 -> repository는 interface를 만들고 구현하는 것이 좋다.
+* service 는??
+
