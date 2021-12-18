@@ -1,4 +1,6 @@
-# 백엔드 기술면접 이정도는 대답하자.
+# 내가 이력서에 알고 있다고 한것들 정리하기
+> 이력서는 제발 진짜 제대로 알고 있는것만 작성하자.  
+> 운 좋게 서류는 통과할지 몰라도 기술면접에서 뽀록난다 ^^ 
 
 ## 객체지향에 대해서 설명하시오.
 
@@ -21,7 +23,7 @@ JVM 구조에 대해 간략히 설명하자면 ClassLoader, RuntimeDataArea, Exe
 
 ### GC 의 대상이 되는 영역은 어디인가요
 
-GC의 대상은 RuntimeDataArea 5가지 영역 PC 레지스터, call stack, native method stack, heap, method area 중 heap 영역만 대상 영역이 됩니다.
+GC의 대상은 RuntimeDataArea 5가지 영역 `PC register`, `call stack`, `native method stack`, `heap, method area` 중 `heap` 영역만 대상 영역이 됩니다.
 
 GC 는 사용하지 않는 객체의 메모리를 청소해주는 역할을 합니다.
 
@@ -30,6 +32,8 @@ GC 는 사용하지 않는 객체의 메모리를 청소해주는 역할을 합�
 execution engine은 실행엔진으로 두 가지 방식으로 동작합니다.  
 자바 인터프리터와 JIT 컴파일러 입니다.
 
+* 자바 인터프리터는 바이트코드 명령어를 하나씩 읽어 해석하고 실행한다. 하나하나의 실행은 빠르나 전체적으로 봤을 때는 느림
+  
 ### JIT 컴파일러에 대해서 알려주세요.
 
 JIT 컴파일러는 크게 두 가지 역할을 합니다.  
@@ -48,6 +52,9 @@ GC는 RuntimeDataArea 중 Heap 영역에서만 수행하게 되고요.
 자바의 메모리 영역은 크게 Young 영역과 Old 영역으로 나뉘게 됩니다.  
 Young 영역에서는 Minor GC가 발생하고 Old 영역에서는 Major GC가 발생합니다.  
 GC 의 정도는 Young 영역이 Old 영역보다 심합니다.
+
+* java 8 이후로 permgen 영역이 metaspace로 대체되었습니다.  
+  * metaspace는 ClassLoader가 현제까지 로드한 class들의 metadata가 저장되는 공간입니다.
 
 ### 과정에 대해 더 자세하게요 
 
@@ -155,3 +162,88 @@ thread-safe 하게 싱글톤을 구현하는 방법으로는 `Synchronized` 키�
 하지만 이 방법들은 thread-safe 하지만, 리플랙션으로 언제든지 조작이 가능합니다. 리플랙션으로 조작할 수 없는 싱글톤을 구현하려면 리플랙션이 막혀있는 enum class의 특징을 활용해 구현 가능합니다.
 
 ## 자바 8 이후 향상된 기능은 무엇인가요?
+LTS 버전 기준 8, 11, 17 이렇게 설명드리겠습니다.  
+
+### ~ java 8 LTS
+* 람다 표현식
+* StreamAPI
+* interface default method
+* java time 패키지
+* CompletableFuture (비동기 처리 할 때 사용)
+* Optional
+* jvm PermGen이 사라지고 metaspace 영역으로 대체
+
+### ~ java 11 LTS
+> [java 11 이상으로 전환해야 하는 이유](https://docs.microsoft.com/ko-kr/java/openjdk/reasons-to-move-to-java-11?toc=/azure/developer/java/fundamentals/toc.json&bc=/azure/developer/breadcrumb/toc.json)
+
+* 람다 파라미터를 위한 지역변수 표현
+* HTTP 2 지원
+* 모듈
+* 프로파일링
+* 가비지 수집
+* docker 컨테이너의 향상된 기능
+* 성능 향상
+
+
+### ~ java 17 LTS
+* LTS 주기의 변경
+* 새로운 라이선스 적용
+
+## hikariCP 가 무엇인가요
+
+java 2.x 버전부터 springboot application의 기본 쓰레드 풀입니다.  
+maximumPoolSize는 기본으로 10 입니다.  
+
+## 자바 리플랙션 그리고 그걸로 얻을 수 있는 spring에 대한 이해가 어떤 것이였나요?
+
+저희 학교 친구들만 해도 java reflection 모르고 DI 를 사용하는 경우가 많습니다.  
+간단하게 설명하자면 리플랙션은 코드를 조작하는 기술입니다. 기본적으로 java 를 통해 바이트버디 등과 같은 라이브러리를 통해 바이트코드를 조작할 수 있습니다.
+
+DI 는 자바의 리플랙션과 어노테이션 프로세서를 이용한 기술입니다.  
+필드 주입을 예로 들면 `@Autowired` 가 달린 필드를 찾고 그 필드의 타입 인스턴스를 생성해 주입하는 방식입니다.
+
+### DI 얘기가 나와서 그런데 DI 에 종류와 이들의 차이는 뭔가요?
+
+* setter 주입
+  * setter 주입은 변경 가능성이 있는 의존관계에 사용되며 스프링빈을 선택적으로 등록 가능합니다.
+* 생성자 주입
+  * Lombok 에서 지원해주는 @RequiredArgsConstructor 를 사용하고 제일 선호하는 Injection 방식입니다.
+  * 생성자 호출 시점에 딱 1번만 호출되는 것을 보장하며, 불변, 필수 의존관계에 사용합니다.
+* 필드 주입
+  * 순환참조를 일으킬 가능성이 크기 때문에 테스트코드 이외에서는 사용하지 않습니다.
+
+## IoC 컨테이너는 뭔가요?
+
+Bean 의 생명주기와 제어권을 갖고 관리해주는 컨테이너입니다.  
+IoC 컨테이너에 객체를 Bean 으로 등록해 필요할 때 사용합니다.  
+
+### 역할에 대해서 알고 있나요?
+
+애플리케이션 실행시점에 빈 오브젝트를 인스턴스화하고 DI 한 후에 최초로 애플리케이션을 가동할 때 빈 하나를 제공해줍니다.
+
+## POJO 는 무엇이고 사용 예는 어떻게 될 수 있을까요?
+POJO 는 Plain Old Java Object의 약자로 Java API 를 제외한 다른 API에 의존적이지 않으며  
+spring 기준으로 `도메인` 과 `비즈니스 로직`이 POJO 의 대상이 될 수 있습니다.
+
+## Servlet filter 와 Intercpetor의 차이가 무엇인가요?
+
+* filter
+  * DispatcherServlet 외부에서 동작하며 Servlet 스팩에 포함됩니다.
+
+* Intercptor
+  * spring에서 Handler를 실행하기 전후에 실행합니다.
+  * spring 의 application context 에 등록합니다.
+  *  HttpServletRequest 혹은 HttpServeltResponse 사용이 가능해 사용자 인증, 자원 접근, 로깅에 사용됩니다.
+
+## Spring에서 CORS를 해결하는 방법을 설명해주세요
+
+저는 webConfig 라는 클래스를 만들고 해당 클래스에 `@Configuration` 애노테이션을 통해 allow origin 해줍니다.
+
+* servlet filter 에서 커스텀한 cors 를 설정할 수도 있습니다.  
+
+* controller 에 개별적으로 `@Crossorigin` 사용해서 설정할 수도 있습니다.
+
+## Filter는 Servlet의 스펙이고, Interceptor는 Spring MVC의 스펙입니다. Spring Application에서 Filter와 Interceptor를 통해 예외를 처리할 경우 어떻게 해야 할까요?
+
+* filter 는 DispatcherServlet 밖에 존재합니다. ErrorController 를 통해 처리해야 합니다.
+* interceptor은 DispatcherServlet 안에 존재하여 `@ControllerAdvice` 를 통해 처리할 수 있습니다.
