@@ -49,7 +49,7 @@ JIT 컴파일러는 크게 두 가지 역할을 합니다.
 ## GC에 대해서 더 자세하게 알려주세요
 
 GC는 RuntimeDataArea 중 Heap 영역에서만 수행하게 되고요.  
-자바의 메모리 영역은 크게 Young 영역과 Old 영역 permgen 영역으로 나뉘게 됩니다.  
+자바의 메모리 영역은 크게 Young 영역과 Old 영역으로 나뉘게 됩니다.  
 Young 영역에서는 Minor GC가 발생하고 Old 영역에서는 Major GC가 발생합니다.  
 GC 의 정도는 Young 영역이 Old 영역보다 심합니다.
 
@@ -74,6 +74,19 @@ servivor 영역이 꽉 차면 servivor1 영역에 있는 객체를 old 영역으
 
 클래스는 객체를 만들기 위한 설계도, 혹은 그 틀을 말하고, 객체는 소프트웨어 세계에 구현할 대상을 말합니다.
 
+## 정적(static)이란 무엇일까요?
+
+클래스 멤버라고 하며, 클래스 로더가 클래스를 로딩해서 메소드 메모르 영역에 적재할 때 클래스별로 관리됩니다.  
+GC 관리 영역 밖에 존재하기 때문에 너무 남발하게 되면 시스템 성능에 악영향을 줄 수 있습니다.
+
+## 자바 원시타입은 각각 몇 바이트를 차지하나요?
+
+1byte: boolean, byte
+2byte: char, short
+4byte: int, float
+8byte: long, double
+
+
 ## 인터페이스와 추상클래스의 차이점은 무엇인지 설명해주세요.
 
 추상클래스는 상속을 통해 자손클래스에서 완성하도록 유도하는 클래스이며, 미완성 설계도(IS~A) 라고 표현할 수 있습니다.
@@ -85,12 +98,28 @@ servivor 영역이 꽉 차면 servivor1 영역에 있는 객체를 old 영역으
 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용할 수 있도록 바이트 형태로 데이터 변환하는 기술과 -> 직렬화  
 바이트로 변환된 데이터를 다시 객체로 변환할 수 있는 기술을 아울려 이야기 해요. -> 역직렬화  
 
-DB의 직렬화 역직렬화와 로직이 유사하다고 할 수 있어요.
-
 ## Call by Value와 Call by Reference의 차이에 대해 설명해주세요.
 
-인자로 받은 값을 복사해서 처리하냐, 인자로 받은 값은 값의 주소를 참조하여 값의 영향을 주냐의 얘기예요.  
-개인적인 생각이지만, shallow copy와 deep copy의 개념과 비슷하다고 생각해요.
+CBV(Call By Value)는 기본적으로 대상에 주소값을 가지지 않는 것으로 값을 할당받는 형태로 사용됩니다. primitive type 에 해당됩니다.  
+
+CBR(Call By Reference)는 대상을 선언했을 때 주소값이 부여됩니다. 그래서 어떠한 객체를 불러왔을 때는 주소값을 불러온다고 봅니다. Class, Object 가 CBR에 해당합니다.
+
+### .equals() 와 == 의 차이에 대해 알려주세요.
+
+`.equals()`는 비교하고자 하는 대상의 **내용 자체**를 비교하지만.
+`==` 연산자는 비교하고자 하는 **대상의 주소값**을 비교합니다.
+
+```java
+public static void main(String[] args) {
+  String str1 = "Hello, world!";
+  String str2 = str1;
+  String str3 = new String("Hello, world!");
+
+  System.out.println(str1 == str2); // true
+  System.out.println(str2 == str3); // false
+  System.out.println(str1.equals(str3)); // true
+}
+```
 
 ## Checked Exception과 Unchecked Exception의 차이를 설명해주세요.
 
@@ -318,6 +347,7 @@ OSI7계층은 네트워크 통신을 구성하는 요소들 7개의 계층으로
 개인정보를 넘기는 것을 꺼려하기 때문에 신뢰할 수 있는 서버에게 정보를 맡겨놓고 접근할 수 있는 권한을 주는 것입니다.
 
 ## SDP 안정된 의존관계 원칙에 대해 설명해주세요.
+
 자신이 안정적인 만큼 추상적이기도 해야 한다. 라는 의미에서 나온 개념인데요  
 간단히 말하면 controller -> service -> repository 구조에서 
 
@@ -325,3 +355,4 @@ OSI7계층은 네트워크 통신을 구성하는 요소들 7개의 계층으로
 * repository는 매우 안정적이므로 추상적이여야 한다 -> repository는 interface를 만들고 구현하는 것이 좋다.
 * service 는??
 
+네 Service는 애매한 부분이 있습니다 그래서 상황에 따라 조사를 해봐야 한다는 의미입니다.
