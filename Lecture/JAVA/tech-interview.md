@@ -23,9 +23,12 @@ JVM 구조에 대해 간략히 설명하자면 ClassLoader, RuntimeDataArea, Exe
 
 ### GC 의 대상이 되는 영역은 어디인가요
 
-GC의 대상은 RuntimeDataArea 5가지 영역 `PC register`, `call stack`, `native method stack`, `heap`, `method area` 중 `heap` 영역만 대상 영역이 됩니다.
+GC의 대상은 RuntimeDataArea 5가지 영역 `PC register`, `jvm stack`, `native method stack`, `heap`, `method area` 중 `heap` 영역만 대상 영역이 됩니다.
 
 GC 는 사용하지 않는 객체의 메모리를 청소해주는 역할을 합니다.
+
+* `PC register`, `jvm stack`, `native method stack` 은 각각 쓰레드 별로 생성되고
+* `heap`, `method area` 은 모든 쓰레드가 공유합니다.
 
 ### Execution Engine에 대해 자세히 알려주세요
 
@@ -104,21 +107,23 @@ CBV(Call By Value)는 기본적으로 대상에 주소값을 가지지 않는 �
 
 CBR(Call By Reference)는 대상을 선언했을 때 주소값이 부여됩니다. 그래서 어떠한 객체를 불러왔을 때는 주소값을 불러온다고 봅니다. Class, Object 가 CBR에 해당합니다.
 
+### 자바에서의 call by reference는 어떻게 동작하나요?
+
+JAVA에서 Call by reference는 해당 객체의 주소값을 직접 넘기는 게 아닌 객체를 보는 또 다른 주소값을 만들어서 넘기다는 사실을 꼭 기억하자. 
+
 ### .equals() 와 == 의 차이에 대해 알려주세요.
 
 `.equals()`는 비교하고자 하는 대상의 **내용 자체**를 비교하지만.
 `==` 연산자는 비교하고자 하는 **대상의 주소값**을 비교합니다.
 
 ```java
-public static void main(String[] args) {
-  String str1 = "Hello, world!";
-  String str2 = str1;
-  String str3 = new String("Hello, world!");
+String str1 = "Hello, world!";
+String str2 = str1;
+String str3 = new String("Hello, world!");
 
-  System.out.println(str1 == str2); // true
-  System.out.println(str2 == str3); // false
-  System.out.println(str1.equals(str3)); // true
-}
+System.out.println(str1 == str2); // true
+System.out.println(str2 == str3); // false
+System.out.println(str1.equals(str3)); // true
 ```
 
 ## Checked Exception과 Unchecked Exception의 차이를 설명해주세요.
