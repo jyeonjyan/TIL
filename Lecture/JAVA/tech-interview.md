@@ -84,10 +84,10 @@ GC 관리 영역 밖에 존재하기 때문에 너무 남발하게 되면 시스
 
 ## 자바 원시타입은 각각 몇 바이트를 차지하나요?
 
-1byte: boolean, byte
-2byte: char, short
-4byte: int, float
-8byte: long, double
+* 1byte: boolean, byte
+* 2byte: char, short
+* 4byte: int, float
+* 8byte: long, double
 
 
 ## 인터페이스와 추상클래스의 차이점은 무엇인지 설명해주세요.
