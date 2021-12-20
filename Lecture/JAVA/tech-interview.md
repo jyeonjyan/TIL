@@ -161,10 +161,21 @@ JPA의 구현체로, JPA 인터페이스를 구현하며, 내부적으로 JDBC A
 
 (적용 예로는 intelliJ의 인터페이스 즉 모든 사용자가 같은 인터페이스, 같은 설정의 정보를 가져야 할 때 객체 하나로 여러 사용자에게 공유해야 합니다.)
 
-thread-safe 하게 싱글톤을 구현하는 방법으로는 `Synchronized` 키워드를 통해 실현 할 수 있고, `Double Check` 기법, 마지막으로 가장 많이 사용되는 `LazyHoder`를 사용하는 방법 등이 있습니다.  
+thread-safe 하게 싱글톤을 구현하는 방법으로는...
+
+* `getInstance()`를 통해 단일 인스턴스를 반환하는 방법
+* `Synchronized` 키워드를 통해 실현 하는 방법
+* `Double Check` 기법
+* 마지막으로 Java 진영에서 가장 많이 선호하는 `LazyHolder` 방식을 사용하는 방법 등이 있습니다.  
+
 하지만 이 방법들은 thread-safe 하지만, 리플랙션으로 언제든지 조작이 가능합니다.  
 
 **리플랙션으로 조작할 수 없는 싱글톤을 구현하려면 리플랙션이 막혀있는 enum class의 특징을 활용해 구현 가능합니다.**
+
+### Spring Container == Singleton Container
+
+Java 애플리케이션에서는 싱글톤 패턴으로 얻을 수 있는 장점이 더 크지만,  
+스프링 컨테이너는 Bean 등록에 대해 싱글톤을 기본적으로 보장해주기 때문에. 개발자가 직접 싱글톤을 구현하여 단일 인스턴스를 보장하는 것은 "안티패턴"이라고도 부릅니다.  
 
 ## 자바 제네릭에 대해서 알려주세요.
 
@@ -288,19 +299,18 @@ spring 기준으로 `도메인` 과 `비즈니스 로직`이 POJO 의 대상이 
 
 * filter
   * DispatcherServlet 보다 먼저 위치해 있으며 Servlet 스팩에 포함됩니다.
+  * 모든 요청을 로깅할 수 있습니다.
+  * 이미지/데이터 압축 및 문자열 인코딩
 
 * Intercptor
-  * spring application 내부에 위치에 있습니다.
-  * spring에서 Handler를 실행하기 전후에 실행합니다.
-  * spring 의 application context 에 등록합니다.
-  * HttpServletRequest 혹은 HttpServeltResponse 사용이 가능해 사용자 인증, 자원 접근, 로깅에 사용됩니다.
+  * spring application 내부에 위치에 있으며 dispatcherServlet 뒤에 위치해 있습니다.
+  * 사용자 인증, 자원 접근, API 로깅에 사용됩니다.
 
 ## Spring에서 CORS를 해결하는 방법을 설명해주세요
 
 저는 webConfig 라는 클래스를 만들고 해당 클래스에 `@Configuration` 애노테이션을 통해 allow origin 해줍니다.
 
 * servlet filter 에서 커스텀한 cors 를 설정할 수도 있습니다.  
-
 * controller 에 개별적으로 `@Crossorigin` 사용해서 설정할 수도 있습니다.
 
 ## Filter는 Servlet의 스펙이고, Interceptor는 Spring MVC의 스펙입니다. Spring Application에서 Filter와 Interceptor를 통해 예외를 처리할 경우 어떻게 해야 할까요?
