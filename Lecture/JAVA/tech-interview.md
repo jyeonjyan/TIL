@@ -103,6 +103,11 @@ GC 관리 영역 밖에 존재하기 때문에 너무 남발하게 되면 시스
 
 인터페이스는 기본 설계도(HAS~A)로 표현할 수 있으며, 다중상속이 가능하다는 차별점이 존재합니다.
 
+### 추상화란 무엇일까요?
+
+공통의 속성이나 기능을 묶어 이름을 붙이는 것.  
+객체지향 관점에 클래스를 정의하는 것을 추상화라고 합니다.
+
 ## 직렬화가 무엇인지 설명하세요.
 
 자바 시스템 내부에서 사용되는 객체 또는 데이터를 외부의 자바 시스템에서도 사용할 수 있도록 바이트 형태로 데이터 변환하는 기술과 -> 직렬화  
@@ -132,6 +137,12 @@ System.out.println(str1 == str2); // true
 System.out.println(str2 == str3); // false
 System.out.println(str1.equals(str3)); // true
 ```
+
+## String vs StringBuilder/StringBuffer
+
+* String: 불변성, 문자열 연산이 적은 경우
+* StringBuilder: 가변성, 단일쓰레드거나 동기화를 고려하지 않아도 되는 경우
+* StringBuffer: 가변성, 멀티쓰레드 환경에서 안전함(thread-safe)
 
 ## Checked Exception과 Unchecked Exception의 차이를 설명해주세요.
 
@@ -416,3 +427,20 @@ OSI7계층은 네트워크 통신을 구성하는 요소들 7개의 계층으로
 * service 는??
 
 네 Service는 애매한 부분이 있습니다 그래서 상황에 따라 조사를 해봐야 한다는 의미입니다.
+
+## 자료구조
+
+### Array vs LinkedList
+* Array
+  * Array는 index가 존재해 조회에 유리, Random Access 가능. O(1) 
+  * Array는 삽입, 삭제 shift 가 발생해 성능이 안좋음 O(N)
+
+* LinkedList
+  * 중간에 값이 추가되서 제거할때 유리하다.
+  * 값을 가져오거나 대거하거나 추가하는 것 모두 복잡도가 O(N)
+
+
+### Tree
+어떤 데이터를 가르키는 간선이 단 하나인 자료구조  
+나무를 닮은 자료구조, 비선형, 계층형 자료구조 탐색에 유리 DFS..
+
