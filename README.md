@@ -70,6 +70,7 @@
 - [사랑해요❤️ modelMapper](./Spring/SpringBoot/modelmapper-love.md)
 - [DispatcherServlet이 대체 뭐하는 녀석인가](./Spring/SpringBoot/dispatcherServlet.md)
 - [우아한 모듈형 모노리스 시스템]()
+- [빈 생명주기 콜백](./Spring/SpringBoot/bean-life-cycle.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
