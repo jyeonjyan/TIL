@@ -63,7 +63,7 @@ void fitSingleton(){
 
 아래는 해당 클래스의 출력문이다.
 
-<img src="../../img/CGLIB-keep-singleton.png" width="600px">
+<img src="../../img/CGLIB-keep-singleton.png" width="750px">
 
 출력문에 보면 `**.SingletonConfig$$EnhancerBySpringCGLIB$**` CGLIB 클래스가 반환된 것을 알 수 있다.  
 
@@ -80,7 +80,7 @@ void fitSingleton(){
 
 ### 인텔리제이에서도 경고를 준다. 
 
-<img src="../../img/not-spring-container-warn.png" width="700px">
+<img src="../../img/not-spring-container-warn.png" width="750px">
 
 > 대충 의존성 주입이 아닌, `@Bean` 메소드가 직접 호출이 되고 있다는 말.
 
