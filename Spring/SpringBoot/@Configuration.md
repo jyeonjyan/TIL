@@ -3,7 +3,7 @@
 앞전에 `스프링 컨테이너 = 싱글톤 컨테이너`라 배웠다. 그만큼 스프링 컨테이너에서 지원하는 싱글톤이라는 특징을 잘 활용해야 하는 것이다.  
 싱글톤 컨테이너에 객체를 `@Bean` 으로 등록하고 전역에서 DI 받아 사용할 수 있다.
 
-객체를 `@Bean`으로 등록하고 스프링 컨테이너에서 DI 받아 사용 했을 때 얻을 수 있는 장점은 **개발자가 복잡한 의존관계에 대해 생각하지 않고, 비즈니스 로직에만 집중할 수 있게 해준다는점** 이다.
+객체를 `@Bean`으로 등록하고 스프링 컨테이너에서 DI 받아 사용 했을 때 얻을 수 있는 장점은 **개발자가 복잡한 의존관계에 대해 생각하지 않고, 비즈니스 로직에만 집중할 수 있게 해준다는 점** 이다.
 
 ## 들어가며..
 
@@ -27,7 +27,7 @@ public class OrderService {
 ```
 
 `OrderService`는 `OrderRepository`를 주입받아 내부에서 사용한다.  
-`OrderRepository` 주입은 싱글톤 컨테이너로 부터 받아야 하는데.. 어디서(service, controller) 호출하든 그럼 전역에서 같은 인스턴스를 보장해야 한다.
+`OrderRepository` 주입은 싱글톤 컨테이너로 부터 받아야 하는데.. 싱글톤 컨테이너 특성에 걸맞게 어디서(service, controller) 호출하든 그럼 전역에서 같은 객체에 대해 같은 인스턴스를 보장해야 한다.
 
 `OrderService`와 `OrderRepository` 의 의존성은 아래 클래스에서 관리 하겠다.
 
@@ -62,6 +62,7 @@ void fitSingleton(){
 ```
 
 아래는 해당 클래스의 출력문이다.
+
 <img src="../../img/CGLIB-keep-singleton.png" width="600px">
 
 출력문에 보면 `**.SingletonConfig$$EnhancerBySpringCGLIB$**` CGLIB 클래스가 반환된 것을 알 수 있다.  
