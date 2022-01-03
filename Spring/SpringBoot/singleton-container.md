@@ -36,7 +36,11 @@ void singletonTest(){
 
 * `new AnnotationConfigApplicationContext()` () 안에 컴포넌트 스캔 할 대상을 넣는다.
 
-
 ### 테스트 결과
 <img src="../../img/singleton-bean.png" width="480px">
 
+## 마무리
+spring, springboot 를 쓰는 사람들이라면 당연히 알거라고 생각한다.  
+혹, 내 TIL 을 보는 사람 중 아직 몰랐던 사람이 있다면, 직접 구현해서 좀 더 학습해보길 바란다. 
+
+**앞으로의 내용이 다 싱글톤 컨테이너라는 개념을 베이스로 이야기 할 것이다.**
