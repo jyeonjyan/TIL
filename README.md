@@ -72,6 +72,7 @@
 - [빈 생명주기 콜백](./Spring/SpringBoot/bean-life-cycle.md)
 - [스프링은 싱글톤 컨테이너](./Spring/SpringBoot/singleton-container.md)
 - [@Configuration과 바이트코드 조작의 마법](./Spring/SpringBoot/@Configuration.md)
+- [@Autowired 필드 명, @Qualifier, @Primary](./Spring/SpringBoot/dependency-option.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
