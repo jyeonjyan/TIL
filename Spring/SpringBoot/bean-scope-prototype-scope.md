@@ -68,21 +68,21 @@ public class PrototypeScopeEx {
 새로운 각각의 빈 인스턴스가 공유되지 않으니 **빈 마다 1을 반환할 것이다.**
 
 ```java
-    @Test
-    @DisplayName("prototype scope, 호출 마다 인스턴스를 새로 만들어 사용하는 방법")
-    void prototypeScopeTest(){
-        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeScopeEx.class);
+@Test
+@DisplayName("prototype scope, 호출 마다 인스턴스를 새로 만들어 사용하는 방법")
+void prototypeScopeTest(){
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeScopeEx.class);
 
-        PrototypeScopeEx bean1 = ac.getBean(PrototypeScopeEx.class);
-        bean1.addInteger();
-        assertEquals(bean1.getInteger(), 1); // 1 is expected
+    PrototypeScopeEx bean1 = ac.getBean(PrototypeScopeEx.class);
+    bean1.addInteger();
+    assertEquals(bean1.getInteger(), 1); // 1 is expected
 
-        PrototypeScopeEx bean2 = ac.getBean(PrototypeScopeEx.class);
-        bean2.addInteger();
-        assertEquals(bean2.getInteger(), 1); // 1 is expected
+    PrototypeScopeEx bean2 = ac.getBean(PrototypeScopeEx.class);
+    bean2.addInteger();
+    assertEquals(bean2.getInteger(), 1); // 1 is expected
 
-        assertNotEquals(bean1, bean2); // bean1 과 bean2의 인스턴스는 서로 다르다.
-    }
+    assertNotEquals(bean1, bean2); // bean1 과 bean2의 인스턴스는 서로 다르다.
+}
 ```
 
 ## `prototype bean`은 bean을 조회하기 직전에 생성된다.
