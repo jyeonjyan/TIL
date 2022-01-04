@@ -85,3 +85,65 @@ public class PrototypeScopeEx {
     }
 ```
 
+## `prototype bean`은 bean을 조회하기 직전에 생성된다.
+
+> 이번 테스트코드에서는 `.getBean()`으로 Bean 생성을 요청할 때 마다 인스턴스가 새로 생기는 것을 확인할 수 있을 것이고.  
+> prototype scope bean은 의존관계주입, 초기화 까지만 스프링 컨테이너가 관리하기 때문에 `@PreDestroy` 안의 출력문은 출력되지 않는 것을 확인 할 수 있다.
+
+빈으로 등록하여 사용하고 싶은 대상(클래스)
+```java
+@Scope("prototype")
+static class PrototypeBean{
+    @PostConstruct
+    public void create(){
+        System.out.println("========= prototype bean create: " + LocalDateTime.now());
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("========= prototype bean destroy: " + LocalDateTime.now());
+    }
+}
+```
+
+```java
+@Test
+@DisplayName("prototype bean, bean 호출 시점에 생성된다.")
+void prototypeBeanCreateAtGetBean(){
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeBean.class);
+    System.out.println("======== find prototypeBean 1 =========");
+    PrototypeBean bean1 = ac.getBean(PrototypeBean.class);
+
+    System.out.println("======== find prototypeBean 2 =========");
+    PrototypeBean bean2 = ac.getBean(PrototypeBean.class);
+
+    System.out.println("====== bean1: " + bean1);
+    System.out.println("====== bean2: " + bean2);
+
+    assertNotEquals(bean1, bean2);
+}
+```
+
+### 아래의 결과 콘솔을 확인하면 정확히 감을 잡을 수 있을 것이다.
+
+<img src="../../img/prototype-bean-life-cycle.png" width="800px">
+
+여기서 꼭 확인 해야 할 부분!!
+* `.getBean()` 으로 bean을 생성과 동시에 인스턴스 생성
+* `bean1` != `bean2`
+* process 는 finished 했지만, `@PreDestroy` 종료 메서드가 수행되지 않음.
+
+## 강제로 `@PreDestroy`를 사용하는 방법.
+
+```java
+@Test
+@DisplayName("prototype bean, bean 호출 시점에 생성된다.")
+void prototypeBeanCreateAtGetBean(){
+    // 생략
+    bean1.destroy();
+    bean2.destroy();
+}
+```
+
+이렇게 빈의 destroy 메소드를 직접 호출해 주면 된다.!!  
+감사합니다.
