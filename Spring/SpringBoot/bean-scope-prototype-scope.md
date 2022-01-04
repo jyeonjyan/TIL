@@ -44,3 +44,44 @@ void singletonScopeTest(){
     assertEquals(bean, bean2); // 같은 인스턴스의 bean을 반환한다.
 }
 ```
+
+## 프로토타입 스코프
+> Bean 생명주기 범위를 "프로토타입" 정도로 지정하는 것을 의미한다.
+
+싱글톤 스코프의 빈을 조회하면 항상 같은 인스턴스의 스프링 빈을 반환했지만, **프로토타입 스코프의 빈을 조회하면 항상 새로운 인스턴스를 생성해서 반환한다.**
+
+```java
+@Scope("prototype")
+public class PrototypeScopeEx {
+    private int singletonInteger = 0;
+
+    public int addInteger(){// 생략 }
+
+    public int getInteger(){// 생략}
+}
+```
+
+이렇게 내가 Bean으로 등록하고자 하는 대상(클래스) 위에 `@Scope("")` 해주면 applicationContext 에서는 **의존관계 주입, 초기화 까지만 담당하게 된다.**  
+앞서 말했듯. 새로운 빈 호출(`.getBean()`)시 항상 다른 인스턴스를 반환한다.  
+
+그렇다면, 아까 테스트 케이스를 그대로 실행한다고 했을 때.  
+새로운 각각의 빈 인스턴스가 공유되지 않으니 **빈 마다 1을 반환할 것이다.**
+
+```java
+    @Test
+    @DisplayName("prototype scope, 호출 마다 인스턴스를 새로 만들어 사용하는 방법")
+    void prototypeScopeTest(){
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeScopeEx.class);
+
+        PrototypeScopeEx bean1 = ac.getBean(PrototypeScopeEx.class);
+        bean1.addInteger();
+        assertEquals(bean1.getInteger(), 1); // 1 is expected
+
+        PrototypeScopeEx bean2 = ac.getBean(PrototypeScopeEx.class);
+        bean2.addInteger();
+        assertEquals(bean2.getInteger(), 1); // 1 is expected
+
+        assertNotEquals(bean1, bean2); // bean1 과 bean2의 인스턴스는 서로 다르다.
+    }
+```
+
