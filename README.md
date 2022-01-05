@@ -74,6 +74,7 @@
 - [@Configuration과 바이트코드 조작의 마법](./Spring/SpringBoot/@Configuration.md)
 - [@Autowired 필드 명, @Qualifier, @Primary](./Spring/SpringBoot/dependency-option.md)
 - [빈 스코프 - 프로토타입 스코프](./Spring/SpringBoot/bean-scope-prototype-scope.md)
+- [프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제점]()
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
