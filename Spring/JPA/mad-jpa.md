@@ -12,6 +12,9 @@ org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException WA
 2. [H2 데이터베이스 버전 확인하기.](https://inf.run/4uLo)
 3. [데이터베이스 예약어랑 테이블, 칼럼 이름이랑 겹치는지 확인한다.](https://bit.ly/3telu1m)
 
+### 내가 겪은 것
+
 나는 이 글을 작성하는 이 시점에 3번째 해결방안을 검토해서 해결했다.  
 난 테이블 이름이 `Order` 여서.. `@Table` 애노테이션에 name 옵션을 줘서 해결했다.
+
 <img src="../../img/db-예약어-주의.png" width="450px">
