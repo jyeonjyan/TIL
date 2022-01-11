@@ -41,3 +41,19 @@ The following method did not exist: 'void org.hibernate.annotations.common.refle
 
 이건 Hibernate Error 인데, 우리는 JPA 를 이미 dependency로 가지고 있기 때문에 `hibernate-core` 와 `hibernate-annotations` 사이에 dependency conflict 를 내는것임.  
 아무튼 무작정 hibernate 관련 dependency는 추가하지 말것 !!
+
+## 무지성 import 를 했을 때.
+
+### 에러를 유발한 코드
+```java
+import com.jpa.just.wrong.Member; // 잘못된 entity import
+
+public interface MemberRepository extends JpaRepository<Member, Long>{}
+```
+
+### 발생한 에러 (IDE 시점의 에러)
+```
+Inferred type 'S' for type parameter 'S' is not within its bound; 
+```
+
+처음보는 에러라 당황했는데, 내가 작업하고 있는 환경이 `MemberEntity` 를 두개 가지고 있는 환경이여서 import가 잘 못 해서 발생한 문제였다.  
