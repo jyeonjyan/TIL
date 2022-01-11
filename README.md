@@ -169,6 +169,7 @@
 - [SQLD 한번에 보기](./DevFeed/SQLD.md)
 - [나는 왜 JPA를 쓸까](./Spring/JPA/jpa-jpql-querydsl.md)
 - [그냥 우리 N+1 그냥 맞닥뜨리자](./Spring/JPA/N+1.md)
+- [알고나면 화를 유발하는 JPA 오류 모음]()
 - [더모먼트 Query 성능개선 사례](./Spring/JPA/improvement-query-perfomance.md)
 
 **Grammar**
