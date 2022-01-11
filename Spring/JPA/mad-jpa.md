@@ -18,3 +18,22 @@ org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException WA
 난 테이블 이름이 `Order` 여서.. `@Table` 애노테이션에 name 옵션을 줘서 해결했다.
 
 <img src="../../img/db-예약어-주의.png" width="450px">
+
+## 무작정 hibernate 버전을 업데이트 했을 때.
+
+### 에러를 유발한 코드
+```xml
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>5.4.13.Final</version>
+</dependency>
+```
+
+### 에러
+```
+The following method did not exist: 'void org.hibernate.annotations.common.reflection.ReflectionManager.reset()'
+```
+
+이건 Hibernate Error 인데, 우리는 JPA 를 이미 dependency로 가지고 있기 때문에 `hibernate-core` 와 `hibernate-annotations` 사이에 dependency conflict 를 내는것임.  
+아무튼 무작정 hibernate 관련 dependency는 추가하지 말것 !!
