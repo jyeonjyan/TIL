@@ -3,9 +3,9 @@
 
 ## 노드 버전을 업데이트 하자!
 
-<img src="../../img/node-update-need.png" width="600px">
+<img src="../../img/node-update-need.png" width="700px">
 
-> 나도 저 이슈와 같은 문제를 겪었다. 🥲
+> 나도 [이 이슈](https://github.com/zoomkoding/zoomkoding-gatsby-blog/issues/16)와 같은 문제를 겪었다. 🥲
 
 `$ node -v`를 통해 노드 버전을 확인하고 latest 버전이랑 너무 멀면 아래 명령어로 업데이트 하자. [참고](https://stackoverflow.com/a/47909570)
 
@@ -18,7 +18,7 @@ sudo n stable
 
 ## Gatsby template 모듈을 모두 설치하자.
 
-<img src="../../img/webpack-error-module-not-found.png" width="700px">
+<img src="../../img/webpack-error-module-not-found.png" width="800px">
 
 처음에는 이렇게 `emotions/react` 관련 not found 에러만 뜨길레 해당 부분만 설치했는데. 나중에는 다른 것(react, styled)도 뜸.  
 [stackoverflow](https://stackoverflow.com/a/70479813)에서 어느 분이 all stop solution을 공유해주셨는데 그냥 이거 쓰면 될 것 같다.
