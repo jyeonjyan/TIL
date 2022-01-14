@@ -23,3 +23,7 @@ sudo n stable
 처음에는 이렇게 `emotions/react` 관련 not found 에러만 뜨길레 해당 부분만 설치했는데. 나중에는 다른 것(react, styled)도 뜸.  
 [stackoverflow](https://stackoverflow.com/a/70479813)에서 어느 분이 all stop solution을 공유해주셨는데 그냥 이거 쓰면 될 것 같다.
 
+#### all stop solution
+```sh
+npm install @mui/material @emotion/react @emotion/styled
+```
