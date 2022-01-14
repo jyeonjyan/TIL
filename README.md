@@ -192,6 +192,7 @@
 **Extra**
 - [nest 빠르게 환경 구성하기 <- "NEW"](Extra/nest/fast-nest-env.md)
 - [지환아 백엔드 기술면접 이정도는 대답 하자.](./Lecture/JAVA/tech-interview.md)
+- [Node 잘 안쓰는 사람들이 갑자기 쓰게 되면 겪을 수 있는 에러 대처법](./)
   
 > 현재 TIL structure를 마이그레이션 중에 있습니다.  
 > 이곳을 제외한 더 많은 파일은 tree를 사용하거나, [여기](./README_legacy.md)를 참고하세요.
