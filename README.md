@@ -43,6 +43,8 @@
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
 - [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
 
+**Backend**
+* [SOA 그리고 MSA]()
 
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
