@@ -27,3 +27,34 @@ sudo n stable
 ```sh
 npm install @mui/material @emotion/react @emotion/styled
 ```
+
+## Gatsby blog 내용이 변경될 때 마다 자동 재시작 하기
+> 잦은 변경이 발생하는 환경에서는 로컬 CPU의 부하를 줄 수 있기 때문에 꼭 필요할 때 사용하자.  
+
+1. nodemon, kill-port 설치
+```shell
+npm install nodemon kill-port --save-dev
+```
+
+(*옵션) `--watch`, `--exec` 커맨드를 통해 지켜보고 있을 파일을 선택할 수 있다.
+```shell
+nodemon --exec "your command here" --watch "filename 1" --watch "filename n" --watch "directory name"
+```
+
+(*옵션) 실행하려는 명령에 대해 kill-port를 사용해서 기존 프로세스의 port 점유를 막는다.
+```shell
+kill-port --port 8000
+```
+
+2. 해당 옵션들을 적절히 활용하여 커맨드를 만들고 `package.json/script`에 추가합니다.
+```shell
+"scripts": {
+    "dev-auto-restart": "nodemon --exec 'kill-port --port 8000 && gatsby develop' --watch gatsby-node.js --watch package.json --watch gatsby-config.js"
+  }
+```
+
+3. 추가한 script/명령어로 실행합니다.
+
+```shell
+npm run dev-auto-restart
+```
