@@ -45,6 +45,7 @@
 
 **Backend**
 * [SOA 그리고 MSA]()
+* [BEST HTTP Authorization header type for JWT](./backend/jwt/jwt-http-header-type.md)
 
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
