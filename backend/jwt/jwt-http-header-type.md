@@ -20,3 +20,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIXVCJ9TJV...r7E20RMHrHDcEfxjoYZgeFONFh7H
 ### JWT에서도 Bearer 스키마를 사용한 인증 헤더 방식을 권장합니다.
 
 <img src="../../img/authentication-jwt.png" width="650px">
+
+## 추가
+
+jwt secret key는 HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용해야 한다.  
+[Base64 String](https://generate.plus/en/base64) <- 해당 링크는 Base64 문자열을 byte length에 따라 생성해주는 사이트이다.
+
+예시:
+```
+jwt.secret: 'BQby6J0BWgJHTF0yE5OO8/+CMSqFINbh7LbiLNno8yVCt787DdsfTDOAjfMrHL46SKjwB8oj6XMAGdwGcs+ZgA=='
+```
