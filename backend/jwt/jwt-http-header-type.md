@@ -4,7 +4,7 @@
 JWT 예제마다, token 기반 인증/인가 예제마다. 인증 토큰에 가장 적합한 HTTP 헤더 유형이 무엇인지 궁금해서 알아본 내용을 공유한다.  
 이미 나와 같은 생각을 많은 분들이 하셔서 [링크](https://bit.ly/3tAfjFe) 걸어둔다. (해당 내용을 발췌해서 만든다.)
 
-## 본론
+## JWT HTTP header 
 클라이언트가 엑세스 토큰을 보내는데 가장 적합한 HTTP header는 인증 체계가 있는 `Authorization` header 라고 한다.  
 이 체계는 [RFC-6750](https://www.rfc-editor.org/rfc/rfc6750)에 의해 설명됩니다.
 
@@ -21,7 +21,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIXVCJ9TJV...r7E20RMHrHDcEfxjoYZgeFONFh7H
 
 <img src="../../img/authentication-jwt.png" width="650px">
 
-## 추가
+## JWT secret key
 
 jwt secret key는 HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용해야 한다.  
 [Base64 String](https://generate.plus/en/base64) <- 해당 링크는 Base64 문자열을 byte length에 따라 생성해주는 사이트이다.
