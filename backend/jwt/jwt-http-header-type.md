@@ -30,3 +30,17 @@ jwt secret key는 HS512 알고리즘을 사용할 것이기 때문에 512bit, �
 ```
 jwt.secret: 'BQby6J0BWgJHTF0yE5OO8/+CMSqFINbh7LbiLNno8yVCt787DdsfTDOAjfMrHL46SKjwB8oj6XMAGdwGcs+ZgA=='
 ```
+
+## JWT가 Base 64 512bit encoding 을 사용하는 이유. 
+> 이런 질문은 던지는건 굉장히 단순하지만, jwt를 사용하는 개발자는 꼭 짚고 넘어가야 하는 개념이라고 생각한다. [stackoverflow](https://stackoverflow.com/questions/58341833/why-base64-is-used-in-jwts)
+
+ASCII 7bits encoding을 사용하여 라이트하게 데이터를 전송할 수 있는데 왜 Base64 512 bit를 굳이 사용할까?  
+
+### 대표적인 문제는 아래와 같이 설명한다.
+
+* ASCII는 7 bits 인토딩인데 나머지 1bit를 처리하는 방식이 시스템 별로 상이하다. 
+* 일부 제어 문자의 경우 시스템 별로 다른 코드값을 가진다.
+
+Base64는 ASCII 중 제어 문자와 일부 특수문자를 제외한 64개의 안전한 출력 문자만 사용한다. (아래 그림을 참고)
+
+<img src="../../img/base64.png" width="650px">
