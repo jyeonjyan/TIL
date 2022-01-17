@@ -32,7 +32,7 @@ jwt.secret: 'BQby6J0BWgJHTF0yE5OO8/+CMSqFINbh7LbiLNno8yVCt787DdsfTDOAjfMrHL46SKj
 ```
 
 ## JWT가 Base 64 512bit encoding 을 사용하는 이유. 
-> 이런 질문은 던지는건 굉장히 단순하지만, jwt를 사용하는 개발자는 꼭 짚고 넘어가야 하는 개념이라고 생각한다. [stackoverflow](https://stackoverflow.com/questions/58341833/why-base64-is-used-in-jwts)
+> 이런 질문은 던지는건 굉장히 단순하지만, jwt를 사용하는 개발자는 꼭 짚고 넘어가야 하는 개념이라고 생각한다. [-> stackoverflow에서도 언급 됐다.](https://stackoverflow.com/questions/58341833/why-base64-is-used-in-jwts)
 
 ASCII 7bits encoding을 사용하여 라이트하게 데이터를 전송할 수 있는데 왜 Base64 512 bit를 굳이 사용할까?  
 
