@@ -42,7 +42,7 @@
 - [java number를 intArray로 convert 하는 방법](https://gist.github.com/jyeonjyan/744adc149918531e3331fd92b6732179)
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
 - [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
-- [상속관계에서의 Builder 패턴 사용]()
+- [상속관계에서의 lombok @Builder 사용](./Spring/SpringBoot/builder-in-inheritance.md)
 
 **Backend**
 - [SOA 그리고 MSA]()
