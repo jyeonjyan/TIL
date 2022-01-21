@@ -48,6 +48,7 @@
 - [SOA 그리고 MSA]()
 - [BEST HTTP Authorization header type for JWT](./backend/jwt/jwt-http-header-type.md)
 - [jwt 의존성 중복으로 인한 기이한 에러](./backend/jwt/jwt-dependency-duplicate.md)
+- [sentry로 로깅 시스템 구축하기](./backend/etc/sentry-logging.md)
 
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
