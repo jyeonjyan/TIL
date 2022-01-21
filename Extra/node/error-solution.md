@@ -58,3 +58,31 @@ kill-port --port 8000
 ```shell
 npm run dev-auto-restart
 ```
+
+## npm install 에서 발생한 이상한 오류
+
+```sh
+gyp gypERR!  ERR!find Python  **********************************************************
+find Pythongyp - "python2" is not in PATH or produced an error
+gypERR!  ERR!find Python You need to install the latest version of Python.
+gypfind Python  checking if "python3" can be used
+ERR!gyp  find PythonERR! Node-gyp should be able to find and use Python. If not,
+gyp find PythonERR! - "python3" is not in PATH or produced an error
+gypfind Python  you can try one of the following options:
+gypERR!  ERR!find Python  checking if the py launcher can be used to find Python 2
+find Pythongyp - Use the switch --python="C:\Path\To\python.exe"
+ERR!gyp find Python  - "py.exe" is not in PATH or produced an error
+ERR!gyp  ERR!find Python    (accepted by both node-gyp and npm)
+find Python checking if Python is C:\Python27\python.exe
+gyp gypERR!  ERR! find Pythonfind Python - Set the environment variable PYTHON
+- "C:\Python27\python.exe" could not be run
+gypgyp  ERR!ERR!  find Pythonfind Python - Set the npm configuration variable python:
+checking if Python is C:\Python37\python.exe
+gyp gypERR!  find PythonERR!   npm config set python "C:\Path\To\python.exe"
+gypfind Python - "C:\Python37\python.exe" could not be run
+gypERR!  find PythonERR! For more information consult the documentation at:
+find Pythongyp
+```
+
+node_modules 를 install 하는데 도대체 왜 python 에러가 뜨는걸까..  
+#### `npm i sqlite3` 명령어를 사용해 해결하자.
