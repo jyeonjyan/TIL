@@ -85,4 +85,4 @@ find Pythongyp
 ```
 
 node_modules 를 install 하는데 도대체 왜 python 에러가 뜨는걸까..  
-#### `npm i sqlite3` 명령어를 사용해 해결하자.
+#### ㅈ`npm i sqlite3` 명령어를 사용해 해결하자.
