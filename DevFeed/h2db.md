@@ -16,13 +16,13 @@ $ ./h2.sh
 
 최초 실행할때
 ```
-jdbc:h2:~/querydsl
+jdbc:h2:~/yourdb
 ```
 
 디렉토리에 ~/ 디렉토리 `db` 확장자 생성 확인 후  
 다음 실행에서는 아래 url 입력 (tcp 모드)
 ```
-jdbc:h2:tcp://localhost/~/querydsl 
+jdbc:h2:tcp://localhost/~/yourdb 
 ```
 
 ⚠️ 중요한건 h2 DB 를 실행시키지 않으면 아래와 같은 오류가 발생한다.
