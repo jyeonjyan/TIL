@@ -50,3 +50,6 @@ HikariCP에서 얻은 Connection은 `(ProxyConnection) Connection.close()`를 �
 
 나는 [stackoverflow](https://bit.ly/3d97nBi) 해당 답변의 방법처럼 인스턴스 용량을 키우니 해결되었다.  
 서버 중단의 심적 타격에 비해 단순한 해결법이라 허무했긴 했지만, 나중에 DB Connection관련 에러가 터진다고 해도 이 계기를 통해 빠르게 해결할 수 있을 것 같다.
+
+## 추가
+1. Docker가 컨테이너 간에 리소스 균형을 맞출 때 문제가 발생하여 이 특정 컨테이너에서 하우스키핑 기간의 실행이 느려집니다.
