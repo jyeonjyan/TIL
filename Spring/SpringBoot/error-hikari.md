@@ -4,11 +4,11 @@
 본 저자는 Message Queue를 사용하지 않는 환경에서 운영하고 있었고, `hikaripool-1 - thread starvation or clock leap detected (housekeeper delta=1m31s430ms415μs864ns).` 라는 오류가 서비스 초기 운영중 발생해 해당 문제를 분석하여 회고 하려고 한다.
 
 ## 배경
-본 저자는 springboot application을 docker에 넣어 운영했고, RDS을 조합하여 사용했다.  
-서버 app 이 돌아가는 환경은 aws, t2-micro 이며, DBMS 는 mysql 을 사용했다.
+나는 springboot application을 docker container로 운영했고, RDS와 함께 사용했다.  
+서버 인스턴스의 환경은 aws, t2-micro 이며, DBMS 는 mysql 을 사용했다. * 현재와 다름
 
-## 이해하기
-원인을 분석하기 전에 HikariCP를 먼저 이해해야 한다.  
+## HikariCP 이해하기
+원인을 분석하기 전에 HikariCP를 먼저 이해해야 했다.  
 앞서 말했듯, HikariCP는 springboot 2.0 부터 기본적으로 설정되어 있는 DB Connection Pool 로써 Zero-Overhead가 특징으로 높은 성능을 자랑하는 DB Connection Pool 이다.  
 
 내가 HikariCP Connection 구조를 이해할 때 본 좋은 [자료](https://bit.ly/3EeTxsT)를 공유하려 한다.  
