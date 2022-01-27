@@ -83,6 +83,7 @@
 - [프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제점](./Spring/SpringBoot/singleton-prototype-mixed-error.md)
 - [Spring REST docs 도입하기](./Spring/SpringBoot/spring-restdocs.md)
 - [Gradle, jar에 html 파일들을 생성하는 방법](./Spring/SpringBoot/jar-html-execute.md)
+- [testing configuration error found multiple declarations of @BootstrapWith](./Spring/SpringBoot/@BootstrapWith-error.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
