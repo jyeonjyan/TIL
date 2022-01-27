@@ -37,13 +37,13 @@ public class ControllerTest {
 
 ## MockMvc 사용하면 @ExtendWith(SpringExtension.class)를 해줘야 하는 이유
 
-@ExtendWith(SpringExtension.class)는 Spring TestContext Framework의 기능을Junit5의 Jupiter 프로그래밍 모델에 통합하는 역할을 한다.
 
 ### 서블릿 컨테이너를 Mocking 한다는 의미는..
 
 웹 환경에서 컨트롤러를 테스트하려면 서블릿 컨테이너가 구동되고 DispatcherServlet 객체가 메모리에 올라가야 한다.  
 이 때 서블릿 컨테이너를 모킹하면 실제 서블릿 컨테이너가 아닌 테스트용 모형 컨테이너를 사용해서 간단하게 컨트롤러를 테스트할 수 있다.
 
+### 실무에서 사용할 때
 
 즉, 컨트롤러만 테스트할 때는 @WebMvcTest를 이외에 컴포넌트들도 테스트하려면 `@AutoConfigureMockMvc`를 사용하자.  
 `@SpringBootTest` 로 테스트 했을 때 controller - service 사이에 `autowired` 가 되지 않았다고 오류가 뜨는데 그 이유가 이런 이유이다.  
