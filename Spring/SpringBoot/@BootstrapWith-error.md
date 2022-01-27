@@ -45,7 +45,7 @@ public class ControllerTest {
 
 ### 실무에서 사용할 때
 
-즉, 컨트롤러만 테스트할 때는 @WebMvcTest를 이외에 컴포넌트들도 테스트하려면 `@AutoConfigureMockMvc`를 사용하자.  
+즉, 컨트롤러만 테스트할 때는 `@WebMvcTest`를 이외에 컴포넌트들도 테스트하려면 `@AutoConfigureMockMvc`를 사용하자.  
 `@SpringBootTest` 로 테스트 했을 때 controller - service 사이에 `autowired` 가 되지 않았다고 오류가 뜨는데 그 이유가 이런 이유이다.  
 
 MockMvc 테스트를 하는데 Controller 단에서 테스트가 그치는게 아니라 Service 혹은 다른 컴포넌트와 유기적인 결합을 통해 결과를 만들어 낸다면 서블릿 컨테이너를 사용해야 하기 때문에 `@AutoConfigureMockMvc` or `@ExtendWith(SpringExtension.class)` 를 추가하여 테스트 하자.
