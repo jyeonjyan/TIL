@@ -86,7 +86,7 @@
 - [Gradle, jar에 html 파일들을 생성하는 방법](./Spring/SpringBoot/jar-html-execute.md)
 - [testing configuration error found multiple declarations of @BootstrapWith](./Spring/SpringBoot/@BootstrapWith-error.md)
 - [Gradle 6 to 7](./Spring/SpringBoot/gradle-6-to-7.md)
-- [Spring Portable Service Abstractions](./Spring/SpringBoot/PSA.md)
+- [Spring PSA 기술을 통해 static method를 쉽고 빠르게 테스트 하다.](./Spring/SpringBoot/PSA.md)
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
