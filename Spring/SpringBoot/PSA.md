@@ -54,16 +54,16 @@ void example(){
 }
 ```
 
-이 테스트는 적절하지 않을 뿐더러 `LocalDate.of()` static method가 호출되는 시점에 NPE 반환한다.  
+이 테스트는 적절하지 않을뿐더러 `LocalDate.of()` static method가 호출되는 시점에 NPE 반환한다.  
 
 계속 찾아보고 있지만 아직 정확한 이유를 알아내지는 못했다..   
-`LocalDate`를 static method target 클래스로 mocking 해둔 이상 해당 클래스(`LocalDate`)의 **두개의 static method를 한번에 mocking 하지는 못하나 보다 ??**
+`LocalDate`를 static method target 클래스로 mocking 해둔 이상 해당 클래스(`LocalDate`)의 **두 개의 static method를 한 번에 mocking 하지는 못하나 보다 ??**
 
 ### 절망의 기간.. (도대체 어떻게 테스트 해야하지 못하는건가?)
-중간에 mocking한 service 클래스 NPE 해결하는 방법, static method 테스팅 하는 방법 등 여러가지를 구글링 해봤지만 보이는건 mockito, powerMock 2.. 내가 접근 1에 소개했던 했던 방식을 알려준다.
+중간에 mocking한 service 클래스 NPE 해결하는 방법, static method 테스팅 하는 방법 등 여러 가지를 구글링 해봤지만 보이는 건 mockito, powerMock 2.. 내가 접근 1에 소개했던 했던 방식을 알려준다.
 
-구글링을 하면서도 느낀점이 많다.  
-프레임워크의 근본(스프링이 해결 하고자, 편하게 하고자 하는)에서 문제해결방법을 고민하는 개발자가 몇 없다는 것을 느꼈다.
+구글링을 하면서도 느낀 많다점이 많다.  
+프레임워크의 근본(스프링이 해결하고자, 편하게 하고자 하는)에서 문제 해결방법을 고민하는 개발자가 몇 없다는 것을 느꼈다.
 
 ### 백기선 - PSA 이거 모르면 스프링 다시 공부하세요. 
 > 난 다시 공부하기로 했다 ㅋㅋㅋㅋㅋ 알고보니 토비의 3.1 에서도 언급된 내용이더라.
@@ -72,7 +72,7 @@ void example(){
 스프링 사용하는 이유라고도 할 수 있는 3대 핵심 기술이 있다 **AOP, IoC, PSA..**
 
 AOP, IoC는 DI, Logging을 하면서 매번 언급되어 잘 알고 있었지만..  
-PSA는 가깝게 사용하고 있는(Spring MVC, JPA) 기술에도 접목 되었었지만. 깊이 생각하지 못하고 넘어 갔던 것 같다.
+PSA는 가깝게 사용하고 있는(Spring MVC, JPA) 기술에도 접목 되었었지만. 깊이 생각하지 못하고 넘어갔던 것 같다.
 
 내가 풀고자 하는 문제를 다이어그램으로 그려보면 아래와 같을 것이다.
 
@@ -111,10 +111,13 @@ public class MetaService {
             return LocalDate.of(2021, 6, 7);
         }
     }
-
+    
+    /**
+     * 생성자 주입
+     * LocalDateService로 추상화 타입을 잡고 MetaLocalDateService를 주입한다.
+     */
     private final LocalDateService localDateService;
 
-    // LocalDateService로 추상화 타입을 잡고 MetaLocalDateService를 주입한다.
     public MetaService(MetaLocalDateService metaLocalDateService) {
         this.localDateService = metaLocalDateService;
     }
