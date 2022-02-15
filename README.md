@@ -87,6 +87,7 @@
 - [testing configuration error found multiple declarations of @BootstrapWith](./Spring/SpringBoot/@BootstrapWith-error.md)
 - [Gradle 6 to 7](./Spring/SpringBoot/gradle-6-to-7.md)
 - [Spring PSA 기술을 통해 static method를 쉽고 빠르게 테스트 하다.](./Spring/SpringBoot/PSA.md)
+- [Spring Persistence Context 그리고 Transactional]()
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
