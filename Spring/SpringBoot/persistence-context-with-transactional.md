@@ -50,8 +50,9 @@ Spring 3대 핵심 원리 중 하나인 AOP 기술은 내부적으로 다이나�
     <img src="../../img/transactional-based-aop.png" width="700px">
 </p>
 
-> 프록시로 감싼 타겟 (JpaRunner)를 외부에서 호출할 때 run()이라는 public 메소드를 호출하는데 (ApplicationRunner를 구현했기 때문에) 이 때 run() 메소드에는 트랜잭션이 적용되지 않는다.  
-> 왜냐면 @Transactional을 savePost()만 붙였으니까. 그런데 그렇게 호출한 run()이 내부에서 @Transactional을 사용한 savePost()를 호출하더라도, JpaRunner 밖에서 호출이 되는게 아니라 프록시 내부에서 savePost()를 바로 호출하기 때문에 타겟을 감싼 트랜잭션이 적용되지 않는 것이다.
+> 프록시로 감싼 타겟 (JpaRunner)를 외부에서 호출할 때 `run()`이라는 public 메소드를 호출하는데 (ApplicationRunner를 구현했기 때문에) 이 때 `run()` 메소드에는 트랜잭션이 적용되지 않는다.  
+> 
+> 왜냐면 @Transactional을 `savePost()`만 붙였으니까. 그런데 그렇게 호출한 run()이 내부에서 @Transactional을 사용한 `savePost()`를 호출하더라도, JpaRunner 밖에서 호출이 되는게 아니라 프록시 내부에서 `savePost()`를 바로 호출하기 때문에 타겟을 감싼 트랜잭션이 적용되지 않는 것이다.
 
 **차라리 JpaRunner 밖에서 savePost() 메소드를 바로 호출했다면 트랜잭션이 적용됐을 것이다.**
 
