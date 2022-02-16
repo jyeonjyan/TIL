@@ -50,12 +50,48 @@ Spring 3대 핵심 원리 중 하나인 AOP 기술은 내부적으로 다이나�
     <img src="../../img/transactional-based-aop.png" width="700px">
 </p>
 
-> 프록시로 감싼 타겟 (JpaRunner)를 외부에서 호출할 때 `run()`이라는 public 메소드를 호출하는데 (ApplicationRunner를 구현했기 때문에) 이 때 `run()` 메소드에는 트랜잭션이 적용되지 않는다.  
-> 
-> 왜냐면 @Transactional을 `savePost()`만 붙였으니까. 그런데 그렇게 호출한 run()이 내부에서 @Transactional을 사용한 `savePost()`를 호출하더라도, JpaRunner 밖에서 호출이 되는게 아니라 프록시 내부에서 `savePost()`를 바로 호출하기 때문에 타겟을 감싼 트랜잭션이 적용되지 않는 것이다.
+프록시로 감싼 `JpaRunner` 를 외부에서 호출할 때 `run()`이라는 public 메소드를 호출하는데 이 때 `run()` 메소드에는 트랜잭션이 적용되지 않는다.  
 
-**차라리 JpaRunner 밖에서 savePost() 메소드를 바로 호출했다면 트랜잭션이 적용됐을 것이다.**
+> `@Transactional` 애노테이션을 `savePost()`에만 붙였기 때문이다.
 
-ex. `JpaExController.java / public void createPost(jpaRunner.savePost()){}`
+또 외부에서 `run()`메소드를 호출한다고 한들 `run()` 메소드에서 호출하는 `savePost()` 메소는 `JpaRunner` 내부에서 호출되기 때문에 티켓을 감싼 트랜잭션이 적용되지 않는다.  
+
+`JpaRunnerEx` 와 같은 다른 티켓에서 `savePost()`를 호출했다면 트랜잭션이 적용됐을 것이다.
 
 ## 따라서 실습하기
+
+```java
+@Test
+@DisplayName("EntityManager.contains(item)이 false로 반환된다.")
+void EntityManager_Contains_Return_False(){
+    final Board board = Board.builder()
+            .content("아니 이 정대우 돼지놈이")
+            .build();
+
+    // persist -> 1차 캐시에 등록
+    final Board boardSave = boardRepository.save(board);
+    System.out.println("==========================");
+
+    // persist 됐으면.. entityManager에 있겠지.
+    final boolean contains = entityManager.contains(boardSave);
+    assertFalse(contains);
+
+    // persistent context -> 1차 캐시를 뒤져서 반환
+    // select query 날라가지 않음
+    boardRepository.findById(boardSave.getId());
+}
+```
+
+해당 `@DataJpaTest`를 실행해보면 `assertFalse()` 메소드가 실패한다.   
+??? 나는 기선님과 같은 시나리오로 한 것 같은데?? 라고 생각할 것이다.
+**비슷한 시나리오 였을 뿐 가장 중요한 개념을 건너뛰고 테스트한 것이다.**  
+
+나의 예제 unitTest(`@Test`) 테스트는 `@DataJpaTest` 애노테이션에 의해 실행된다.
+기선님의 예제는 `run()` 메소드에 `ApplicationRunner` 를 구현해 외부에서 호출 할 때 `run()` 메소드를 호출하게 하였다.
+
+기선님이 말한 DFS 학습법을 통해 우리 테스트가 `entityManager.contains()`에 대해서 통과할 수 있었던 이유를 찾아보겠다.
+
+## @DataJpaTest
+`@DataJpaTest` 애노테이션은 내부적으로 다양한 기능을 가지고 있지만. 그 중에서 `@ExtendWith({SpringExtension.class})`, `@Transactional` 에 집중해야한다.
+
+결국에는.. `@DataJpaTest`가 붙어있는 클래스에 대해 `@Transactional`을 전역으로 활성화 하게 되고 외부(`SpringExtension`)에 의해 unitTest가 실행되기 때문에 <u>다이나믹 프록시의 단점</u> 또한 해결할 수 있게 된다. 
