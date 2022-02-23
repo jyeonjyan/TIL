@@ -27,8 +27,7 @@ Nginx 에서는 Nginx에 대해서 아래와 같이 설명한다.
 Nginx의 동작방식을 이해하는데 필요한 개념
 
 * [PCB & IPC & Context Switching](../CS/PCB-IPC-ContextSwitching.md)
-* CPU
-  * IRQ (Interrupt request lines)
+* IRQ (Interrupt request lines)
 
 ## Nginx가 기존의 웹 서버(Apache)와 차이점
 
