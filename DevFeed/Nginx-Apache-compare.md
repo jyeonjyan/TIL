@@ -10,7 +10,7 @@
 오늘 미디엄의 좋은 [포스팅](https://bit.ly/3haCw9e)을 보고 개념을 글로 정리하는 것을 실행에 옮기게 됐다.  
 내가 과연 이 기술을 알고 쓰는 걸까 싶은 기술들을 앞으로 CS와 연관 지어서 포스팅해 보려고 한다.
 
-## Nginx를 통한 무중단 배포
+## Nginx의 활용
 
 "springboot 무중단 배포" 라고 구글링 하면 "Nginx를 통한 무중단 배포" 라는 키워드를 보지 않을 수 없다.  
 [toss](https://toss.im/) `Response Headers` 를 보면 Server가 `nginx` 이다. (front cache server로 생각든다)
