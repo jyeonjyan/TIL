@@ -12,7 +12,8 @@
 
 ## Nginx를 통한 무중단 배포
 
-"springboot 무중단 배포" 라고 구글링 하면 "Nginx를 통한 무중단 배포" 라는 키워드를 보지 않을 수 없다.
+"springboot 무중단 배포" 라고 구글링 하면 "Nginx를 통한 무중단 배포" 라는 키워드를 보지 않을 수 없다.  
+[toss](https://toss.im/) `Response Headers` 를 보면 Server가 `nginx` 이다. (front cache server로 생각든다)
 
 ### Nginx 란?
 
@@ -20,7 +21,8 @@ Nginx에 대한 굉장히 자세한 내용은 나 포스트보다 [공식문서]
 
 Nginx 에서는 Nginx에 대해서 아래와 같이 설명한다.  
 
-> 많은 web server와 application server는 단순한 쓰레드, 프로세스 기반 아키텍쳐 이지만 Nginx는 혁신적인 이벤트 중심 아키텍쳐이다. 이를 통해 최신 하드웨어에서의 수십만의 동시 접속을 이뤄낸다고 한다.
+> 많은 web server와 application server는 단순한 쓰레드, 프로세스 기반 아키텍쳐 이지만 Nginx는 혁신적인 이벤트 중심 아키텍쳐이다.  
+> 이를 통해 최신 하드웨어에서의 수십만의 동시 접속을 이뤄낸다고 한다.
 
 ## Nginx의 성능을 이해하려면 동작 방식을 알 필요가 있다.
 
@@ -36,8 +38,12 @@ Nginx의 동작방식을 이해하는데 필요한 개념
   * 소개에도 강조했던 동시접속 (concurrent connections)
 * 이를 위해 개선된 설계
   * Event-driven architecture
+    * 연결 전담 프로세스나 스레드를 두지 않는다.
+    * worker 프로세스들이 listen socket, connection socket 2개의 이벤트를 다 처리한다.
   * non-blocking I/O
 * 설계를 구현한 방식
   * 고정된 수의 worker 프로세스만을 관리한다. 
+    * 매 connection마다 프로세스나 스레드를 생성하지 않는다.
   * 프로세스를 이벤트를 기반으로 non-blocking 하게 동작한다.
   * 리소스나 Context Switching도 현저히 줄인다.
+

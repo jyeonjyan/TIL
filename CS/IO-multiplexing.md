@@ -7,4 +7,3 @@
 * I/O Multiplexing: 여러 소켓에 대해 I/O를 병향적으로 하는 기법 다수 프로세스 혹은 스레드를 만들지 않고 여러 파일을 처리할 수 있다.
 * 비동기 I/O: 비동기적으로 처리하는 기법. 시그널이 병행되어 존재함.
 * Event Driven I/O: multiplexing을 추상화 함 libev, pyev, libevent 라이브러리가 있음.
-
