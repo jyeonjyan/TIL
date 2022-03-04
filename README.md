@@ -43,6 +43,7 @@
 - [java arrayList item 중복 제거를 하는 방법](./Lecture/JAVA/distinct-arrayList-item.md)
 - [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
 - [상속관계에서의 lombok @Builder 사용](./Spring/SpringBoot/builder-in-inheritance.md)
+- [Immutable:: java StringBuilder를 쓰는 이유](./Lecture/JAVA/Immutable-with-string.md)
 
 **Backend**
 - [SOA 그리고 MSA]()
