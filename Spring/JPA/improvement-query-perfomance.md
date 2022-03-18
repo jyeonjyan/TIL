@@ -1,4 +1,4 @@
-# JPA 쿼리 성능 개선 사례
+# every-moment 서비스 쿼리 성능 개선 사례
 
 ## 연관된 Entity의 save를 위해서는 반대편 Entity ID만 있으면 된다.
 
@@ -66,4 +66,3 @@ Hibernate:
 ```
 
 * `cross join` 발생하여 join 조건을 무시하고 `answer` 테이블에 해당하는 모든 칼럼이 `uncomfortable` 테이블의 모든 행들과 조인되는 경우가 발생한다.
-* 
