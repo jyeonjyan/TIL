@@ -51,6 +51,7 @@
 - [jwt 의존성 중복으로 인한 기이한 에러](./backend/jwt/jwt-dependency-duplicate.md)
 - [sentry로 로깅 시스템 구축하기](./backend/etc/sentry-logging.md)
 - [지금의 REST API는 REST를 따르고 있지 않다.](./backend/architecture/restapi.md)
+- [높은 응집도와 낮은 결합도](./DevFeed/CohesionAndCoupling.md)
 
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
