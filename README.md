@@ -44,6 +44,7 @@
 - [java 참조형 변수](./Lecture/JAVA/Reference-veriable.md)
 - [상속관계에서의 lombok @Builder 사용](./Spring/SpringBoot/builder-in-inheritance.md)
 - [Immutable:: java StringBuilder를 쓰는 이유](./Lecture/JAVA/Immutable-with-string.md)
+- [Java는 Call By Value만 있다](./Lecture/JAVA/javaIsCallByValue.md)
 
 **Backend**
 - [SOA 그리고 MSA]()
