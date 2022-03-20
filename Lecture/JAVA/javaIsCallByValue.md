@@ -50,3 +50,40 @@ private static void primitiveArrayCallByRef(int[] array) {
 어떻게 보면 자바는 `Call By Reference`와 `Call By Value`가 공존하는 언어가 아닐까? 하는 생각이 들 것이다.  
 
 여러 커뮤니티에 "java는 `Call By Value`다. `Call By Ref`도 존재한다." 를 두고 열렬한 토론을 하고 있었다. 나는 이럴 때 일수록, 이런 결과에도 불구하고 java가 `Call By Value` 라는 점을 증명하려 한다.
+
+참고하면 좋은 자료들
+> [DevEric Blog](https://deveric.tistory.com/92)  
+> [stackoverflow - Call By Value, Call By Reference 두 가지 이면의 의미와 역사](https://stackoverflow.com/a/430958/18518672)  
+> [Scott Stanchfield - Java is Pass-by-Value, Dammit!](https://www.javadude.com/articles/passbyvalue.htm)
+
+## 기본적으로 Call By Value는 함수 외부의 변수에 영향을 주지 않아야 해!
+
+내가 처음에 생각했던 java가 진정 `Call By Value` 라면 "**함수 외부의 변수에 영향을 주면 안돼 !"** 를 이미 어떤 분이 StackOverFlow에 기재하셨다.
+
+<p align="center">
+    <img src="../../img/sof-ref-is-ref.png" width="750px">
+</p>
+
+솔직히 이걸 작성하면서 자료를 많이 조사했는데 이러한 논쟁들이 기술적 용어에 대한 말장난을 하는 것만 같아 짜증이 났다.
+
+<p align="center">
+    <img src="../../img/SOF-cbv-cbr-my-think.png" width="750px">
+</p>
+
+> 나처럼 말장난 (용어가 복잡하게 얽혀 있음)으로 여기고 그로 인해 명쾌하지만은 않은 답변들이 불편하다는 것에 의견을 남기신 분도 존재했다.
+
+## On Pointers vs References
+
+프로그래밍 언어 디자인에서 "포인터"는 일부 데이터의 위치를 ​​간접적으로 추적하는 변수입니다. 포인터의 값은 관심 있는 데이터의 메모리 주소인 경우가 많습니다. 일부 언어에서는 해당 주소를 조작할 수 있습니다.
+
+참고자료 3번째 블로그에서는..  
+이 [Oracle 자료](https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.3.1) 두 번째 줄은 많은 사람들에게 더 큰 혼란을 야기 시켰다고 합니다.
+
+> The reference values (often just references) are pointers to these objects, and a special null reference, which refers to no object.  
+>
+> 참조 값(종종 단순히 참조)은 이러한 개체에 대한 포인터이며 개체를 참조하지 않는 특수한 null 참조입니다.
+
+그들은 원래 Java를 만들 때 "포인터"를 염두에 두고 있었습니다. (예: 클래스에서 이것의 일부를 볼 수 있습니다 NullPointerException)  
+
+Sun은 Java를 보안 언어로 사용하기를 원했으며 **Java의 장점 중 하나는 C++에서처럼 포인터 연산 을 허용하지 않는다는 것입니다.**  
+그들은 공식적으로 "참조"라고 부르는 개념에 대해 다른 이름을 시도하기까지 했습니다. 엄청난 실수로 그 과정에서 더 큰 혼란을 일으켰습니다.
