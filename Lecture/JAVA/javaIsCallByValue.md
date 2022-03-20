@@ -78,7 +78,7 @@ private static void primitiveArrayCallByRef(int[] array) {
 프로그래밍 언어 디자인에서 "포인터"는 일부 데이터의 위치를 ​​간접적으로 추적하는 변수입니다. 포인터의 값은 관심 있는 데이터의 메모리 주소인 경우가 많습니다. 일부 언어에서는 해당 주소를 조작할 수 있습니다.
 
 참고자료 3번째 블로그에서는..  
-이 [Oracle 자료](https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.3.1) 두 번째 줄은 많은 사람들에게 더 큰 혼란을 야기 시켰다고 합니다.
+이 [Oracle 자료](https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.3.1) 두 번째 줄은 많은 사람들에게 더 큰 혼란을 야기 시켰다고 이야기 합니다.
 
 > The reference values (often just references) are pointers to these objects, and a special null reference, which refers to no object.  
 >
@@ -124,3 +124,37 @@ primitiveArrayCallByRef(arr)
 당신은 arr 자체를 전달하고 있지 않습니다. arr에 대한 포인터(메모리 주소)를 전달하고 있습니다.
 
 ## 그렇다면 제 코드에서는 어떤일이 일어나고 있었던걸까요?
+
+```java
+public static void main(String[] args) {
+    int[] arr = new int[]{1, 2, 3, 4, 5};
+
+    for (int i=0; i<3; i++){
+        primitiveArrayCallByRef(arr); // 1
+    }
+
+}
+
+private static void primitiveArrayCallByRef(int[] array) {
+
+    System.out.println("=============");
+    System.out.println(Arrays.toString(array)); 
+
+    for (int i=0; i<array.length; i++){
+        if (i == 1){
+            // swap
+            int temp = array[i];
+            array[i] = array[i+1];
+            array[i+1] = temp;
+        }
+    }
+}
+```
+
+* `주석 1` 과 같이 array를 매개변수로 넣어 `primitiveArrayCallByRef(arr)`메소드를 호출 했을 때 `new int[]`로 선언한 `main()`의 배열의 포인터(메모리 주소) 값을 복사하여 전달됩니다. (`Call By Value`)
+  * 그림으로 표현하면 다음과 같습니다.
+  * 
+* `primitiveArrayCallByRef(int[] array)` 파라미터로 받은 `array` 이름을 가진 배열은 `main()` 의 배열 `arr` 이름을 가진 포인터를 가르키게 됩니다.
+  * 그림으로 표현하면 다음과 같습니다.
+  * 
+* 
