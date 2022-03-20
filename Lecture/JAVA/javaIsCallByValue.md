@@ -8,8 +8,45 @@
 앞서 말했듯 자바는 `call by value` 라고 이미 알고있던 나는.. 코딩테스트 solution의 출력 결과를 보고 멘붕에 빠지게 된다.
 
 아래 출력은 내가 실제로 나는 쏘* 코딩테스트를 보면서 있었던 일이다.  
-나는 코딩테스트 시간이 촉박했기에 swap 로직의 문제를 해결하지 못하고 우선 제출했지만.. 회고하려고 한다.
+나는 코딩테스트 시간이 촉박했기에 swap 로직의 copy address 문제를 해결하지 못하고 우선 제출했지만.. 회고하려고 한다.
 
 <p align="center">
-    <img src="../../img/socar-myResult-console.png" width="750px">
+    <img src="../../img/socar-myResult-console.png" width="800px">
 </p>
+
+콘솔에 보이는 `original: [*, *, * ...]` 출력은 아래 예시코드로 설명하면 다음과 같다.  
+`main()` 에서 `primitiveArrayCallByRef()` 에 `original`에 해당하는 array를 인자로 넘기고 호출 한 뒤 `primitiveArrayCallByRef()`에서 파라미터로 받은 배열을 출력한 것이다.
+
+> swap을 반복할 때마다(메소드를 호출 할 때마다) `swapped: [*, *, * ...]` 의 배열이 다음 original 배열의 값에 전이(영향)가 되는 것을 확인할 수 있다.
+
+아래의 코드를 참고하면 더 이해가 잘 될 것이다.
+
+```java
+public static void main(String[] args) {
+    int[] array = new int[]{1, 2, 3, 4, 5};
+
+    for (int i=0; i<3; i++){
+        primitiveArrayCallByRef(array);
+    }
+
+}
+
+private static void primitiveArrayCallByRef(int[] array) {
+
+    System.out.println("=============");
+    System.out.println(Arrays.toString(array)); 
+
+    for (int i=0; i<array.length; i++){
+        if (i == 1){
+            // swap
+            int temp = array[i];
+            array[i] = array[i+1];
+            array[i+1] = temp;
+        }
+    }
+}
+```
+
+어떻게 보면 자바는 `Call By Reference`와 `Call By Value`가 공존하는 언어가 아닐까? 하는 생각이 들 것이다.  
+
+여러 커뮤니티에 "java는 `Call By Value`다. `Call By Ref`도 존재한다." 를 두고 열렬한 토론을 하고 있었다. 나는 이럴 때 일수록, 이런 결과에도 불구하고 java가 `Call By Value` 라는 점을 증명하려 한다.
