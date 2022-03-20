@@ -19,4 +19,4 @@ assertTrue(literal1.hashCode() == literal2.hashCode());
     <img src="../../img/notLiteral.png" width="680px">
 </p>
 
-하지만 `notLiteral`은 `new String`을 통해 같은 내용의 문자열임에도, 메모리에 새롭게 생성했다.  
+하지만 `notLiteral` 문자열은 `new String` Reference Type을 통해 같은 내용의 문자열임에도, 메모리에 새롭게 생성합니다.  
