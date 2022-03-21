@@ -64,13 +64,13 @@ private static void primitiveArrayCallByRef(int[] array) {
     <img src="../../img/sof-ref-is-ref.png" width="750px">
 </p>
 
-솔직히 이걸 작성하면서 자료를 많이 조사했는데 이러한 논쟁들이 기술적 용어에 대한 말장난을 하는 것만 같아 짜증이 났다.  
-이에 대한 답변도 내 포스팅 내용을 더 읽지 않는 이상 바로 이해 하기에는 어려울 것이다.
+"함수 외부에 변수에 영향을 주면 안되잖아."에 대한 답변도 내 포스팅 내용을 더 읽지 않는 이상 바로 이해 하기에는 어려울 것이다.  
 
 <p align="center">
     <img src="../../img/SOF-cbv-cbr-my-think.png" width="750px">
 </p>
 
+> 솔직히 이걸 작성하면서 자료를 많이 조사했는데 이러한 논쟁들이 기술적 용어에 대한 말장난을 하는 것만 같아 짜증이 났다.  
 > 나처럼 말장난 (용어가 복잡하게 얽혀 있음)으로 여기고 그로 인해 명쾌하지만은 않은 답변들이 불편하다는 것에 의견을 남기신 분도 존재했다.
 
 ## On Pointers vs References
@@ -125,6 +125,9 @@ primitiveArrayCallByRef(arr)
 
 ## 그렇다면 제 코드에서는 어떤일이 일어나고 있었던걸까요?
 
+참고하면 좋은 자료
+- [stackoverflow - primitve types array in meomory](https://stackoverflow.com/a/29582896/18518672)
+
 ```java
 public static void main(String[] args) {
     int[] arr = new int[]{1, 2, 3, 4, 5};
@@ -153,8 +156,8 @@ private static void primitiveArrayCallByRef(int[] array) {
 
 * `주석 1` 과 같이 array를 매개변수로 넣어 `primitiveArrayCallByRef(arr)`메소드를 호출 했을 때 `new int[]`로 선언한 `main()`의 배열의 포인터(메모리 주소) 값을 복사하여 전달됩니다. (`Call By Value`)
   * 그림으로 표현하면 다음과 같습니다.
-  * 
+  * <img src="../../img/pass-array-pointer-value.png" width="630px">
 * `primitiveArrayCallByRef(int[] array)` 파라미터로 받은 `array` 이름을 가진 배열은 `main()` 의 배열 `arr` 이름을 가진 포인터를 가르키게 됩니다.
   * 그림으로 표현하면 다음과 같습니다.
-  * 
-* 
+  * <img src="../../img/point-thesame-heap-memory.png" width="630px">
+
