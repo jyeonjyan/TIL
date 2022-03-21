@@ -15,7 +15,7 @@
 </p>
 
 콘솔에 보이는 `original: [*, *, * ...]` 출력은 아래 예시코드로 설명하면 다음과 같다.  
-`main()` 에서 `primitiveArrayCallByRef()` 에 `original`에 해당하는 array를 인자로 넘기고 호출 한 뒤 `primitiveArrayCallByRef()`에서 파라미터로 받은 배열을 출력한 것이다.
+`main()` 에서 `swap()` 에 `original`에 해당하는 array를 인자로 넘기고 호출 한 뒤 `swap()`에서 파라미터로 받은 배열을 출력한 것이다.
 
 > swap을 반복할 때마다(메소드를 호출 할 때마다) `swapped: [*, *, * ...]` 의 배열이 다음 original 배열의 값에 전이(영향)가 되는 것을 확인할 수 있다.
 
@@ -26,12 +26,12 @@ public static void main(String[] args) {
     int[] array = new int[]{1, 2, 3, 4, 5};
 
     for (int i=0; i<3; i++){
-        primitiveArrayCallByRef(array);
+        swap(array);
     }
 
 }
 
-private static void primitiveArrayCallByRef(int[] array) {
+private static void swap(int[] array) {
 
     System.out.println("=============");
     System.out.println(Arrays.toString(array)); 
@@ -118,7 +118,7 @@ p->setName("jyeonjyan");
 요약하자면 자바 에는 포인터가 있고 포인터의 값이 전달 됩니다. 실제로 객체 자체를 매개변수로 전달할 수 있는 방법은 없습니다. 객체에 대한 포인터만 전달할 수 있습니다.
 
 ```java
-primitiveArrayCallByRef(arr)
+swap(arr)
 ```
 
 당신은 arr 자체를 전달하고 있지 않습니다. arr에 대한 포인터(메모리 주소)를 전달하고 있습니다.
@@ -133,12 +133,12 @@ public static void main(String[] args) {
     int[] arr = new int[]{1, 2, 3, 4, 5};
 
     for (int i=0; i<3; i++){
-        primitiveArrayCallByRef(arr); // 1
+        swap(arr); // 1
     }
 
 }
 
-private static void primitiveArrayCallByRef(int[] array) {
+private static void swap(int[] array) {
 
     System.out.println("=============");
     System.out.println(Arrays.toString(array)); 
@@ -154,10 +154,10 @@ private static void primitiveArrayCallByRef(int[] array) {
 }
 ```
 
-* `주석 1` 과 같이 array를 매개변수로 넣어 `primitiveArrayCallByRef(arr)`메소드를 호출 했을 때 `new int[]`로 선언한 `main()`의 배열의 포인터(메모리 주소) 값을 복사하여 전달됩니다. (`Call By Value`)
+* `주석 1` 과 같이 array를 매개변수로 넣어 `swap(arr)`메소드를 호출 했을 때 `new int[]`로 선언한 `main()`의 배열의 포인터(메모리 주소) 값을 복사하여 전달됩니다. (`Call By Value`)
   * 그림으로 표현하면 다음과 같습니다.
   * <img src="../../img/pass-array-pointer-value.png" width="630px">
-* `primitiveArrayCallByRef(int[] array)` 파라미터로 받은 `array` 이름을 가진 배열은 `main()` 의 배열 `arr` 이름을 가진 포인터를 가르키게 됩니다.
+* `swap(int[] array)` 파라미터로 받은 `array` 이름을 가진 배열은 `main()` 의 배열 `arr` 포인터와 같은 곳을 가르키게 됩니다.
   * 그림으로 표현하면 다음과 같습니다.
   * <img src="../../img/point-thesame-heap-memory.png" width="630px">
 
