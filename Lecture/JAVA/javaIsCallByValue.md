@@ -7,7 +7,7 @@
 
 앞서 말했듯 자바는 `call by value` 라고 이미 알고있던 나는.. 코딩테스트 solution의 출력 결과를 보고 멘붕에 빠지게 된다.
 
-아래 출력은 내가 실제로 나는 쏘* 코딩테스트를 보면서 있었던 일이다.  
+아래 출력은 내가 실제로 코딩테스트를 보면서 있었던 일이다.  
 나는 코딩테스트 시간이 촉박했기에 swap 로직의 copy address 문제를 해결하지 못하고 우선 제출했지만.. 회고하려고 한다.
 
 <p align="center">
@@ -160,4 +160,24 @@ private static void swap(int[] array) {
 * `swap(int[] array)` 파라미터로 받은 `array` 이름을 가진 배열은 `main()` 의 배열 `arr` 포인터와 같은 곳을 가르키게 됩니다.
   * 그림으로 표현하면 다음과 같습니다.
   * <img src="../../img/point-thesame-heap-memory.png" width="630px">
+* 결과적으로 `swap(int[] arr)` 호출시 함수 내부에서 `x0001` 주소의 배열을 swap 하여 `main()`에서 `x0001` 배열을 호출시 swap 된 배열을 출력하게 되는 것입니다.
 
+## 이러한 문제를 해결하려면 어떻게 해야 할까요?
+
+우선 제 예시에서는 아래와 같이 새로운 배열`x0002`을 생성하여 파라미터로 받은 `x0001` 배열의 값(item)을 복사해주면 됩니다.
+
+```java
+private static void swap(int[] array) {
+
+    final int[] cloneArr = array.clone();
+
+    for (int i=0; i<cloneArr.length; i++){
+        if (i == 1){
+            // swap
+            int temp = cloneArr[i];
+            cloneArr[i] = cloneArr[i+1];
+            cloneArr[i+1] = temp;
+        }
+    }
+}
+```
