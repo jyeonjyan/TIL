@@ -6,8 +6,6 @@ java에서의 Exception은 두 가지로 구분할 수 있다 CheckedException�
 
 여기서 RuntimeException은 Exception 클래스의 서브 클래스이기 때문에 Exception의 일종이기도 하지만 **자바에서는 RuntimeException과 이를 상속한 클래스를 조금 특별하게 취급한다.** 명시적으로 예외를 처리하지 않아도 되기 때문이다.
 
-<img src="../../img/java-checked-unchecked-exceptions-2.png">
-
 ## 예외 처리
 예외를 처리하는 방법에는 예외 복구, 예외 처리 회피, 예외 전환 방법이 있다.
 
