@@ -57,7 +57,7 @@
 **Design Pattern**
 - [디자인 패턴](./DesignPattern/DesignPattern.md)
 - [싱글톤 패턴](./DesignPattern/Singleton.md)
-- [스트래티지 패턴 <- "NEW"](./DesignPattern/strategy-pattern.md)
+- [스트래티지 패턴](./DesignPattern/strategy-pattern.md)
 
 **Springboot**
 - [TDD란](./Spring/Concept/TDD.md)
@@ -95,7 +95,7 @@
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
 - [Just In Time 컴파일이란?](./CS/JIT.md)
-- [동기, 비동기 | 블록킹, 논블로킹 <- "NEW"](./Lecture/JAVA/async-nonblocking.md)
+- [동기, 비동기 | 블록킹, 논블로킹](./Lecture/JAVA/async-nonblocking.md)
 - [Nginx가 Apache 보다 좋은 성능을 내는 이유](./DevFeed/Nginx-Apache-compare.md)
   - [PCB & IPC & Context Switching](./CS/PCB-IPC-ContextSwitching.md)
   - [I/O Multiplexing](./CS/IO-multiplexing.md)
@@ -106,12 +106,12 @@
   * [버블정렬](./Lecture/algorithm/bubbleSort.md)
   * [삽입정렬](./Lecture/algorithm/insertionSort.md)
   * [카운팅정렬](./Lecture/algorithm/counting-sort.md)
-  * [깊이 우선 탐색 DFS <- "NEW"](./Lecture/algorithm/DFS.md)
+  * [깊이 우선 탐색 DFS](./Lecture/algorithm/DFS.md)
 
 **Git, Commands**
 - [엎질러진 github 명령 취소하기](./GitHub/delPush.md)
 - [github 라이센스 알아보기](./DevFeed/githubLicense.md)
-- [mysql 초기화 하는 방법 <- "NEW"](./DevFeed/mysql-reset.md)
+- [mysql 초기화 하는 방법](./DevFeed/mysql-reset.md)
 
 **DevOps**
 - [CICD](./DevFeed/CICD.md)
@@ -132,7 +132,7 @@
 - [xx.com의 리다이렉션 횟수가 너무 많습니다.](./DevOps/tooManyRedirection.md)
 - [notion 사이트 내 도메인이름으로 타겟팅 하기](./DevOps/notion-targeting.md)
 - [학교가불편한순간 v1.1.1에서 마주한 트러블슈팅](./DevOps/themoment-v1.1.1-issue.md)
-- [20명 정도 되는 규모의 팀에 Vault 도입하기 <- "NEW"](./DevOps/Introducing-Vault.md)
+- [20명 정도 되는 규모의 팀에 Vault 도입하기](./DevOps/Introducing-Vault.md)
 
 **Network**
 - [URI 란?](./DevFeed/URI.md)
@@ -141,7 +141,7 @@
 - [puppeteer 란?](./experience/puppeteer.md)
 - [프록시란?](./Network/Proxy.md)
 - [웹 생태계의 스팩](./Spring/Concept/webSpec.md)
-- [cache 란? <- "NEW"](./Network/cache.md)
+- [cache 란?](./Network/cache.md)
 
 **모든 개발자들을 위한 HTTP**
 - 인터넷 네트워크
@@ -194,22 +194,22 @@
 
 **Grammar**
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
-- [동기 | 비동기 <- "NEW"](./DevFeed/PromiseToAwait.md)
+- [동기 | 비동기](./DevFeed/PromiseToAwait.md)
 
 **library**
 - [SDK 란?](./Spring/Concept/whatIsSDK.md)
 - [SOLID 원칙](./Spring/Concept/SOLID.md)
-- [시간복잡도 <- "NEW"](./Spring/Concept/library/Time-complexity.md)
+- [시간복잡도](./Spring/Concept/library/Time-complexity.md)
 
 **Methodology**
 - [Test Driven Development](./DevFeed/TDD.md)
 - [러닝커브 이겨내기](./DevFeed/LearningCurve.md)
 - [애자일한 조직문화](./organization/AgileCulture.md)
 - [애자일이란?](./organization/Agile.md)
-- [스타트업 용어 정리 <- "NEW"](./organization/startup-expression.md)
+- [스타트업 용어 정리](./organization/startup-expression.md)
 
 **Extra**
-- [nest 빠르게 환경 구성하기 <- "NEW"](Extra/nest/fast-nest-env.md)
+- [nest 빠르게 환경 구성하기](Extra/nest/fast-nest-env.md)
 - [지환아 백엔드 기술면접 이정도는 대답 하자.](./Lecture/JAVA/tech-interview.md)
 - [Node 잘 안쓰는 사람들이 갑자기 쓰게 되면 겪을 수 있는 에러 대처법](./Extra/node/error-solution.md)
   
