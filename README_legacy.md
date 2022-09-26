@@ -1,2 +1,2 @@
 It was current migrated !! 
-It's for test.
+please signin target account and try ssh clone.
