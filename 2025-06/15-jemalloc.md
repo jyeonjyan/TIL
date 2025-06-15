@@ -39,3 +39,19 @@ https://www.slideshare.net/JangHoon1/jemalloc-92835449#5
 * 자주 쓰거나 같은 크기의 객체들을 묶어둠.
 
 <img src='../img/slab-allocation.png'>
+
+
+## jemalloc 으로 성능향상
+
+JVM 에서 Native Memory 영역이 존재하고, Native Memory 에 malloc 할때는 기본적으로 system malloc(Linux 를 기준으로 glibc 의 ptmalloc) 을 사용함, 이걸 jemalloc 으로 대체 가능 함.
+
+* [JVM 메모리 누수 > Native 메모리 > ptmalloc 분석 사례](https://www.leeby.one/posts/JVM-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%88%84%EC%88%98-Native-%EB%A9%94%EB%AA%A8%EB%A6%AC-glibc-malloc/)
+
+요약:  
+ptmalloc2 의 메모리 파편화 문제로 인해 memory 가 꾸준하게 늘어 남.  
+분석을 했을대 ptmalloc2의 `free()` 는 예상과 다르게 동작 함. 바로 OS memory 를 free 하는것이 아닌, 향후 있을 사용을 위해 freelist로 넣음.  
+그래서 사실상 process 에서 사용중인(RSS) 메모리로 인식 함.  
+freelist 에 있는 메모리를 잘 활용하면 될텐데, 버그가 있었음.
+
+* [Malt 에서 Jemalloc 으로 바꾸고 Natvie Memory 사용량을 최적화한 사례](https://blog.malt.engineering/java-in-k8s-how-weve-reduced-memory-usage-without-changing-any-code-cbef5d740ad)
+
