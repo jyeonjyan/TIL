@@ -28,7 +28,7 @@
 - [자바 리플랙션](./Lecture/JAVA/reflection-1.md)
 - [나만의 @애노테이션 만들기](./Lecture/JAVA/MyAnnotation.md)
 - [java 리플랙션을 사용해 DI 구현하기](./Lecture/JAVA/DI-impl.md)
-- [java 메소드 레퍼런스](../Lecture/JAVA/java-method-reference.md)
+- [java 메소드 레퍼런스](./Lecture/JAVA/java-method-reference.md)
 - [java 인테페이스 기본 메서드와 스태틱 메서드](./Lecture/JAVA/interface-defualt-static.md)
 - [java 8 API의 기본 메서드와 스태틱 메서드](./Lecture/JAVA/java-8-defualt-static-method.md)
 - [checked-exception unchecked-exception](./Lecture/JAVA/checked-unchecked-exception.md)
@@ -45,6 +45,8 @@
 - [상속관계에서의 lombok @Builder 사용](./Spring/SpringBoot/builder-in-inheritance.md)
 - [Immutable:: java StringBuilder를 쓰는 이유](./Lecture/JAVA/Immutable-with-string.md)
 - [Java는 Call By Value만 있다](./Lecture/JAVA/javaIsCallByValue.md)
+- [Just In Time 컴파일이란?](./CS/JIT.md)
+- [SOLID 원칙](./Spring/Concept/SOLID.md)
 
 **Backend**
 - [SOA 그리고 MSA]()
@@ -77,7 +79,7 @@
 - [springboot app request client ip 가져오기](./Spring/SpringBoot/getClientIp.md)
 - [장애회고, HikariCP connection error](./Spring/SpringBoot/error-hikari.md)
 - [spring application을 운영할 때 고려해야 security](./Network/spring-security.md)
-- [사랑해요❤️ modelMapper](./Spring/SpringBoot/modelmapper-love.md)
+- [modelMapper](./Spring/SpringBoot/modelmapper-love.md)
 - [DispatcherServlet이 대체 뭐하는 녀석인가](./Spring/SpringBoot/dispatcherServlet.md)
 - [빈 생명주기 콜백](./Spring/SpringBoot/bean-life-cycle.md)
 - [스프링은 싱글톤 컨테이너](./Spring/SpringBoot/singleton-container.md)
@@ -94,11 +96,12 @@
 
 **Computer Science**
 - [인터프리터언어 | 컴파일언어](./CS/interpreter-compile.md)
-- [Just In Time 컴파일이란?](./CS/JIT.md)
 - [동기, 비동기 | 블록킹, 논블로킹](./Lecture/JAVA/async-nonblocking.md)
 - [Nginx가 Apache 보다 좋은 성능을 내는 이유](./DevFeed/Nginx-Apache-compare.md)
   - [PCB & IPC & Context Switching](./CS/PCB-IPC-ContextSwitching.md)
   - [I/O Multiplexing](./CS/IO-multiplexing.md)
+- [SDK 란?](./Spring/Concept/whatIsSDK.md)
+- [시간복잡도](./Spring/Concept/library/Time-complexity.md)
 
 **Algorithm**
 * 정렬
@@ -196,11 +199,6 @@
 - [파라미터 | 인자](./DevFeed/Parameter,Argument.md)
 - [동기 | 비동기](./DevFeed/PromiseToAwait.md)
 
-**library**
-- [SDK 란?](./Spring/Concept/whatIsSDK.md)
-- [SOLID 원칙](./Spring/Concept/SOLID.md)
-- [시간복잡도](./Spring/Concept/library/Time-complexity.md)
-
 **Methodology**
 - [Test Driven Development](./DevFeed/TDD.md)
 - [러닝커브 이겨내기](./DevFeed/LearningCurve.md)
@@ -210,6 +208,6 @@
 
 **Extra**
 - [nest 빠르게 환경 구성하기](Extra/nest/fast-nest-env.md)
-- [지환아 백엔드 기술면접 이정도는 대답 하자.](./Lecture/JAVA/tech-interview.md)
+- [기술면접 준비](./Lecture/JAVA/tech-interview.md)
 - [Node 잘 안쓰는 사람들이 갑자기 쓰게 되면 겪을 수 있는 에러 대처법](./Extra/node/error-solution.md)
   
