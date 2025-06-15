@@ -16,7 +16,7 @@ Jason Evans 가 FreeBSD 를 위해서 개발한 malloc(동적메모리 할당기
 한때, Facebook 에서 잘 사용했었던것 같음
 
 
-## 메모리 단편화
+## 메모리 단편화와 최소화 하기 위한 노력
 
 https://www.slideshare.net/JangHoon1/jemalloc-92835449#5
 
