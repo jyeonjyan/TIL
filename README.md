@@ -1,5 +1,6 @@
 **2025-06**
 - [2025-06-15 jemalloc](./2025-06/15-jemalloc.md)
+- [2025-06-17 이미지 파일인지 검증하는 방법](./2025-06/17-metadata-extractor.md)
 
 **Java, Object-oriented**
 - [절차지향, 객체지향의 차이](./Lecture/JAVA/Procedure-oriented&object-oriented.md)
