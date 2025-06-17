@@ -88,7 +88,7 @@ if (!inputStream.markSupported())
 <img src="../img/jpeg-compressed-size.png" width="400px">
 
 여기서는 17KB 로 보이나, 메모리는 18MB 정도로 잡힌것을 볼 수 있다.  
-이유는 이미지 디코딩과 래스터화(rasterization)" 과정에서의 구조적 오버헤드 때문이다.  
+이유는 "이미지 디코딩과 래스터화(rasterization)" 과정에서의 구조적 오버헤드 때문이다.  
 JPEG은 손실 압축 형식이라 디스크 상에서는 작지만, 메모리에 올리면 18MB 정도가 나온다.  
 
 `3000 (width) × 2000 (height) × 3 (RGB) bytes ≒ 18,000,000 bytes ≒ 18MB`
