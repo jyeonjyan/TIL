@@ -1,4 +1,4 @@
-# application 에서 이미지 파일인지 확인하기
+# application 에서 이미지 파일인지 안전하게 확인하기
 
 ## 특정 파일의 확장자를 알고 싶을때 파일의 magic number 를 보자.
 
@@ -7,7 +7,7 @@ https://en.wikipedia.org/wiki/List_of_file_signatures
 
 <img src="../img/magic-num-cli.png">
 
-JPG(JPEG) 파일의 경우 HEX 코드로 ffd8 로 시작하고 ffd9로 끝난다.
+JPG(JPEG) 파일의 경우 HEX 코드로 ffd8 로 시작하고 ffd9로 끝난다.  
 간단히 command line 으로 확인하고 싶다면, MacOS 기준 아래 command 를 실행하면 된다.
 
 ```
