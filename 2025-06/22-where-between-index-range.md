@@ -1,4 +1,4 @@
-# MySQL where between index range 를 이용한 성능개선
+# MySQL where between index range
 
 ## 사례 소개
 
@@ -36,8 +36,7 @@ where p.promotion_type = 'a'
   * 만약 성공적으로 가져온다고 하더라도 select 되는 row 수가 많아서 batch 에서 OOM 이 발생했을거라 적당한 모수를 가져왔어야 했다.
     * 끊어서 가져온다고 한다면 `LIMIT X` 를 쓰면 되지 않을까 했는데, "전체 user 를 빠뜨림 없이" 조건을 대입해봐야 했기 때문에 단순히 LIMIT 만으로는 만족 X.
 
-당시 query B & query C 를 해주는 helper 함수가 `bucketBeteen` 이라는 이름으로 존재했었고, fundermental 한 이점을 완벽하게 이해하지는 못한채 **이게 정배니깐** 사용했었다.  
-실제로 적용했을때 안정적이고 나름 빠르게 배치가 수행되었고, 이제 와서보니 생각드는것도 있고 해서 이 방법이 먹혔던 fundermental 한 근거를 대보려고 한다.
+당시 query B & query C 를 해주는 helper 함수를 `bucketBeteen` 이라는 개념으로 정의해 사용했고, 안정적이고 빠르게 잘 돌아갔다.
 
 
 ### OFFSET LIMIT 을 이용한 페이징 쿼리도 방법이였지 않았을까?
@@ -59,7 +58,7 @@ LIMIT {page_size} OFFSET ({page_number} - 1) * {page_size};
 
 **따라서 내 요구사항에는 `bucketBetween` 으로 처리하는것이 DB 와 APP 의 부담을 최소화하여 처리하는데 최고의 방법이라는것을 알 수 있다.**
 
-## OFFSET LIMIT 쿼리와 BETWEEN 쿼리 성능 비교
+## OFFSET 쿼리와 BETWEEN 쿼리 성능 비교
 
 문득, OFFSET 으로 beginId 를 주는것과 BETWEEN 으로 beginId 를 주는것 사이에 성능 차이가 있을까? 라는 생각이 들었다.  
 그래서 다음과 같이 테이블을 만들고, 1000만 개의 데이터를 넣는 프로시져를 실행시켜 성능을 비교해봤다.
@@ -123,7 +122,7 @@ SELECT * FROM articles WHERE id BETWEEN 100001 AND 100010;
    2. Index range scan 은 B+Tree 에서 해당 범위로 바로 점프해서 시작
       1. 빠르고 locality-friendly
 
-OFSSET 도 `id > X` 와 같이 동작하면 좋겠지만, OFFSET 은 select 결과에서의 순서상 몇 번째의 개념이기 때문에 `id > X` 와 같이 동작할 수 없다.  
+OFSSET 도 `where id > X` 와 같이 동작하면 좋겠지만, OFFSET 은 select 결과에서의 순서상 몇 번째의 개념이기 때문에 `where id > X` 와 같이 동작할 수 없다.  
 
 
 ### CPU locaility 최적화
