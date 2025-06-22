@@ -40,5 +40,18 @@ where p.promotion_type = 'a'
 실제로 적용했을때 안정적이고 나름 빠르게 배치가 수행되었고, 이제 와서보니 생각드는것도 있고 해서 이 방법이 먹혔던 fundermental 한 근거를 대보려고 한다.
 
 
-## OFFSET LIMIT 쿼리도 방법이 될 수 있었을 것 같다.
+## OFFSET LIMIT 을 이용한 페이징 쿼리도 방법이였지 않았을까
 
+```sql
+SELECT DISTINCT u.device_id
+FROM promotion p
+JOIN user u ON u.user_id = p.user_id
+WHERE p.promotion_type = 'a'
+ORDER BY p.user_id
+LIMIT {page_size} OFFSET ({page_number} - 1) * {page_size};
+```
+
+* page_size 1000 page_number 가 1 이면 : LIMIT 1000 OFFSET 0; (id 1 부터)
+* page_size 1000 page_number 가 2 이면 : LIMIT 1000 OFFSET 1000; (id 1001 부터)
+
+전체 user 를 빠뜨림 없이(+ 중복 X) 처리하기 위해 user_id 로 정렬이 들어가니깐 성능이 더 좋을 수는 없을 것 같다.
