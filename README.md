@@ -1,5 +1,5 @@
 **2025-06**
-- [2025-06-22 MySQL where between index range](./2025-06/22-where-between-index-range.md)
+- [2025-06-22 MySQL BETWEEN vs OFFSET 실전 배치 쿼리 최적화와 Index Range Scan의 위력](./2025-06/22-where-between-index-range.md)
 - [2025-06-17 이미지 파일인지 검증하는 방법](./2025-06/17-metadata-extractor.md)
 - [2025-06-15 jemalloc](./2025-06/15-jemalloc.md)
 

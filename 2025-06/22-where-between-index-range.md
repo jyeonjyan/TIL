@@ -1,4 +1,9 @@
-# MySQL where between index range
+# MySQL BETWEEN vs OFFSET 실전 배치 쿼리 최적화와 Index Range Scan의 위력
+
+## TL;DR
+* 쿼리 성능 문제 때문에 OFFSET 대신 BETWEEN 으로 chunking 처리
+* Index Range Scan은 Index Scan보다 훨씬 효율적
+* 순차 접근은 OS/DB/CPU 차원에서 프리패치 최적화 이점을 얻을 수 있음
 
 ## 사례 소개
 
