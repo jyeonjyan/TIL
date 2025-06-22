@@ -139,3 +139,6 @@ OFSSET 도 `id > X` 와 같이 동작하면 좋겠지만, OFFSET 은 select 결�
  
 디스크 / OS / InnoDB는 sequential access를 감지하면, 다음 블록도 미리 올림  
 디스크 → buffer pool → CPU cache까지의 전체 흐름에서, 인접 범위를 순차적으로 요청할 경우, 메모리 접근성과 CPU cache 효율이 동시에 좋아질 가능성이 높음
+
+### 결론
+index range scan 할 수 있는 방법인 `BETWEEN beginId` 을 사용하자!
