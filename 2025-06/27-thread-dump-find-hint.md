@@ -80,7 +80,7 @@ at org.jetbrains.kotlin.resolve.calls.inference.model.NewConstraintSystemImpl.ar
 
 > https://youtrack.jetbrains.com/issue/KT-56815/compileKotlin-task-is-stuck-with-whiletrue-and-suspend-function
 
-찾아보니 나와 같은 문제를 겪은 사람이 있었고, [Kotlin 1.8.20](https://github.com/JetBrains/kotlin/blob/master/docs/changelogs/ChangeLog-1.8.X.md#1822) 버전에서 해결된 것으로 보임.
+찾아보니 나와 같은 문제를 겪은 사람이 있었고, [Kotlin 1.8.20](https://github.com/JetBrains/kotlin/blob/master/docs/changelogs/ChangeLog-1.8.X.md#1822) 버전에서 해결된 것으로 보임. (이하 버전에서는 무한루프 재현)
 
 ## 마무리 
 
