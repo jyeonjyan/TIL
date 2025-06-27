@@ -80,11 +80,11 @@ at org.jetbrains.kotlin.resolve.calls.inference.model.NewConstraintSystemImpl.ar
 
 > https://youtrack.jetbrains.com/issue/KT-56815/compileKotlin-task-is-stuck-with-whiletrue-and-suspend-function
 
-찾아보니 나와 같은 문제를 겪은 사람이 있었고, [Kotlin 1.8.20 compileKotlin task is stuck with while(true) and suspend function](https://github.com/JetBrains/kotlin/blob/master/docs/changelogs/ChangeLog-1.8.X.md#1822) 에서 해결된 것으로 보임.
+찾아보니 나와 같은 문제를 겪은 사람이 있었고, [Kotlin 1.8.20](https://github.com/JetBrains/kotlin/blob/master/docs/changelogs/ChangeLog-1.8.X.md#1822) 버전에서 해결된 것으로 보임.
 
 ## 마무리 
 
-thread-dump 를 뜨는것은 어렵지 않음, 다만 thread-dump 를 떠서 분석해야겠다는 생각을 해보지 못했는데, 이참에 배움.  
+thread-dump 를 뜨는것은 어렵지 않음, 다만 thread-dump 를 떠서 분석해야겠다는 생각을 해보지 못했는데, 이번 일을 통해 배웠음.  
 분석 기법을 일상적으로 사용하다보면 문제의 원인을 빨리 찾는데 도움이 될거라고 생각 함.  
 분석 툴이 알려주는 정보가 해결 방법까지 제시하지 못하더라도, **이건 "문제"** 라고 인지할 수 있게 도와 줌.  
 앞으로 문제가 발생했을때 메트릭을 뽑고 분석하는 습관을 길러야겠음.
